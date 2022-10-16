@@ -1,0 +1,32 @@
+@use "global" as *;
+
+.p-drawer-nav__items {
+  border-bottom: rem(1) dotted $color-white;
+  border-top: rem(1) dotted $color-white;
+}
+
+.p-drawer-nav__items li {
+  font-size: rem(14);
+}
+
+.p-drawer-nav__items li:nth-child(n + 2) {
+  border-top: rem(1) dotted $color-white;
+}
+
+.p-drawer-nav__items li a {
+  align-items: center;
+  color: $color-text02;
+  display: flex;
+  padding: rem(16) 0;
+}
+
+.p-drawer-nav__items li a::after {
+  content: '\f061';
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  margin-left: auto;
+}
+
+.p-drawer-nav__items li a img {
+  margin-right: rem(14);
+}

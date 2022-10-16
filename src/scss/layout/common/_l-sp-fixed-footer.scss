@@ -1,0 +1,10 @@
+@use "global" as *;
+
+.l-sp-fixed-footer {
+  bottom: 0;
+  height: rem(60);
+  left: 0;
+  position: fixed;
+  width: 100%;
+  z-index: $layer-sp-fixed-footer;
+}

@@ -1,0 +1,10 @@
+<% let pageId='home' ; %>
+  <% let path='./' ; %>
+
+    <%- include(path + 'common/_head' , {pageId: pageId}) %>
+
+      <%- include(path + 'common/_header' , {pageId: pageId}) %>
+
+        <% console.log(jsonData) %>
+
+          <%- include(path + 'common/_footer' , {pageId: pageId}) %>

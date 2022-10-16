@@ -1,0 +1,17 @@
+@use "global" as *;
+
+.l-contact {
+  padding-bottom: rem(100);
+
+  @include mq('md') {
+    padding-bottom: rem(160);
+  }
+}
+
+.l-contact__main-content {
+  margin-top: rem(60);
+
+  @include mq('md') {
+    margin-top: rem(80);
+  }
+}

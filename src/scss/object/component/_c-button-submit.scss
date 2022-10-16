@@ -1,0 +1,29 @@
+@use "global" as *;
+
+.c-button-submit input[type="submit"] {
+  background-color: $color-white;
+  border: rem(1) solid $color-main;
+  border-radius: rem(24);
+  color: $color-main;
+  font-size: rem(14);
+  @include letterSpacing(80);
+  max-width: rem(273);
+  padding: rem(8) rem(16);
+  transition: background-color $trs-duration, color $trs-duration;
+  width: 100%;
+  
+  @include mq('md') {
+    border-radius: rem(28);
+    font-size: rem(16);
+    max-width: rem(360);
+    padding: rem(17) rem(25);
+  }
+}
+
+.c-button-submit input[type="submit"]:focus,
+.c-button-submit input[type="submit"]:hover {
+  @include mq('hover-pc') {
+    background-color: $color-main;
+    color: $color-text02;
+  }
+}

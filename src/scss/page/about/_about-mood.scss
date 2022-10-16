@@ -1,0 +1,43 @@
+@use "global" as *;
+
+.about-mood__title-wrapper {
+  text-align: center;
+}
+
+.about-mood__images {
+  column-gap: rem(12);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: rem(40);
+  row-gap: rem(12);
+
+  @include mq('md') {
+    column-gap: rem(24);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: rem(60);
+    row-gap: rem(24);
+  }
+}
+
+.about-mood__image {
+  border-radius: rem(20);
+  overflow: hidden;
+  position: relative;
+}
+
+.about-mood__image::before {
+  content: '';
+  display: block;
+  padding-top: 100%;
+}
+
+.about-mood__image img {
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  object-position: center center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}

@@ -1,0 +1,26 @@
+@use "global" as *;
+
+.staff-director-greeting__lead {
+  font-size: rem(20);
+  @include letterSpacing(80);
+  @include lineHeight(20, 32);
+  font-weight: $bold;
+
+  @include mq('md') {
+    font-size: rem(28);
+    @include lineHeight(28, 44);
+  }
+}
+
+.staff-director-greeting__description {
+  font-size: rem(14);
+  @include lineHeight(14, 24);
+}
+
+.staff-director-greeting__description:nth-child(n + 2) {
+  margin-top: rem(24);
+}
+
+.staff-director-greeting__description:last-child {
+  text-align: right;
+}

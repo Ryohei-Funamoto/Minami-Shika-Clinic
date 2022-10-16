@@ -1,0 +1,127 @@
+@use "global" as *;
+
+.p-off-center-media {
+  @include mq('md') {
+    display: flex;
+  }
+}
+
+.p-off-center-media--reverse {
+  @include mq('md') {
+    flex-direction: row-reverse;
+  }
+}
+
+.p-off-center-media--deco {
+  position: relative;
+}
+
+.p-off-center-media--deco::before {
+  background-image: url(../img/home/home_concept_bg_deco.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: '';
+  display: block;
+  height: calc(308 / 375 * 100vw);
+  left: rem(10);
+  margin-left: calc(50% - 50vw);
+  position: absolute;
+  top: 0;
+  width: calc(557 / 375 * 100vw);
+  z-index: $layer-background;
+  
+  @include mq('md') {
+    height: 100%;
+    left: calc(416 / 1140 * 100%);
+    margin-left: 0;
+    width: calc(1311 / 1140 * 100%);
+  }
+}
+
+.p-off-center-media__body {
+  @include mq('md') {
+    padding: rem(36) 0 0;
+    width: calc(407 / 1140 * 100%);
+  }
+}
+
+.p-off-center-media__subtitle {
+  color: $color-main;
+  display: block;
+  font-size: rem(11);
+  font-weight: $bold;
+  @include letterSpacing(100);
+  text-transform: uppercase;
+
+  @include mq('md') {
+    font-size: rem(14);
+  }
+}
+
+.p-off-center-media__title {
+  font-size: rem(20);
+  font-weight: $bold;
+  @include letterSpacing(80);
+  @include lineHeight(20, 32);
+  margin-top: rem(16);
+
+  @include mq('md') {
+    font-size: rem(28);
+    @include lineHeight(28, 44);
+    margin-top: rem(28);
+  }
+}
+
+.p-off-center-media__description {
+  font-size: rem(14);
+  @include lineHeight(14, 24);
+  margin-top: rem(32);
+
+  @include mq('md') {
+    margin-top: rem(40);
+  }
+}
+
+.p-off-center-media__description + .p-off-center-media__description {
+  margin-top: rem(24);
+}
+
+.p-off-center-media__image {
+  border-radius: rem(20) 0 0 rem(20);
+  margin: rem(40) calc(50% - 50vw) 0 auto;
+  overflow: hidden;
+  position: relative;
+  width: calc(50vw + 50% - rem(21));
+
+  @include mq('md') {
+    flex-shrink: 0;
+    margin: 0 0 0 calc(93 / 1140 * 100%);
+    width: calc(640 / 1140 * 100%);
+  }
+}
+
+.p-off-center-media--reverse .p-off-center-media__image {
+  border-radius: 0 rem(20) rem(20) 0;
+  margin: rem(40) auto 0 calc(50% - 50vw);
+
+  @include mq('md') {
+    margin: 0 calc(93 / 1140 * 100%) 0 0;
+  }
+}
+
+.p-off-center-media__image::before {
+  content: '';
+  display: block;
+  @include paddingTopHack(334, 229);
+}
+
+.p-off-center-media__image img {
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  object-position: center center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}

@@ -1,0 +1,9 @@
+@use "global" as *;
+
+.l-footer-section {
+  padding: rem(14) 0 rem(60);
+  
+  @include mq('md') {
+    padding: rem(56) 0 rem(60);
+  }
+}

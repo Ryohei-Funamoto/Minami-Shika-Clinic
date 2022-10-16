@@ -1,0 +1,14 @@
+@use "global" as *;
+
+.p-header-info {
+  display: none;
+
+  @include mq('xl') {
+    display: block;
+  }
+}
+
+.p-header-info__address {
+  font-size: rem(12);
+  text-align: right;
+}

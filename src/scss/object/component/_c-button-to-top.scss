@@ -1,0 +1,41 @@
+@use "global" as *;
+
+.c-button-to-top {
+  align-items: center;
+  background-color: $color-white;
+  border: rem(3) solid $color-main;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: background-color $trs-duration,opacity $trs-duration, visibility $trs-duration;
+}
+
+.c-button-to-top.is-show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.c-button-to-top.is-show:focus,
+.c-button-to-top.is-show:hover {
+  @include mq('hover-pc') {
+    background-color: $color-main;
+  }
+}
+
+.c-button-to-top::before {
+  color: $color-main;
+  content: '\f062';
+  font-family: 'Font Awesome 6 Free';
+  font-size: rem(24);
+  font-weight: 900;
+  transition: color $trs-duration;
+}
+
+.c-button-to-top.is-show:focus::before,
+.c-button-to-top.is-show:hover::before {
+  @include mq('hover-pc') {
+    color: $color-white;
+  }
+}

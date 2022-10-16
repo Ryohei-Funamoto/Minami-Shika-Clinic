@@ -1,0 +1,98 @@
+@use "global" as *;
+
+.p-gnav {
+  display: none;
+
+  @include mq('xl') {
+    display: block;
+  }
+}
+
+.p-gnav__items {
+  display: flex;
+  height: inherit;
+}
+
+.p-gnav__items li {
+  font-size: rem(11);
+  font-weight: $bold ;
+  height: inherit;
+}
+
+.p-gnav__items li:nth-child(n + 2) {
+  margin-left: rem(24);
+}
+
+.p-gnav__items li a {
+  align-items: center;
+  color: $color-text;
+  display: flex;
+  flex-direction: column;
+  height: inherit;
+  justify-content: center;
+  position: relative;
+  transition: color $trs-duration;
+}
+
+.p-gnav__items li.is-current a {
+  color: $color-main;
+}
+
+.p-gnav__items li a:focus,
+.p-gnav__items li a:hover {
+  @include mq('hover-pc') {
+    color: $color-main;
+  }
+}
+
+.p-gnav__items li a::after {
+  background-color: $color-main;
+  border-radius: rem(30);
+  bottom: rem(8);
+  content: "";
+  display: block;
+  height: rem(2);
+  left: 50%;
+  opacity: 0;
+  position: absolute;
+  transform: translateX(-50%);
+  transition: opacity $trs-duration, visibility $trs-duration;
+  visibility: hidden;
+  width: rem(20);
+}
+
+.p-gnav__items li.is-current a::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.p-gnav__items li a:focus::after,
+.p-gnav__items li a:hover::after {
+  @include mq('hover-pc') {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.p-gnav__items li a svg {
+  margin-bottom: rem(2);
+}
+
+.p-gnav__items li a svg g,
+.p-gnav__items li a svg path {
+  transition: fill $trs-duration;
+}
+
+.p-gnav__items li.is-current a svg g,
+.p-gnav__items li.is-current a svg path {
+  fill: $color-main;
+}
+
+.p-gnav__items li a:focus svg g,
+.p-gnav__items li a:focus svg path,
+.p-gnav__items li a:hover svg g,
+.p-gnav__items li a:hover svg path {
+  @include mq('hover-pc') {
+    fill: $color-main;
+  }
+}

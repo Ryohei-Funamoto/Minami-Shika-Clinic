@@ -1,0 +1,63 @@
+@use "global" as *;
+@use "sass:color";
+
+.p-textbox input[type="text"],
+.p-textbox input[type="email"],
+.p-textbox input[type="tel"],
+.p-textbox input[type="date"],
+.p-textbox textarea {
+  border: rem(1) solid transparent;
+  background-color: $color-gray06;
+  border-radius: rem(4);
+  font-size: rem(16);
+  padding: rem(11) rem(16) rem(12);
+}
+
+.p-textbox textarea {
+  height: rem(160);
+
+  @include mq('md') {
+    height: rem(200);
+  }
+}
+
+.p-textbox input[type="text"]:focus,
+.p-textbox input[type="email"]:focus,
+.p-textbox input[type="tel"]:focus,
+.p-textbox input[type="date"]:focus,
+.p-textbox textarea:focus {
+  border: rem(1) solid color.adjust($color-black, $alpha: -0.36);
+}
+
+.p-textbox>span {
+  display: block;
+}
+
+.p-textbox:not(.p-textbox--tel)>span:nth-child(n + 2) {
+  margin-top: rem(20);
+}
+
+.p-textbox--tel {
+  align-items: center;
+  display: flex;
+}
+
+.p-textbox--tel>span {
+  max-width: rem(80);
+}
+
+.p-textbox--date>span {
+  position: relative;
+}
+
+.p-textbox--date>span::before {
+  content: '\f073';
+  display: block;
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  pointer-events: none;
+  position: absolute;
+  right: rem(10);
+  top: 50%;
+  transform: translateY(-50%);
+}

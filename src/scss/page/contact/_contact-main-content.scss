@@ -1,0 +1,23 @@
+@use "global" as *;
+
+.contact-main-content__container {
+  @include mq('md') {
+    max-width: rem(808);
+  }
+}
+
+.contact-main-content__info:nth-child(n + 2) {
+  margin-top: rem(40);
+
+  @include mq('md') {
+    margin-top: rem(42);
+  }
+}
+
+.contact-main-content__form-area {
+  margin-top: rem(100);
+
+  @include mq('md') {
+    margin-top: rem(160);
+  }
+}

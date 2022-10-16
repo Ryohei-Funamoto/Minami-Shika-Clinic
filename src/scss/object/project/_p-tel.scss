@@ -1,0 +1,27 @@
+@use "global" as *;
+
+.p-tel {
+  font-size: rem(32);
+  font-weight: $bold;
+  @include letterSpacing(-20);
+  @include lineHeight(32, 36);
+}
+
+.p-tel--small {
+  font-size: rem(20);
+  letter-spacing: 0;
+}
+
+.p-tel a {
+  align-items: center;
+  color: $color-main;
+  display: flex;
+}
+
+.p-tel img {
+  margin-right: rem(4);
+}
+
+.p-tel--small img {
+  width: rem(18);
+}

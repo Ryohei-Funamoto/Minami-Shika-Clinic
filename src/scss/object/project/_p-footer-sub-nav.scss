@@ -1,0 +1,54 @@
+@use "global" as *;
+
+.p-footer-sub-nav {
+  display: flex;
+}
+
+.p-footer-sub-nav__items:nth-child(n + 2) {
+  margin-left: rem(20);
+}
+
+.p-footer-sub-nav__items>li {
+  font-size: rem(16);
+  font-weight: $medium;
+  @include lineHeight(16, 22);
+}
+
+.p-footer-sub-nav__items>li:nth-child(n + 2) {
+  margin-top: rem(20);
+}
+
+.p-footer-sub-nav__items>li>a {
+  color: $color-text;
+  display: block;
+  padding-left: rem(12);
+  position: relative;
+  transition: color $trs-duration;
+}
+
+.p-footer-sub-nav__items>li>a:focus,
+.p-footer-sub-nav__items>li>a:hover {
+  @include mq('hover-pc') {
+    color: $color-main;
+  }
+}
+
+.p-footer-sub-nav__items>li>a::before {
+  border-bottom: rem(6) solid transparent;
+  border-left: rem(6) solid $color-main;
+  border-top: rem(6) solid transparent;
+  content: '';
+  display: block;
+  left: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: left $trs-duration;
+}
+
+.p-footer-sub-nav__items>li>a:focus::before,
+.p-footer-sub-nav__items>li>a:hover::before {
+  @include mq('hover-pc') {
+    left: rem(3);
+  }
+}

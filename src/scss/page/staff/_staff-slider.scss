@@ -1,0 +1,31 @@
+@use "global" as *;
+
+.staff-slider__slides {
+  transition-timing-function: linear;
+}
+
+.staff-slider__slide {
+  border-radius: rem(20);
+  overflow: hidden;
+  position: relative;
+}
+
+.staff-slider__slide::before {
+  content: '';
+  display: block;
+  @include paddingTopHack(200, 150);
+
+  @include mq('md') {
+    @include paddingTopHack(305, 229);
+  }
+}
+
+.staff-slider__slide img {
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  object-position: center center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}

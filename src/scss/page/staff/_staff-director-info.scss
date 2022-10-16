@@ -1,0 +1,79 @@
+@use "global" as *;
+
+.staff-director-info {
+  display: flex;
+  flex-direction: column;
+
+  @include mq('md') {
+    align-items: flex-start;
+    flex-direction: row;
+  }
+}
+
+.staff-director-info__body {
+  display: contents;
+
+  @include mq('md') {
+    display: block;
+  }
+}
+
+.staff-director-info__greeting {
+  order: 1;
+
+  @include mq('md') {
+    order: 0;
+  }
+}
+
+.staff-director-info__profile-lists {
+  margin-top: rem(40);
+  order: 3;
+
+  @include mq('md') {
+    margin-top: rem(60);
+    order: 0;
+  }
+}
+
+.staff-director-info__profile-list:nth-child(n + 2) {
+  margin-top: rem(40);
+
+  @include mq('md') {
+    margin-top: rem(32);
+  }
+}
+
+.staff-director-info__image {
+  border-radius: rem(20);
+  margin: rem(40) 0 0;
+  order: 2;
+  overflow: hidden;
+  position: relative;
+
+  @include mq('md') {
+    flex-shrink: 0;
+    margin: rem(7) 0 0 calc(80 / 1000 * 100%);
+    width: calc(460 / 1000 * 100%);
+  }
+}
+
+.staff-director-info__image::before {
+  content: '';
+  display: block;
+  @include paddingTopHack(335, 446);
+
+  @include mq('md') {
+    @include paddingTopHack(460, 613);
+  }
+}
+
+.staff-director-info__image img {
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  object-position: center center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}

@@ -1,0 +1,52 @@
+@use "global" as *;
+@use "sass:color";
+
+.p-header {
+  background-color: $color-white;
+  box-shadow: 0 rem(3) rem(6) color.adjust($color-black, $alpha: -0.84);
+}
+
+.p-header__container {
+  height: inherit;
+  max-width: 100%;
+  padding: 0 rem(12) 0 rem(20);
+  
+  @include mq('md') {
+    padding: 0 rem(40);
+  }
+}
+
+.p-header__inner {
+  align-items: center;
+  display: flex;
+  height: inherit;
+}
+
+.p-header__logo img {
+  max-width: 100%;
+}
+
+.p-header__nav {
+  height: inherit;
+  margin-left: auto;
+}
+
+.p-header__info {
+  margin-left: rem(32);
+}
+
+.p-header__hamburger {
+  height: rem(44);
+  margin-left: auto;
+  width: rem(44);
+  z-index: $layer-hamburger;
+}
+
+.p-header__drawer {
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: $layer-drawer;
+}

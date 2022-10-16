@@ -1,0 +1,21 @@
+@use "global" as *;
+
+.p-footer-section {
+  background-color: $color-sub02;
+}
+
+.p-footer-section__info {
+  padding: rem(32) rem(10) rem(20);
+
+  @include mq('md') {
+    padding: rem(49) rem(40);
+  }
+}
+
+.p-footer-section__nav {
+  margin-top: rem(60);
+
+  @include mq('md') {
+    margin-top: rem(40);
+  }
+}

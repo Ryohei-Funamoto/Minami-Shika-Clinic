@@ -1,0 +1,104 @@
+<% let pageId='about' ; %>
+  <% let path='../' ; %>
+
+    <%- include(path + 'common/_head' , {pageId: pageId}) %>
+
+      <%- include(path + 'common/_header' , {pageId: pageId}) %>
+
+        <% console.log(jsonData) %>
+
+          <div class="l-about">
+            <main>
+              <div class="l-about__main-visual l-main-visual l-main-visual--sub p-sub-main-visual about-main-visual">
+                <picture>
+                  <source srcset="/img/about/about_mv_pc_img.jpg" media="(min-width: 768px)">
+                  <img src="/img/about/about_mv_sp_img.jpg" alt="<%= jsonData.pages[pageId].title; %>">
+                </picture>
+                <div class="p-sub-main-visual__content about-main-visual__content">
+                  <h1 class="p-sub-main-visual__title about-main-visual__title">
+                    <%= jsonData.pages[pageId].title; %>
+                  </h1>
+                  <span class="p-sub-main-visual__subtitle about-main-visual__subtitle">
+                    <%= jsonData.pages[pageId].subtitle; %>
+                  </span>
+                </div><!-- /.p-sub-main-visual__content about-main-visual__content -->
+              </div><!-- /.l-main-visual l-main-visual--sub p-sub-main-visual about-main-visual -->
+
+              <%- include(path + 'common/_breadcrumb' , {pageId: pageId}) %>
+
+                <section class="l-about__policy about-policy">
+                  <div class="l-container about-policy__container">
+                    <div class="about-policy__title-wrapper">
+                      <h2 class="about-policy__title c-section-title">ポリシーと特徴</h2>
+                    </div><!-- /.about-policy__title-wrapper -->
+
+                    <ul class="about-policy__items">
+                      <li
+                        class="about-policy__item about-policy__item--reverse about-policy__item--deco p-off-center-media p-off-center-media--reverse p-off-center-media--deco">
+                        <div class="p-off-center-media__body">
+                          <div class="p-off-center-media__title-wrapper">
+                            <span class="p-off-center-media__subtitle">policy</span>
+                            <h3 class="p-off-center-media__title">コミュニケーションから始まる最適な医療提供</h3>
+                          </div><!-- /.p-off-center-media__title-wrapper -->
+                          <p class="p-off-center-media__description">
+                            当院ではまず患者様から詳しくお話を伺います。<br>難しい言葉は使わず、実際に感じている小さな違和感からあらゆる可能性を考え、最適な治療方法をご提案いたします。</p>
+                          <p class="p-off-center-media__description">「どこよりも本音で話せる歯医者さん」を目指し、スタッフ一同、「人間力の向上」にも勤めております。
+                          </p>
+                        </div><!-- /.p-off-center-media__body -->
+                        <figure class="p-off-center-media__image">
+                          <img src="/img/about/about_policy_img.jpg" alt="コミュニケーションから始まる最適な医療提供">
+                        </figure><!-- /.p-off-center-media__image -->
+                      </li><!-- /.about-policy__item p-off-center-media -->
+
+                      <li class="about-policy__item p-off-center-media">
+                        <div class="p-off-center-media__body">
+                          <div class="p-off-center-media__title-wrapper">
+                            <span class="p-off-center-media__subtitle">feature</span>
+                            <h3 class="p-off-center-media__title">「医療技術の追求」と<br>「通いやすさ」</h3>
+                          </div><!-- /.p-off-center-media__title-wrapper -->
+                          <p class="p-off-center-media__description">
+                            歯の治療において、小さな違和感は大きなストレスにつながります。私たちは常に快適な歯科医療技術の研究を行っております。<br>また、「通いやすさ」も医院選びの重要なポイントと考え、2019年のリニューアルを期に更に駅の近くへ場所を移しました。
+                          </p>
+                          <p class="p-off-center-media__description">朝から夜までお仕事をされている方のために診療時間を見直し、平日でもご利用いただけるようにいたしました。
+                          </p>
+                        </div><!-- /.p-off-center-media__body -->
+                        <figure class="p-off-center-media__image">
+                          <img src="/img/about/about_feature_img.jpg" alt="「医療技術の追求」と「通いやすさ」">
+                        </figure><!-- /.p-off-center-media__image -->
+                      </li><!-- /.about-policy__item p-off-center-media -->
+                    </ul><!-- /.about-policy__items -->
+                  </div><!-- /.l-container about-policy__container -->
+                </section><!-- /.l-about__policy about-policy -->
+
+                <section class="l-about__mood about-mood">
+                  <div class="l-container about-mood__container">
+                    <div class="about-mood__title-wrapper">
+                      <h2 class="about-mood__title c-section-title">院内の様子</h2>
+                    </div><!-- /.about-mood__title-wrapper -->
+
+                    <div class="about-mood__images">
+                      <figure class="about-mood__image">
+                        <img src="/img/about/about_mood_img01.jpg" alt="院内の様子１">
+                      </figure><!-- /.about-mood__image -->
+                      <figure class="about-mood__image">
+                        <img src="/img/about/about_mood_img02.jpg" alt="院内の様子２">
+                      </figure><!-- /.about-mood__image -->
+                      <figure class="about-mood__image">
+                        <img src="/img/about/about_mood_img03.jpg" alt="院内の様子３">
+                      </figure><!-- /.about-mood__image -->
+                      <figure class="about-mood__image">
+                        <img src="/img/about/about_mood_img04.jpg" alt="院内の様子４">
+                      </figure><!-- /.about-mood__image -->
+                      <figure class="about-mood__image">
+                        <img src="/img/about/about_mood_img05.jpg" alt="院内の様子５">
+                      </figure><!-- /.about-mood__image -->
+                      <figure class="about-mood__image">
+                        <img src="/img/about/about_mood_img06.jpg" alt="院内の様子６">
+                      </figure><!-- /.about-mood__image -->
+                    </div><!-- /.about-mood__images -->
+                  </div><!-- /.l-container about-mood__container -->
+                </section><!-- /.l-about__mood about-mood -->
+            </main>
+          </div><!-- /.l-about -->
+
+          <%- include(path + 'common/_footer' , {pageId: pageId}) %>

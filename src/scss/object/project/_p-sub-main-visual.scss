@@ -1,0 +1,69 @@
+@use "global" as *;
+@use "sass:color";
+
+.p-sub-main-visual {
+  border-radius: rem(12);
+  overflow: hidden;
+  position: relative;
+}
+
+.p-sub-main-visual::after {
+  background-color: color.adjust($color-black, $alpha: -0.8);
+  content: '';
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.p-sub-main-visual picture {
+  height: 100%;
+  width: 100%;
+}
+
+.p-sub-main-visual img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  width: 100%;
+}
+
+.p-sub-main-visual__content {
+  left: 50%;
+  padding: 0 rem(strip-unit($padding-sp));
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  z-index: 1;
+}
+
+.p-sub-main-visual__title {
+  color: $color-text02;
+  font-size: rem(24);
+  font-weight: $bold;
+  @include letterSpacing(200);
+  
+  @include mq('md') {
+    font-size: rem(32);
+    @include letterSpacing(100);
+    @include lineHeight(32, 36);
+  }
+}
+
+.p-sub-main-visual__subtitle {
+  display: inline-block;
+  color: $color-text02;
+  font-size: rem(12);
+  font-weight: $bold;
+  @include letterSpacing(100);
+  margin-top: rem(16);
+  text-transform: uppercase;
+
+  @include mq('md') {
+    font-size: rem(14);
+  }
+}

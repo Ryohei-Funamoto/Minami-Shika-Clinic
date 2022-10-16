@@ -1,0 +1,19 @@
+@use "global" as *;
+
+.p-form__item {
+  border-top: rem(1) solid $color-gray05;
+  padding: rem(28) 0;
+}
+
+.p-form__item:last-child {
+  border-bottom: rem(1) solid $color-gray05;
+}
+
+.p-form__button {
+  margin-top: rem(68);
+  text-align: center;
+
+  @include mq('md') {
+    margin-top: rem(72);
+  }
+}

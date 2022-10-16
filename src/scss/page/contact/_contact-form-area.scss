@@ -1,0 +1,13 @@
+@use "global" as *;
+
+.contact-form-area__title-wrapper {
+  text-align: center;
+}
+
+.contact-form-area__form {
+  margin-top: rem(68);
+
+  @include mq('md') {
+    margin-top: rem(66);
+  }
+}

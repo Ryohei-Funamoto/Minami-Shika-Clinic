@@ -1,0 +1,86 @@
+@use "global" as *;
+@use "sass:color";
+
+.p-footer-info {
+  background-color: $color-white;
+  border-radius: rem(8);
+
+  @include mq('md') {
+    align-items: center;
+    display: flex;
+  }
+}
+
+.p-footer-info__logo {
+  text-align: center;
+}
+
+.p-footer-info__logo img {
+  max-width: rem(311);
+  width: 100%;
+
+  @include mq('md') {
+    max-width: rem(403);
+  }
+}
+
+.p-footer-info__address {
+  font-size: rem(14);
+  @include lineHeight(14, 36);
+  text-align: center;
+}
+
+.p-footer-info__tel {
+  margin-top: rem(20);
+}
+
+.p-footer-info__tel a {
+  justify-content: center;
+}
+
+.p-footer-info__buttons {
+  display: flex;
+  font-size: 0;
+  justify-content: center;
+  margin-top: rem(20);
+}
+
+.p-footer-info__button:nth-child(n + 2) {
+  margin-left: rem(15);
+  
+  @include mq('md') {
+    margin-left: rem(20);
+  }
+}
+
+.p-footer-info__medical-time-sheet {
+  border-radius: rem(12);
+  box-shadow: 0 rem(3) rem(6) color.adjust($color-black, $alpha: -0.84);
+  margin-top: rem(20);
+}
+
+.p-footer-info__map {
+  margin: rem(20) auto 0;
+  max-width: calc(100% - rem(20));
+  position: relative;
+  width: 100%;
+
+  @include mq('md') {
+    margin: 0 0 0 rem(40);
+    max-width: rem(385);
+  }
+}
+
+.p-footer-info__map::before {
+  content: "";
+  display: block;
+  @include paddingTopHack(315, 315);
+}
+
+.p-footer-info__map iframe {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}

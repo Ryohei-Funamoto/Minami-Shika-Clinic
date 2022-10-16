@@ -1,0 +1,18 @@
+@use "global" as *;
+
+.p-breadcrumb {
+  font-size: rem(12);
+  @include lineHeight(12, 18);
+}
+
+.p-breadcrumb__container {
+  max-width: 100%;
+
+  @include mq('md') {
+    max-width: calc(1180 / 1280 * 100%);
+  }
+}
+
+.p-breadcrumb a {
+  color: $color-gray04;
+}

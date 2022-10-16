@@ -1,0 +1,12 @@
+@use "global" as *;
+
+.p-footer {
+  background-color: $color-main;
+  color: $color-text02;
+  
+}
+
+.p-footer__copyright {
+  font-size: rem(14);
+  text-align: center;
+}

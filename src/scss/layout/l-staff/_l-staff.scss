@@ -1,0 +1,33 @@
+@use "global" as *;
+
+.l-staff {
+  padding-bottom: rem(100);
+
+  @include mq('md') {
+    padding-bottom: rem(160);
+  }
+}
+
+.l-staff__greeting {
+  margin-top: rem(60);
+
+  @include mq('md') {
+    margin-top: rem(80);
+  }
+}
+
+.l-staff__slider {
+  margin-top: rem(100);
+
+  @include mq('md') {
+    margin-top: rem(160);
+  }
+}
+
+.l-staff__intro {
+  margin-top: rem(100);
+
+  @include mq('md') {
+    margin-top: rem(160);
+  }
+}

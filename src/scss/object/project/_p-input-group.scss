@@ -1,0 +1,50 @@
+@use "global" as *;
+
+.p-input-group {
+  @include mq('md') {
+    align-items: center;
+    display: flex;
+  }
+}
+
+.p-input-group__label {
+  align-items: flex-start;
+  display: flex;
+
+  @include mq('md') {
+    width: rem(240);
+  }
+}
+
+.p-input-group__label--required::after {
+  background-color: $color-accent;
+  border-radius: rem(4);
+  color: $color-white;
+  content: '必須';
+  display: inline-block;
+  font-size: rem(12);
+  font-weight: $bold;
+  @include lineHeight(12, 12);
+  margin-left: rem(16);
+  padding: rem(6);
+}
+
+.p-input-group__label--multi-row span {
+  color: $color-gray03;
+  display: block;
+  font-size: rem(11);
+}
+
+.p-input-group__field {
+  margin-top: rem(20);
+
+  @include mq('md') {
+    margin-top: 0;
+    width: calc(100% - rem(240));
+  }
+}
+
+.p-input-group__field--radio,
+.p-input-group__field--checkbox {
+  margin-bottom: rem(-16);
+}

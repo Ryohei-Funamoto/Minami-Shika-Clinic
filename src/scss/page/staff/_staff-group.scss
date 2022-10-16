@@ -1,0 +1,23 @@
+@use "global" as *;
+
+.staff-group__title {
+  border-bottom: rem(1) solid #707070;
+  font-size: rem(16);
+  font-weight: bold;
+  @include letterSpacing(80);
+  padding-bottom: rem(8);
+}
+
+.staff-group__items {
+  column-gap: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: rem(37);
+  row-gap: rem(60);
+  
+  @include mq('md') {
+    column-gap: rem(80);
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: rem(40);
+  }
+}

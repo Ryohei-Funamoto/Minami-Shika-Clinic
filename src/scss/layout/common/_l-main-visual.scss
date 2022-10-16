@@ -1,0 +1,19 @@
+@use "global" as *;
+
+.l-main-visual {
+  margin: rem(80) auto 0;
+  width: calc(100% - rem(40));
+  
+  @include mq('md') {
+    margin: rem(120) auto 0;
+    width: calc(1160 / 1280 * 100%);
+  }
+}
+
+.l-main-visual--sub {
+  height: rem(188);
+
+  @include mq('md') {
+    height: rem(340);
+  }
+}

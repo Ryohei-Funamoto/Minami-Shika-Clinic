@@ -1,0 +1,8 @@
+@use "global" as *;
+
+.l-button-pc-fixed {
+  position: fixed;
+  right: 0;
+  top: rem(176);
+  z-index: $layer-floating;
+}

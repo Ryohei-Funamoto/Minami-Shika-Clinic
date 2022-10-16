@@ -1,0 +1,52 @@
+@use "global" as *;
+
+.p-checkbox input[type="checkbox"]+span {
+  display: inline-block;
+  font-size: rem(14);
+  @include lineHeight(14, 24);
+  margin: 0 rem(24) rem(16) 0;
+  padding-left: rem(32);
+  position: relative;
+  
+  @include mq('md') {
+    margin: 0 rem(32) rem(16) 0;
+  }
+}
+
+.p-checkbox input[type="checkbox"]+span::before {
+  background-color: $color-white;
+  border: rem(1) solid $color-main;
+  content: '';
+  display: block;
+  height: rem(24);
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: background-color $trs-duration;
+  width: rem(24);
+}
+
+.p-checkbox input[type="checkbox"]:checked+span::before {
+  background-color: $color-main;
+}
+
+.p-checkbox input[type="checkbox"]+span::after {
+  border-bottom: rem(2) solid $color-white;
+  border-left: rem(2) solid $color-white;
+  content: '';
+  display: block;
+  height: rem(10);
+  left: rem(5);
+  opacity: 0;
+  position: absolute;
+  top: rem(4);
+  transform: rotate(-45deg);
+  transition: opacity $trs-duration, visibility $trs-duration;
+  visibility: hidden;
+  width: rem(15);
+}
+
+.p-checkbox input[type="checkbox"]:checked+span::after {
+  opacity: 1;
+  visibility: visible;
+}

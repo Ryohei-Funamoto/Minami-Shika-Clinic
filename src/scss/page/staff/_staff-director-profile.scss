@@ -1,0 +1,29 @@
+@use "global" as *;
+
+.staff-director-profile__title {
+  border-bottom: rem(1) solid $color-gray;
+  font-size: rem(16);
+  font-weight: $medium;
+  padding-bottom: rem(8);
+}
+
+dl.staff-director-profile__items {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.staff-director-profile__items dt,
+.staff-director-profile__items dd,
+.staff-director-profile__items li {
+  font-size: rem(14);
+  @include lineHeight(14, 24);
+  margin-top: rem(16);
+}
+
+.staff-director-profile__items dt {
+  width: rem(65);
+}
+
+.staff-director-profile__items dd {
+  width: calc(100% - rem(65));
+}

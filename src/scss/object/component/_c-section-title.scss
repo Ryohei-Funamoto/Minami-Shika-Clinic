@@ -1,0 +1,45 @@
+@use "global" as *;
+
+.c-section-title {
+  display: inline-block;
+  font-size: rem(20);
+  font-weight: $bold;
+  @include letterSpacing(80);
+  @include lineHeight(20, 32);
+  padding: 0 rem(65);
+  position: relative;
+  
+  @include mq('md') {
+    font-size: rem(28);
+    @include lineHeight(28, 40);
+    padding: 0 rem(96);
+  }
+}
+
+.c-section-title::before,
+.c-section-title::after {
+  background-image: url(../img/common/section_title_deco.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: '';
+  display: block;
+  height: rem(13);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: rem(49);
+
+  @include mq('md') {
+    height: rem(18);
+    width: rem(68);
+  }
+}
+
+.c-section-title::before {
+  left: 0;
+}
+
+.c-section-title::after {
+  right: 0;
+}

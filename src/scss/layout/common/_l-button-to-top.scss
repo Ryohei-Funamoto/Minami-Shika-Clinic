@@ -1,0 +1,15 @@
+@use "global" as *;
+
+.l-button-to-top {
+  bottom: rem(100);
+  height: rem(52);
+  position: fixed;
+  right: rem(10);
+  width: rem(52);
+  z-index: $layer-floating;
+
+  @include mq('md') {
+    bottom: rem(40);
+    right: rem(20);
+  }
+}

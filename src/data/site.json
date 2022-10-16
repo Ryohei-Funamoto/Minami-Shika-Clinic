@@ -1,0 +1,204 @@
+{
+  "siteInfo": {
+    "siteName": "みなみ歯科クリニック",
+    "siteUrl": "サイトのドメイン"
+  },
+  "pages": {
+    "home": {
+      "name": "home",
+      "title": "ホーム",
+      "subtitle": "home",
+      "description": "トップページの説明",
+      "ogpImage": "",
+      "type": "website",
+      "slug": "/"
+    },
+    "news": {
+      "name": "news",
+      "title": "お知らせ",
+      "subtitle": "news",
+      "description": "お知らせページの説明",
+      "ogpImage": "",
+      "type": "article",
+      "slug": "/news/"
+    },
+    "about": {
+      "name": "about",
+      "title": "当院について",
+      "subtitle": "about",
+      "description": "「当院について」ページの説明",
+      "ogpImage": "",
+      "type": "article",
+      "slug": "/about/",
+      "breadcrumb": [
+        {
+          "order": 1,
+          "path": "/",
+          "label": "ホーム"
+        },
+        {
+          "order": 2,
+          "path": "",
+          "label": "当院について"
+        }
+      ]
+    },
+    "medical": {
+      "name": "medical",
+      "title": "診療案内",
+      "subtitle": "medical",
+      "description": "診療案内ページの説明",
+      "ogpImage": "",
+      "type": "article",
+      "slug": "/medical/",
+      "breadcrumb": [
+        {
+          "order": 1,
+          "path": "/",
+          "label": "ホーム"
+        },
+        {
+          "order": 2,
+          "path": "",
+          "label": "診療案内"
+        }
+      ]
+    },
+    "staff": {
+      "name": "staff",
+      "title": "スタッフ紹介",
+      "subtitle": "staff",
+      "description": "スタッフ紹介ページの説明",
+      "ogpImage": "",
+      "type": "article",
+      "slug": "/staff/",
+      "breadcrumb": [
+        {
+          "order": 1,
+          "path": "/",
+          "label": "ホーム"
+        },
+        {
+          "order": 2,
+          "path": "",
+          "label": "スタッフ紹介"
+        }
+      ]
+    },
+    "blog": {
+      "name": "blog",
+      "title": "スタッフブログ",
+      "subtitle": "blog",
+      "description": "スタッフブログページの説明",
+      "ogpImage": "",
+      "type": "article",
+      "slug": "/blog/",
+      "breadcrumb": [
+        {
+          "order": 1,
+          "path": "/",
+          "label": "ホーム"
+        },
+        {
+          "order": 2,
+          "path": "",
+          "label": "スタッフブログ"
+        }
+      ]
+    },
+    "contact": {
+      "name": "contact",
+      "title": "お問い合わせ",
+      "subtitle": "contact",
+      "description": "お問い合わせページの説明",
+      "ogpImage": "",
+      "type": "article",
+      "slug": "/contact/",
+      "breadcrumb": [
+        {
+          "order": 1,
+          "path": "/",
+          "label": "ホーム"
+        },
+        {
+          "order": 2,
+          "path": "",
+          "label": "お問い合わせ"
+        }
+      ]
+    },
+    "contact_thanks": {
+      "name": "contact_thanks",
+      "title": "お問い合わせ",
+      "subtitle": "contact",
+      "description": "お問い合わせ完了ページの説明",
+      "ogpImage": "",
+      "type": "article",
+      "slug": "/contact/contact_thanks/",
+      "breadcrumb": [
+        {
+          "order": 1,
+          "path": "/",
+          "label": "ホーム"
+        },
+        {
+          "order": 2,
+          "path": "/contact/",
+          "label": "お問い合わせ"
+        },
+        {
+          "order": 3,
+          "path": "",
+          "label": "お問い合わせ完了"
+        }
+      ]
+    },
+    "reserve": {
+      "name": "reserve",
+      "title": "WEB予約",
+      "subtitle": "reserve",
+      "description": "WEB予約ページの説明",
+      "ogpImage": "",
+      "type": "article",
+      "slug": "/reserve/",
+      "breadcrumb": [
+        {
+          "order": 1,
+          "path": "/",
+          "label": "ホーム"
+        },
+        {
+          "order": 2,
+          "path": "",
+          "label": "WEB予約"
+        }
+      ]
+    },
+    "reserve_thanks": {
+      "name": "reserve_thanks",
+      "title": "WEB予約",
+      "subtitle": "reserve",
+      "description": "WEB予約完了ページの説明",
+      "ogpImage": "",
+      "type": "article",
+      "slug": "/reserve/reserve_thanks/",
+      "breadcrumb": [
+        {
+          "order": 1,
+          "path": "/",
+          "label": "ホーム"
+        },
+        {
+          "order": 2,
+          "path": "/reserve/",
+          "label": "WEB予約"
+        },
+        {
+          "order": 3,
+          "path": "",
+          "label": "WEB予約完了"
+        }
+      ]
+    }
+  }
+}

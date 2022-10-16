@@ -1,0 +1,28 @@
+@use "global" as *;
+
+.p-select {
+  position: relative;
+}
+
+.p-select::before {
+  border-bottom: rem(2) solid $color-text;
+  border-left: rem(2) solid $color-text;
+  content: '';
+  display: block;
+  height: rem(10);
+  pointer-events: none;
+  position: absolute;
+  right: rem(12);
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
+  width: rem(10);
+  z-index: $layer-default;
+}
+
+.p-select select {
+  border: rem(1) solid transparent;
+  background-color: $color-gray06;
+  border-radius: rem(4);
+  font-size: rem(16);
+  padding: rem(11) rem(32) rem(12) rem(16);
+}

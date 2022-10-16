@@ -1,0 +1,28 @@
+@use "global" as *;
+@use "sass:color";
+
+.p-sp-fixed-footer {
+  background-color: color.adjust($color-white, $alpha: -0.15);
+}
+
+.p-sp-fixed-footer__container {
+  height: inherit;
+  max-width: rem(440);
+}
+
+.p-sp-fixed-footer__inner {
+  align-items: center;
+  display: flex;
+  height: inherit;
+}
+
+.p-sp-fixed-footer__business-hours {
+  font-size: rem(10);
+  @include lineHeight(10, 12);
+  margin-top: rem(4);
+  text-align: center;
+}
+
+.p-sp-fixed-footer__right {
+  margin-left: auto;
+}
