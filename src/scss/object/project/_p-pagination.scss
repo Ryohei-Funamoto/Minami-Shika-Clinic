@@ -1,0 +1,117 @@
+@use "global" as *;
+
+.p-pagination {
+  font-size: 0;
+  text-align: center;
+}
+
+.p-pagination .page-numbers:not(:last-child) {
+  margin-right: rem(7);
+
+  @include mq('md') {
+    margin-right: rem(10);
+  }
+}
+
+.p-pagination a,
+.p-pagination span {
+  background-color: $color-white;
+  border: rem(1) solid $color-main;
+  border-radius: rem(4);
+  color: $color-main;
+  display: inline-block;
+  font-size: rem(12);
+  line-height: 1;
+  padding: rem(8) rem(10);
+  transition: background-color $trs-duration, color $trs-duration;
+
+  @include mq('md') {
+    font-size: rem(14);
+    padding: rem(10) rem(12);
+  }
+}
+
+.p-pagination a:focus,
+.p-pagination a:hover {
+  @include mq('hover-pc') {
+    background-color: $color-main;
+    color: $color-text02;
+  }
+}
+
+.p-pagination span.current {
+  background-color: $color-main;
+  color: $color-text02;
+}
+
+.p-pagination a.prev,
+.p-pagination a.next {
+  background-color: $color-main;
+  color: $color-text02;
+  position: relative;
+  transition: background-color $trs-duration, color $trs-duration;
+}
+
+.p-pagination a.prev:focus,
+.p-pagination a.prev:hover,
+.p-pagination a.next:focus,
+.p-pagination a.next:hover {
+  @include mq('hover-pc') {
+    background-color: $color-white;
+    color: $color-main;
+  }
+}
+
+.p-pagination a.prev {
+  padding: rem(8) rem(15) rem(8) rem(34);
+  
+  @include mq('md') {
+    padding: rem(10) rem(14) rem(10) rem(38);
+  }
+}
+
+.p-pagination a.prev::before {
+  content: '\f0a8';
+  font-family: 'Font Awesome 6 Free';
+  font-size: rem(14);
+  font-weight: 900;
+  left: rem(15);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: left $trs-duration;
+}
+
+.p-pagination a.prev:focus::before,
+.p-pagination a.prev:hover::before {
+  @include mq('hover-pc') {
+    left: rem(10);
+  }
+}
+
+.p-pagination a.next {
+  padding: rem(8) rem(34) rem(8) rem(15);
+  
+  @include mq('md') {
+    padding: rem(10) rem(38) rem(10) rem(14);
+  }
+}
+
+.p-pagination a.next::before {
+  content: '\f0a9';
+  font-family: 'Font Awesome 6 Free';
+  font-size: rem(14);
+  font-weight: 900;
+  right: rem(15);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: right $trs-duration;
+}
+
+.p-pagination a.next:focus::before,
+.p-pagination a.next:hover::before {
+  @include mq('hover-pc') {
+    right: rem(10);
+  }
+}

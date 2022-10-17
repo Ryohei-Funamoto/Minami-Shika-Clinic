@@ -1,24 +1,24 @@
 @use "global" as *;
 
-.staff-data__item {
+.p-staff-data__item {
   display: flex;
 }
 
-.staff-data__item:nth-child(n + 2) {
+.p-staff-data__item:nth-child(n + 2) {
   border-top: rem(1) solid $color-white;
 }
 
-.staff-data__term,
-.staff-data__description {
+.p-staff-data__term,
+.p-staff-data__description {
   font-size: rem(14);
   padding: rem(17) rem(12) rem(17) rem(20);
 }
 
-.staff-data__term {
+.p-staff-data__term {
   background-color: $color-sub02;
   width: rem(140);
 }
 
-.staff-data__description {
+.p-staff-data__description {
   width: calc(100% - rem(140));
 }

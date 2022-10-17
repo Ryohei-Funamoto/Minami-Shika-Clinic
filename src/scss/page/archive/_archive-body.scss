@@ -1,0 +1,23 @@
+@use "global" as *;
+
+.archive-body__inner {
+  @include mq('md') {
+    display: flex;
+  }
+}
+
+.archive-body__main {
+  @include mq('md') {
+    width: calc(100% - rem(300));
+  }
+}
+
+.archive-body__side {
+  margin: rem(100) 0 0;
+
+  @include mq('md') {
+    flex-shrink: 0;
+    margin: 0 0 0 rem(30);
+    width: rem(300);
+  }
+}

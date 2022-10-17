@@ -8,119 +8,116 @@
         <% console.log(jsonData) %>
 
           <div class="l-contact">
-            <main>
-              <div
-                class="l-contact__main-visual l-main-visual l-main-visual--sub p-sub-main-visual contact-main-visual">
-                <picture>
-                  <source srcset="/img/contact/contact_mv_pc_img.jpg" media="(min-width: 768px)">
-                  <img src="/img/contact/contact_mv_sp_img.jpg" alt="<%= jsonData.pages[pageId].title; %>">
-                </picture>
-                <div class="p-sub-main-visual__content contact-main-visual__content">
-                  <h1 class="p-sub-main-visual__title contact-main-visual__title">
-                    <%= jsonData.pages[pageId].title; %>
-                  </h1>
-                  <span class="p-sub-main-visual__subtitle contact-main-visual__subtitle">
-                    <%= jsonData.pages[pageId].subtitle; %>
-                  </span>
-                </div><!-- /.p-sub-main-visual__content contact-main-visual__content -->
-              </div><!-- /.l-main-visual l-main-visual--sub p-sub-main-visual contact-main-visual -->
+            <div class="l-contact__main-visual l-main-visual l-main-visual--sub p-sub-main-visual contact-main-visual">
+              <picture>
+                <source srcset="/img/contact/contact_mv_pc_img.jpg" media="(min-width: 768px)">
+                <img src="/img/contact/contact_mv_sp_img.jpg" alt="<%= jsonData.pages[pageId].title; %>">
+              </picture>
+              <div class="p-sub-main-visual__content contact-main-visual__content">
+                <h1 class="p-sub-main-visual__title contact-main-visual__title">
+                  <%= jsonData.pages[pageId].title; %>
+                </h1>
+                <span class="p-sub-main-visual__subtitle contact-main-visual__subtitle">
+                  <%= jsonData.pages[pageId].subtitle; %>
+                </span>
+              </div><!-- /.p-sub-main-visual__content contact-main-visual__content -->
+            </div><!-- /.l-main-visual l-main-visual--sub p-sub-main-visual contact-main-visual -->
 
-              <%- include(path + 'common/_breadcrumb' , {pageId: pageId}) %>
+            <%- include(path + 'common/_breadcrumb' , {pageId: pageId}) %>
 
-                <div class="l-contact__main-content contact-main-content">
-                  <div class="l-container contact-main-content__container">
-                    <div class="contact-main-content__info contact-info">
-                      <p class="contact-info__description">お急ぎの方は、お電話(TEL
-                        03-1234-5678)での連絡がスムーズです。<br>以下のフォームからお問い合わせ頂いた場合、ご連絡が2～3日後になる場合がございます。<br>また、メールアドレスの入力間違いにより送信できない事が発生しておりますので、メールアドレスは正しくご入力下さい。<br><span
-                          class="contact-info__description--precaution">※3営業日以内に当院からの返信がない場合には、お電話(TEL
-                          03-1234-5678)にてお問い合わせ下さい。</span></p>
-                    </div><!-- /.contact-main-content__info contact-info -->
+              <div class="l-contact__body contact-body">
+                <div class="l-container contact-body__container">
+                  <div class="contact-body__info contact-info">
+                    <p class="contact-info__description">お急ぎの方は、お電話(TEL
+                      03-1234-5678)での連絡がスムーズです。<br>以下のフォームからお問い合わせ頂いた場合、ご連絡が2～3日後になる場合がございます。<br>また、メールアドレスの入力間違いにより送信できない事が発生しておりますので、メールアドレスは正しくご入力下さい。<br><span
+                        class="contact-info__description--precaution">※3営業日以内に当院からの返信がない場合には、お電話(TEL
+                        03-1234-5678)にてお問い合わせ下さい。</span></p>
+                  </div><!-- /.contact-body__info contact-info -->
 
-                    <section class="contact-main-content__form-area contact-form-area">
-                      <div class="contact-form-area__title-wrapper">
-                        <h2 class="contact-form-area__title c-section-title">お問い合わせ<br class="u-hidden-pc">フォーム</h2>
-                      </div><!-- /.contact-form-area__title-wrapper -->
+                  <section class="contact-body__form-area contact-form-area">
+                    <div class="contact-form-area__title-wrapper">
+                      <h2 class="contact-form-area__title c-section-title">お問い合わせ<br class="u-hidden-pc">フォーム</h2>
+                    </div><!-- /.contact-form-area__title-wrapper -->
 
-                      <div class="contact-form-area__form p-form">
-                        <form action="">
-                          <dl class="p-form__items">
-                            <div class="p-form__item p-input-group">
-                              <dt class="p-input-group__label p-input-group__label--required">
-                                <label for="name">お名前</label>
-                              </dt>
-                              <dd class="p-input-group__field">
-                                <div class="p-textbox">
-                                  <span>
-                                    <input type="text" name="your-name" id="name" placeholder="山田　太郎"
-                                      aria-required="true">
-                                  </span>
-                                </div>
-                              </dd>
-                            </div>
-                            <div class="p-form__item p-input-group">
-                              <dt class="p-input-group__label p-input-group__label--required">
-                                <label for="kana">フリガナ</label>
-                              </dt>
-                              <dd class="p-input-group__field">
-                                <div class="p-textbox">
-                                  <span>
-                                    <input type="text" name="your-kana" id="kana" placeholder="ヤマダ タロウ"
-                                      aria-required="true">
-                                  </span>
-                                </div>
-                              </dd>
-                            </div>
-                            <div class="p-form__item p-input-group">
-                              <dt id="telNumberLabel" class="p-input-group__label p-input-group__label--required">電話番号
-                              </dt>
-                              <dd class="p-input-group__field">
-                                <div class="p-textbox p-textbox--tel" aria-labelledby="telNumberLabel">
-                                  <span>
-                                    <input type="tel" name="your-tel01" placeholder="080" aria-required="true">
-                                  </span>
-                                  -
-                                  <span>
-                                    <input type="tel" name="your-tel02" placeholder="1234" aria-required="true">
-                                  </span>
-                                  -
-                                  <span>
-                                    <input type="tel" name="your-tel03" placeholder="5678" aria-required="true">
-                                  </span>
-                                </div>
-                              </dd>
-                            </div>
-                            <div class="p-form__item p-input-group">
-                              <dt class="p-input-group__label p-input-group__label--required">
-                                <label for="email">メールアドレス</label>
-                              </dt>
-                              <dd class="p-input-group__field">
-                                <div class="p-textbox">
-                                  <span>
-                                    <input type="email" name="your-email" id="email">
-                                  </span>
-                                </div>
-                              </dd>
-                            </div>
-                            <div class="p-form__item p-input-group">
-                              <dt class="p-input-group__label"><label for="message">お問い合わせ内容</label></dt>
-                              <dd class="p-input-group__field">
-                                <div class="p-textbox">
-                                  <span>
-                                    <textarea name="your-message" id="message" placeholder="ご自由にご記入ください。"></textarea>
-                                  </span>
-                                </div>
-                              </dd>
-                            </div>
-                          </dl>
-                          <div class="p-form__button c-button-submit">
-                            <input type="submit" value="送　信">
+                    <div class="contact-form-area__form p-form">
+                      <form action="">
+                        <dl class="p-form__items">
+                          <div class="p-form__item p-input-group">
+                            <dt class="p-input-group__label p-input-group__label--required">
+                              <label for="name">お名前</label>
+                            </dt>
+                            <dd class="p-input-group__field">
+                              <div class="p-textbox">
+                                <span>
+                                  <input type="text" name="your-name" id="name" placeholder="山田　太郎"
+                                    aria-required="true">
+                                </span>
+                              </div>
+                            </dd>
                           </div>
-                        </form>
-                      </div><!-- /.contact-form-area__form p-form -->
-                    </section><!-- /.contact-main-content__form-area contact-form-area -->
-                  </div><!-- /.l-container contact-main-content__container -->
-                </div><!-- /.l-contact__main-content contact-main-content -->
-            </main>
+                          <div class="p-form__item p-input-group">
+                            <dt class="p-input-group__label p-input-group__label--required">
+                              <label for="kana">フリガナ</label>
+                            </dt>
+                            <dd class="p-input-group__field">
+                              <div class="p-textbox">
+                                <span>
+                                  <input type="text" name="your-kana" id="kana" placeholder="ヤマダ タロウ"
+                                    aria-required="true">
+                                </span>
+                              </div>
+                            </dd>
+                          </div>
+                          <div class="p-form__item p-input-group">
+                            <dt id="telNumberLabel" class="p-input-group__label p-input-group__label--required">電話番号
+                            </dt>
+                            <dd class="p-input-group__field">
+                              <div class="p-textbox p-textbox--tel" aria-labelledby="telNumberLabel">
+                                <span>
+                                  <input type="tel" name="your-tel01" placeholder="080" aria-required="true">
+                                </span>
+                                -
+                                <span>
+                                  <input type="tel" name="your-tel02" placeholder="1234" aria-required="true">
+                                </span>
+                                -
+                                <span>
+                                  <input type="tel" name="your-tel03" placeholder="5678" aria-required="true">
+                                </span>
+                              </div>
+                            </dd>
+                          </div>
+                          <div class="p-form__item p-input-group">
+                            <dt class="p-input-group__label p-input-group__label--required">
+                              <label for="email">メールアドレス</label>
+                            </dt>
+                            <dd class="p-input-group__field">
+                              <div class="p-textbox">
+                                <span>
+                                  <input type="email" name="your-email" id="email">
+                                </span>
+                              </div>
+                            </dd>
+                          </div>
+                          <div class="p-form__item p-input-group">
+                            <dt class="p-input-group__label"><label for="message">お問い合わせ内容</label></dt>
+                            <dd class="p-input-group__field">
+                              <div class="p-textbox">
+                                <span>
+                                  <textarea name="your-message" id="message" placeholder="ご自由にご記入ください。"></textarea>
+                                </span>
+                              </div>
+                            </dd>
+                          </div>
+                        </dl>
+                        <div class="p-form__button c-button-submit">
+                          <input type="submit" value="送　信">
+                        </div>
+                      </form>
+                    </div><!-- /.contact-form-area__form p-form -->
+                  </section><!-- /.contact-body__form-area contact-form-area -->
+                </div><!-- /.l-container contact-body__container -->
+              </div><!-- /.l-contact__body contact-body -->
           </div><!-- /.l-contact -->
 
           <%- include(path + 'common/_footer' , {pageId: pageId}) %>

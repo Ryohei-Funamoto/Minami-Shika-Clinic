@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.l-contact {
+.l-archive {
   padding-bottom: rem(100);
 
   @include mq('md') {
@@ -8,10 +8,10 @@
   }
 }
 
-.l-contact__body {
+.l-archive__body {
   margin-top: rem(60);
 
   @include mq('md') {
-    margin-top: rem(80);
+    margin-top: rem(90);
   }
 }

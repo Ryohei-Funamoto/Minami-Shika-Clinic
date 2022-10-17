@@ -1,0 +1,5 @@
+@use "global" as *;
+
+.archive-main__item:nth-child(n + 2) {
+  margin-top: rem(20);
+}

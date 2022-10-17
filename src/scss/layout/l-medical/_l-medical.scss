@@ -1,0 +1,29 @@
+@use "global" as *;
+
+.l-medical {
+  padding-bottom: rem(100);
+
+  @include mq('md') {
+    padding-bottom: rem(160);
+  }
+}
+
+.l-medical__anchor:first-of-type {
+  margin-top: rem(60);
+  
+  @include mq('md') {
+    margin-top: rem(80);
+  }
+}
+
+.l-medical__anchor + .l-medical__anchor {
+  margin-top: rem(80);
+}
+
+.l-medical__intro {
+  margin-top: rem(100);
+
+  @include mq('md') {
+    margin-top: rem(160);
+  }
+}

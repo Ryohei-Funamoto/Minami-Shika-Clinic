@@ -13,15 +13,6 @@
       "type": "website",
       "slug": "/"
     },
-    "news": {
-      "name": "news",
-      "title": "お知らせ",
-      "subtitle": "news",
-      "description": "お知らせページの説明",
-      "ogpImage": "",
-      "type": "article",
-      "slug": "/news/"
-    },
     "about": {
       "name": "about",
       "title": "当院について",
@@ -103,6 +94,32 @@
           "order": 2,
           "path": "",
           "label": "スタッフブログ"
+        }
+      ]
+    },
+    "blog_single": {
+      "name": "blog_single",
+      "title": "記事のタイトル記事のタイトル",
+      "subtitle": "blog",
+      "description": "スタッフブログ記事の説明",
+      "ogpImage": "",
+      "type": "article",
+      "slug": "/blog/blog_single/",
+      "breadcrumb": [
+        {
+          "order": 1,
+          "path": "/",
+          "label": "ホーム"
+        },
+        {
+          "order": 2,
+          "path": "/blog/",
+          "label": "スタッフブログ"
+        },
+        {
+          "order": 3,
+          "path": "",
+          "label": "記事のタイトル記事のタイトル"
         }
       ]
     },

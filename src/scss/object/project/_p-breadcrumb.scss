@@ -1,4 +1,5 @@
 @use "global" as *;
+@use "sass:math";
 
 .p-breadcrumb {
   font-size: rem(12);
@@ -9,7 +10,7 @@
   max-width: 100%;
 
   @include mq('md') {
-    max-width: calc(1180 / 1280 * 100%);
+    max-width: math.div(1180, 1280) * 100%;
   }
 }
 

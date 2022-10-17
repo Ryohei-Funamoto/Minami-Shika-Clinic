@@ -1,0 +1,73 @@
+@use "global" as *;
+
+.p-sidebar-category-list__head {
+  align-items: center;
+  border-bottom: rem(1) solid $color-gray03;
+  display: flex;
+  font-size: rem(14);
+  font-weight: $bold;
+  @include lineHeight(14, 20);
+  padding-bottom: rem(8);
+}
+
+.p-sidebar-category-list__head::before {
+  background-image: url(../img/common/icon_folder.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  display: block;
+  height: rem(24);
+  margin-right: rem(10);
+  width: rem(24);
+}
+
+.p-sidebar-category-list__items {
+  margin-top: rem(20);
+  padding-left: rem(20);
+}
+
+.p-sidebar-category-list__item {
+  font-size: rem(16);
+  line-height: 1;
+}
+
+.p-sidebar-category-list__item:nth-child(n + 2) {
+  margin-top: rem(20);
+}
+
+.p-sidebar-category-list__item a {
+  align-items: center;
+  color: $color-text;
+  display: block;
+  padding-left: rem(12);
+  position: relative;
+  transition: color $trs-duration;
+}
+
+.p-sidebar-category-list__item a:focus,
+.p-sidebar-category-list__item a:hover {
+  @include mq('hover-pc') {
+    color: $color-main;
+  }
+}
+
+.p-sidebar-category-list__item a::before {
+  border-bottom: rem(6) solid transparent;
+  border-left: rem(6) solid $color-main;
+  border-top: rem(6) solid transparent;
+  content: "";
+  display: block;
+  left: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: left $trs-duration;
+}
+
+.p-sidebar-category-list__item a:focus::before,
+.p-sidebar-category-list__item a:hover::before {
+  @include mq('hover-pc') {
+    left: rem(3);
+  }
+}

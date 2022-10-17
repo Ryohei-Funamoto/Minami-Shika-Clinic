@@ -8,249 +8,246 @@
         <% console.log(jsonData) %>
 
           <div class="l-contact">
-            <main>
-              <div
-                class="l-contact__main-visual l-main-visual l-main-visual--sub p-sub-main-visual contact-main-visual">
-                <picture>
-                  <source srcset="/img/contact/contact_mv_pc_img.jpg" media="(min-width: 768px)">
-                  <img src="/img/contact/contact_mv_sp_img.jpg" alt="<%= jsonData.pages[pageId].title; %>">
-                </picture>
-                <div class="p-sub-main-visual__content contact-main-visual__content">
-                  <h1 class="p-sub-main-visual__title contact-main-visual__title">
-                    <%= jsonData.pages[pageId].title; %>
-                  </h1>
-                  <span class="p-sub-main-visual__subtitle contact-main-visual__subtitle">
-                    <%= jsonData.pages[pageId].subtitle; %>
-                  </span>
-                </div><!-- /.p-sub-main-visual__content contact-main-visual__content -->
-              </div><!-- /.l-main-visual l-main-visual--sub p-sub-main-visual contact-main-visual -->
+            <div class="l-contact__main-visual l-main-visual l-main-visual--sub p-sub-main-visual contact-main-visual">
+              <picture>
+                <source srcset="/img/contact/contact_mv_pc_img.jpg" media="(min-width: 768px)">
+                <img src="/img/contact/contact_mv_sp_img.jpg" alt="<%= jsonData.pages[pageId].title; %>">
+              </picture>
+              <div class="p-sub-main-visual__content contact-main-visual__content">
+                <h1 class="p-sub-main-visual__title contact-main-visual__title">
+                  <%= jsonData.pages[pageId].title; %>
+                </h1>
+                <span class="p-sub-main-visual__subtitle contact-main-visual__subtitle">
+                  <%= jsonData.pages[pageId].subtitle; %>
+                </span>
+              </div><!-- /.p-sub-main-visual__content contact-main-visual__content -->
+            </div><!-- /.l-main-visual l-main-visual--sub p-sub-main-visual contact-main-visual -->
 
-              <%- include(path + 'common/_breadcrumb' , {pageId: pageId}) %>
+            <%- include(path + 'common/_breadcrumb' , {pageId: pageId}) %>
 
-                <div class="l-contact__main-content contact-main-content">
-                  <div class="l-container contact-main-content__container">
-                    <section class="contact-main-content__info contact-info">
-                      <h2 class="contact-info__title">お電話でのご予約/ご相談</h2>
-                      <div class="contact-info__tel-wrapper">
-                        <p class="contact-info__tel p-tel">
-                          <a href="tel:03-1234-5678">
-                            <img src="/img/common/icon_tel.svg" alt="tel">
-                            03-1234-5678
-                          </a>
-                        </p>
-                        <p class="contact-info__business-hours c-business-hours">(年中無休 AM9:00〜PM22:00)</p>
-                      </div><!-- /.contact-info__tel -->
-                      <p class="contact-info__description">
-                        お急ぎの方は電話での連絡がスムーズです。<br>混雑状況によっては当日受診をご利用いただけない場合がございます。<br>あらかじめご了承ください。</p>
-                    </section><!-- /.contact-main-content__info contact-info -->
+              <div class="l-contact__body contact-body">
+                <div class="l-container contact-body__container">
+                  <section class="contact-body__info contact-info">
+                    <h2 class="contact-info__title">お電話でのご予約/ご相談</h2>
+                    <div class="contact-info__tel-wrapper">
+                      <p class="contact-info__tel p-tel">
+                        <a href="tel:03-1234-5678">
+                          <img src="/img/common/icon_tel.svg" alt="tel">
+                          03-1234-5678
+                        </a>
+                      </p>
+                      <p class="contact-info__business-hours c-business-hours">(年中無休 AM9:00〜PM22:00)</p>
+                    </div><!-- /.contact-info__tel -->
+                    <p class="contact-info__description">
+                      お急ぎの方は電話での連絡がスムーズです。<br>混雑状況によっては当日受診をご利用いただけない場合がございます。<br>あらかじめご了承ください。</p>
+                  </section><!-- /.contact-body__info contact-info -->
 
-                    <section class="contact-main-content__info contact-info">
-                      <h2 class="contact-info__title">メールでのご予約/ご相談</h2>
-                      <p class="contact-info__description">
-                        【ご予約に関しての注意点】<br>メールアドレスの入力間違いにより送信できない事が発生しておりますので、メールアドレスは正しくご入力下さい。<br>※24時間以内に当院からの返信がない場合には、お電話(TEL
-                        03-1234-5678)にてお問い合わせ下さい。</p>
-                    </section><!-- /.contact-main-content__info contact-info -->
+                  <section class="contact-body__info contact-info">
+                    <h2 class="contact-info__title">メールでのご予約/ご相談</h2>
+                    <p class="contact-info__description">
+                      【ご予約に関しての注意点】<br>メールアドレスの入力間違いにより送信できない事が発生しておりますので、メールアドレスは正しくご入力下さい。<br>※24時間以内に当院からの返信がない場合には、お電話(TEL
+                      03-1234-5678)にてお問い合わせ下さい。</p>
+                  </section><!-- /.contact-body__info contact-info -->
 
-                    <section class="contact-main-content__form-area contact-form-area">
-                      <div class="contact-form-area__title-wrapper">
-                        <h2 class="contact-form-area__title-wrapper c-section-title">予約フォーム</h2>
-                      </div><!-- /.contact-form-area__title-wrapper -->
+                  <section class="contact-body__form-area contact-form-area">
+                    <div class="contact-form-area__title-wrapper">
+                      <h2 class="contact-form-area__title-wrapper c-section-title">予約フォーム</h2>
+                    </div><!-- /.contact-form-area__title-wrapper -->
 
-                      <div class="contact-form-area__form p-form">
-                        <form action="">
-                          <dl class="p-form__items">
-                            <div class="p-form__item p-input-group">
-                              <dt class="p-input-group__label p-input-group__label--required">
-                                <label for="name">お名前</label>
-                              </dt>
-                              <dd class="p-input-group__field">
-                                <div class="p-textbox">
-                                  <span>
-                                    <input type="text" name="your-name" id="name" placeholder="山田　太郎"
-                                      aria-required="true">
-                                  </span>
-                                </div>
-                              </dd>
-                            </div>
-                            <div class="p-form__item p-input-group">
-                              <dt class="p-input-group__label p-input-group__label--required">
-                                <label for="kana">フリガナ</label>
-                              </dt>
-                              <dd class="p-input-group__field">
-                                <div class="p-textbox">
-                                  <span>
-                                    <input type="text" name="your-kana" id="kana" placeholder="ヤマダ タロウ"
-                                      aria-required="true">
-                                  </span>
-                                </div>
-                              </dd>
-                            </div>
-                            <div class="p-form__item p-input-group">
-                              <dt id="telNumberLabel" class="p-input-group__label p-input-group__label--required">電話番号
-                              </dt>
-                              <dd class="p-input-group__field">
-                                <div class="p-textbox p-textbox--tel" aria-labelledby="telNumberLabel">
-                                  <span>
-                                    <input type="tel" name="your-tel01" placeholder="080" aria-required="true">
-                                  </span>
-                                  -
-                                  <span>
-                                    <input type="tel" name="your-tel02" placeholder="1234" aria-required="true">
-                                  </span>
-                                  -
-                                  <span>
-                                    <input type="tel" name="your-tel03" placeholder="5678" aria-required="true">
-                                  </span>
-                                </div>
-                              </dd>
-                            </div>
-                            <div class="p-form__item p-input-group">
-                              <dt class="p-input-group__label p-input-group__label--required">
-                                <label for="email">メールアドレス</label>
-                              </dt>
-                              <dd class="p-input-group__field">
-                                <div class="p-textbox">
-                                  <span>
-                                    <input type="email" name="your-email" id="email">
-                                  </span>
-                                </div>
-                              </dd>
-                            </div>
-                            <div class="p-form__item p-input-group">
-                              <dt id="visitTimesLabel" class="p-input-group__label p-input-group__label--required">初診/再診
-                              </dt>
-                              <dd class="p-input-group__field p-input-group__field--radio">
-                                <div class="p-radio" aria-labelledby="visitTimesLabel">
-                                  <span>
-                                    <label>
-                                      <input type="radio" name="your-visit-times" value="初診" checked="checked">
-                                      <span>初診</span>
-                                    </label>
-                                  </span>
-                                  <span>
-                                    <label>
-                                      <input type="radio" name="your-visit-times" value="再診">
-                                      <span>再診</span>
-                                    </label>
-                                  </span>
-                                </div>
-                              </dd>
-                            </div>
-                            <div class="p-form__item p-input-group">
-                              <dt id="purposeLabel" class="p-input-group__label p-input-group__label--required">
-                                <div class="p-input-group__label--multi-row">診療内容<span>※(複数選択可)</span></div>
-                              </dt>
-                              <dd class="p-input-group__field p-input-group__field--checkbox">
-                                <div class="p-checkbox" aria-labelledby="purposeLabel">
-                                  <span>
-                                    <label>
-                                      <input type="checkbox" name="your-purpose[]" value="虫歯">
-                                      <span>虫歯</span>
-                                    </label>
-                                  </span>
-                                  <span>
-                                    <label>
-                                      <input type="checkbox" name="your-purpose[]" value="被せ物がとれた">
-                                      <span>被せ物がとれた</span>
-                                    </label>
-                                  </span>
-                                  <span>
-                                    <label>
-                                      <input type="checkbox" name="your-purpose[]" value="矯正歯科">
-                                      <span>矯正歯科</span>
-                                    </label>
-                                  </span>
-                                  <span>
-                                    <label>
-                                      <input type="checkbox" name="your-purpose[]" value="咬み合わせ">
-                                      <span>咬み合わせ</span>
-                                    </label>
-                                  </span>
-                                  <span>
-                                    <label>
-                                      <input type="checkbox" name="your-purpose[]" value="歯周病">
-                                      <span>歯周病</span>
-                                    </label>
-                                  </span>
-                                  <span>
-                                    <label>
-                                      <input type="checkbox" name="your-purpose[]" value="小児歯科">
-                                      <span>小児歯科</span>
-                                    </label>
-                                  </span>
-                                  <span>
-                                    <label>
-                                      <input type="checkbox" name="your-purpose[]" value="入れ歯">
-                                      <span>入れ歯</span>
-                                    </label>
-                                  </span>
-                                  <span>
-                                    <label>
-                                      <input type="checkbox" name="your-purpose[]" value="インプラント">
-                                      <span>インプラント</span>
-                                    </label>
-                                  </span>
-                                  <span>
-                                    <label>
-                                      <input type="checkbox" name="your-purpose[]" value="その他">
-                                      <span>その他</span>
-                                    </label>
-                                  </span>
-                                </div>
-                              </dd>
-                            </div>
-                            <div class="p-form__item p-input-group">
-                              <dt class="p-input-group__label p-input-group__label--required">
-                                <label for="contactWay">ご連絡方法</label>
-                              </dt>
-                              <dd class="p-input-group__field">
-                                <div class="p-select">
-                                  <span>
-                                    <select name="your-contact-way" id="contactWay" aria-required="true">
-                                      <option value="メール">メール</option>
-                                      <option value="お電話">お電話</option>
-                                      <option value="どちらでも可">どちらでも可</option>
-                                    </select>
-                                  </span>
-                                </div>
-                              </dd>
-                            </div>
-                            <div class="p-form__item p-input-group">
-                              <dt id="preferredDateLabel" class="p-input-group__label">ご連絡方法</dt>
-                              <dd class="p-input-group__field">
-                                <div class="p-textbox p-textbox--date" aria-labelledby="preferredDateLabel">
-                                  <span>
-                                    <input type="date" name="your-preferred-date01" placeholder="年/月/日">
-                                  </span>
-                                  <span>
-                                    <input type="date" name="your-preferred-date02" placeholder="年/月/日">
-                                  </span>
-                                  <span>
-                                    <input type="date" name="your-preferred-date03" placeholder="年/月/日">
-                                  </span>
-                                </div>
-                              </dd>
-                            </div>
-                            <div class="p-form__item p-input-group">
-                              <dt class="p-input-group__label"><label for="message">お問い合わせ内容</label></dt>
-                              <dd class="p-input-group__field">
-                                <div class="p-textbox">
-                                  <span>
-                                    <textarea name="your-message" id="message" placeholder="ご自由にご記入ください。"></textarea>
-                                  </span>
-                                </div>
-                              </dd>
-                            </div>
-                          </dl>
-                          <div class="p-form__button c-button-submit">
-                            <input type="submit" value="送　信">
+                    <div class="contact-form-area__form p-form">
+                      <form action="">
+                        <dl class="p-form__items">
+                          <div class="p-form__item p-input-group">
+                            <dt class="p-input-group__label p-input-group__label--required">
+                              <label for="name">お名前</label>
+                            </dt>
+                            <dd class="p-input-group__field">
+                              <div class="p-textbox">
+                                <span>
+                                  <input type="text" name="your-name" id="name" placeholder="山田　太郎"
+                                    aria-required="true">
+                                </span>
+                              </div>
+                            </dd>
                           </div>
-                        </form>
-                      </div><!-- /.contact-form-area__form p-form -->
-                    </section><!-- /.contact-main-content__form-area contact-form-area -->
-                  </div><!-- /.l-container contact-main-content__container -->
-                </div><!-- /.l-contact__main-content contact-main-content -->
-            </main>
+                          <div class="p-form__item p-input-group">
+                            <dt class="p-input-group__label p-input-group__label--required">
+                              <label for="kana">フリガナ</label>
+                            </dt>
+                            <dd class="p-input-group__field">
+                              <div class="p-textbox">
+                                <span>
+                                  <input type="text" name="your-kana" id="kana" placeholder="ヤマダ タロウ"
+                                    aria-required="true">
+                                </span>
+                              </div>
+                            </dd>
+                          </div>
+                          <div class="p-form__item p-input-group">
+                            <dt id="telNumberLabel" class="p-input-group__label p-input-group__label--required">電話番号
+                            </dt>
+                            <dd class="p-input-group__field">
+                              <div class="p-textbox p-textbox--tel" aria-labelledby="telNumberLabel">
+                                <span>
+                                  <input type="tel" name="your-tel01" placeholder="080" aria-required="true">
+                                </span>
+                                -
+                                <span>
+                                  <input type="tel" name="your-tel02" placeholder="1234" aria-required="true">
+                                </span>
+                                -
+                                <span>
+                                  <input type="tel" name="your-tel03" placeholder="5678" aria-required="true">
+                                </span>
+                              </div>
+                            </dd>
+                          </div>
+                          <div class="p-form__item p-input-group">
+                            <dt class="p-input-group__label p-input-group__label--required">
+                              <label for="email">メールアドレス</label>
+                            </dt>
+                            <dd class="p-input-group__field">
+                              <div class="p-textbox">
+                                <span>
+                                  <input type="email" name="your-email" id="email">
+                                </span>
+                              </div>
+                            </dd>
+                          </div>
+                          <div class="p-form__item p-input-group">
+                            <dt id="visitTimesLabel" class="p-input-group__label p-input-group__label--required">初診/再診
+                            </dt>
+                            <dd class="p-input-group__field p-input-group__field--radio">
+                              <div class="p-radio" aria-labelledby="visitTimesLabel">
+                                <span>
+                                  <label>
+                                    <input type="radio" name="your-visit-times" value="初診" checked="checked">
+                                    <span>初診</span>
+                                  </label>
+                                </span>
+                                <span>
+                                  <label>
+                                    <input type="radio" name="your-visit-times" value="再診">
+                                    <span>再診</span>
+                                  </label>
+                                </span>
+                              </div>
+                            </dd>
+                          </div>
+                          <div class="p-form__item p-input-group">
+                            <dt id="purposeLabel" class="p-input-group__label p-input-group__label--required">
+                              <div class="p-input-group__label--multi-row">診療内容<span>※(複数選択可)</span></div>
+                            </dt>
+                            <dd class="p-input-group__field p-input-group__field--checkbox">
+                              <div class="p-checkbox" aria-labelledby="purposeLabel">
+                                <span>
+                                  <label>
+                                    <input type="checkbox" name="your-purpose[]" value="虫歯">
+                                    <span>虫歯</span>
+                                  </label>
+                                </span>
+                                <span>
+                                  <label>
+                                    <input type="checkbox" name="your-purpose[]" value="被せ物がとれた">
+                                    <span>被せ物がとれた</span>
+                                  </label>
+                                </span>
+                                <span>
+                                  <label>
+                                    <input type="checkbox" name="your-purpose[]" value="矯正歯科">
+                                    <span>矯正歯科</span>
+                                  </label>
+                                </span>
+                                <span>
+                                  <label>
+                                    <input type="checkbox" name="your-purpose[]" value="咬み合わせ">
+                                    <span>咬み合わせ</span>
+                                  </label>
+                                </span>
+                                <span>
+                                  <label>
+                                    <input type="checkbox" name="your-purpose[]" value="歯周病">
+                                    <span>歯周病</span>
+                                  </label>
+                                </span>
+                                <span>
+                                  <label>
+                                    <input type="checkbox" name="your-purpose[]" value="小児歯科">
+                                    <span>小児歯科</span>
+                                  </label>
+                                </span>
+                                <span>
+                                  <label>
+                                    <input type="checkbox" name="your-purpose[]" value="入れ歯">
+                                    <span>入れ歯</span>
+                                  </label>
+                                </span>
+                                <span>
+                                  <label>
+                                    <input type="checkbox" name="your-purpose[]" value="インプラント">
+                                    <span>インプラント</span>
+                                  </label>
+                                </span>
+                                <span>
+                                  <label>
+                                    <input type="checkbox" name="your-purpose[]" value="その他">
+                                    <span>その他</span>
+                                  </label>
+                                </span>
+                              </div>
+                            </dd>
+                          </div>
+                          <div class="p-form__item p-input-group">
+                            <dt class="p-input-group__label p-input-group__label--required">
+                              <label for="contactWay">ご連絡方法</label>
+                            </dt>
+                            <dd class="p-input-group__field">
+                              <div class="p-select">
+                                <span>
+                                  <select name="your-contact-way" id="contactWay" aria-required="true">
+                                    <option value="メール">メール</option>
+                                    <option value="お電話">お電話</option>
+                                    <option value="どちらでも可">どちらでも可</option>
+                                  </select>
+                                </span>
+                              </div>
+                            </dd>
+                          </div>
+                          <div class="p-form__item p-input-group">
+                            <dt id="preferredDateLabel" class="p-input-group__label">ご連絡方法</dt>
+                            <dd class="p-input-group__field">
+                              <div class="p-textbox p-textbox--date" aria-labelledby="preferredDateLabel">
+                                <span>
+                                  <input type="date" name="your-preferred-date01" placeholder="年/月/日">
+                                </span>
+                                <span>
+                                  <input type="date" name="your-preferred-date02" placeholder="年/月/日">
+                                </span>
+                                <span>
+                                  <input type="date" name="your-preferred-date03" placeholder="年/月/日">
+                                </span>
+                              </div>
+                            </dd>
+                          </div>
+                          <div class="p-form__item p-input-group">
+                            <dt class="p-input-group__label"><label for="message">お問い合わせ内容</label></dt>
+                            <dd class="p-input-group__field">
+                              <div class="p-textbox">
+                                <span>
+                                  <textarea name="your-message" id="message" placeholder="ご自由にご記入ください。"></textarea>
+                                </span>
+                              </div>
+                            </dd>
+                          </div>
+                        </dl>
+                        <div class="p-form__button c-button-submit">
+                          <input type="submit" value="送　信">
+                        </div>
+                      </form>
+                    </div><!-- /.contact-form-area__form p-form -->
+                  </section><!-- /.contact-body__form-area contact-form-area -->
+                </div><!-- /.l-container contact-body__container -->
+              </div><!-- /.l-contact__body contact-body -->
           </div><!-- /.l-contact -->
 
           <%- include(path + 'common/_footer' , {pageId: pageId}) %>

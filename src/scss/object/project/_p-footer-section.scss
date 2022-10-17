@@ -1,7 +1,20 @@
 @use "global" as *;
 
-.p-footer-section {
+.p-footer-section__top-deco {
+  background-image: url(../img/common/footer_deco_wave.svg);
+  background-position: center top;
+  background-size: cover;
+  height: rem(32);
+  width: 100%;
+}
+
+.p-footer-section__content {
   background-color: $color-sub02;
+  padding: rem(14) 0 rem(60);
+  
+  @include mq('md') {
+    padding: rem(56) 0 rem(60);
+  }
 }
 
 .p-footer-section__info {

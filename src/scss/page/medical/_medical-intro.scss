@@ -1,0 +1,100 @@
+@use "global" as *;
+@use "sass:math";
+
+.medical-intro__top-deco {
+  background-image: url(../img/home/home_medical_deco_sp_top.svg);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: math.div(85, 375) * 100vw;
+  width: 100%;
+
+  @include mq('md') {
+    background-image: url(../img/home/home_medical_deco_pc_top.svg);
+    height: math.div(201, 1280) * 100vw;
+  }
+}
+
+.medical-intro__content {
+  background-color: $color-sub02;
+  padding: rem(32) 0 rem(97);
+
+  @include mq('md') {
+    padding: 0 0 rem(82);
+  }
+}
+
+.medical-intro__title-wrapper {
+  text-align: center;
+}
+
+.medical-intro__items {
+  margin-top: rem(40);
+
+  @include mq('md') {
+    margin-top: rem(60);
+  }
+}
+
+.medical-intro__item:nth-child(n + 2) {
+  margin-top: rem(33);
+
+  @include mq('md') {
+    margin-top: rem(40);
+  }
+}
+
+.medical-intro__bottom-deco {
+  background-image: url(../img/home/home_medical_deco_sp_bottom.svg);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: math.div(29, 375) * 100vw;
+  position: relative;
+  width: 100%;
+  
+  @include mq('md') {
+    background-image: url(../img/home/home_medical_deco_pc_bottom.svg);
+    height: math.div(97, 1280) * 100vw;
+  }
+}
+
+.medical-intro__bottom-deco::before {
+  background-image: url(../img/home/home_medical_deco_kirakira01.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  bottom: calc(100% + rem(16));
+  content: "";
+  height: rem(25);
+  left: rem(12);
+  position: absolute;
+  width: rem(25);
+
+  @include mq('md') {
+    bottom: 100%;
+    height: rem(57);
+    left: rem(40);
+    width: rem(57);
+  }
+}
+
+.medical-intro__bottom-deco::after {
+  background-image: url(../img/home/home_medical_deco_kirakira02.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  bottom: 100%;
+  content: "";
+  height: rem(58);
+  position: absolute;
+  right: rem(8);
+  width: rem(53);
+  
+  @include mq('md') {
+    bottom: calc(100% - rem(22));
+    height: rem(138);
+    right: rem(20);
+    width: rem(126);
+  }
+}

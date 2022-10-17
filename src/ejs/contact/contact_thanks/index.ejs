@@ -8,36 +8,33 @@
         <% console.log(jsonData) %>
 
           <div class="l-contact">
-            <main>
-              <div
-                class="l-contact__main-visual l-main-visual l-main-visual--sub p-sub-main-visual contact-main-visual">
-                <picture>
-                  <source srcset="/img/contact/contact_mv_pc_img.jpg" media="(min-width: 768px)">
-                  <img src="/img/contact/contact_mv_sp_img.jpg" alt="<%= jsonData.pages[pageId].title; %>">
-                </picture>
-                <div class="p-sub-main-visual__content contact-main-visual__content">
-                  <h1 class="p-sub-main-visual__title contact-main-visual__title">
-                    <%= jsonData.pages[pageId].title; %>
-                  </h1>
-                  <span class="p-sub-main-visual__subtitle contact-main-visual__subtitle">
-                    <%= jsonData.pages[pageId].subtitle; %>
-                  </span>
-                </div><!-- /.p-sub-main-visual__content contact-main-visual__content -->
-              </div><!-- /.l-main-visual l-main-visual--sub p-sub-main-visual contact-main-visual -->
+            <div class="l-contact__main-visual l-main-visual l-main-visual--sub p-sub-main-visual contact-main-visual">
+              <picture>
+                <source srcset="/img/contact/contact_mv_pc_img.jpg" media="(min-width: 768px)">
+                <img src="/img/contact/contact_mv_sp_img.jpg" alt="<%= jsonData.pages[pageId].title; %>">
+              </picture>
+              <div class="p-sub-main-visual__content contact-main-visual__content">
+                <h1 class="p-sub-main-visual__title contact-main-visual__title">
+                  <%= jsonData.pages[pageId].title; %>
+                </h1>
+                <span class="p-sub-main-visual__subtitle contact-main-visual__subtitle">
+                  <%= jsonData.pages[pageId].subtitle; %>
+                </span>
+              </div><!-- /.p-sub-main-visual__content contact-main-visual__content -->
+            </div><!-- /.l-main-visual l-main-visual--sub p-sub-main-visual contact-main-visual -->
 
-              <%- include(path + 'common/_breadcrumb' , {pageId: pageId}) %>
+            <%- include(path + 'common/_breadcrumb' , {pageId: pageId}) %>
 
-                <div class="l-contact__main-content contact-main-content">
-                  <div class="l-container contact-main-content__container">
-                    <div class="contact-main-content__info contact-info">
-                      <p class="contact-info__description">
-                        お問い合わせありがとうございました。<br>3営業日以内に返信いたしますので、しばらくお待ちいただけますと幸いです。<br><span
-                          class="contact-info__description--precaution">※3営業日以内に当院からの返信がない場合には、お電話(TEL
-                          03-1234-5678)にてお問い合わせ下さい。</span></p>
-                    </div><!-- /.contact-main-content__info contact-info -->
-                  </div><!-- /.l-container contact-main-content__container -->
-                </div><!-- /.l-contact__main-content contact-main-content -->
-            </main>
+              <div class="l-contact__body contact-body">
+                <div class="l-container contact-body__container">
+                  <div class="contact-body__info contact-info">
+                    <p class="contact-info__description">
+                      お問い合わせありがとうございました。<br>3営業日以内に返信いたしますので、しばらくお待ちいただけますと幸いです。<br><span
+                        class="contact-info__description--precaution">※3営業日以内に当院からの返信がない場合には、お電話(TEL
+                        03-1234-5678)にてお問い合わせ下さい。</span></p>
+                  </div><!-- /.contact-body__info contact-info -->
+                </div><!-- /.l-container contact-body__container -->
+              </div><!-- /.l-contact__body contact-body -->
           </div><!-- /.l-contact -->
 
           <%- include(path + 'common/_footer' , {pageId: pageId}) %>

@@ -1,4 +1,5 @@
 @use "global" as *;
+@use "sass:math";
 
 .p-off-center-media {
   @include mq('md') {
@@ -23,26 +24,26 @@
   background-size: contain;
   content: '';
   display: block;
-  height: calc(308 / 375 * 100vw);
+  height: math.div(308, 375) * 100vw;
   left: rem(10);
   margin-left: calc(50% - 50vw);
   position: absolute;
   top: 0;
-  width: calc(557 / 375 * 100vw);
+  width: math.div(557, 375) * 100vw;
   z-index: $layer-background;
   
   @include mq('md') {
     height: 100%;
-    left: calc(416 / 1140 * 100%);
+    left: math.div(416, 1140) * 100%;
     margin-left: 0;
-    width: calc(1311 / 1140 * 100%);
+    width: math.div(1311, 1140) * 100%;
   }
 }
 
 .p-off-center-media__body {
   @include mq('md') {
     padding: rem(36) 0 0;
-    width: calc(407 / 1140 * 100%);
+    width: math.div(407, 1140) * 100%;
   }
 }
 
@@ -96,8 +97,8 @@
 
   @include mq('md') {
     flex-shrink: 0;
-    margin: 0 0 0 calc(93 / 1140 * 100%);
-    width: calc(640 / 1140 * 100%);
+    margin: 0 0 0 math.div(93, 1140) * 100%;
+    width: math.div(640, 1140) * 100%;
   }
 }
 
@@ -106,7 +107,7 @@
   margin: rem(40) auto 0 calc(50% - 50vw);
 
   @include mq('md') {
-    margin: 0 calc(93 / 1140 * 100%) 0 0;
+    margin: 0 math.div(93, 1140) * 100% 0 0;
   }
 }
 

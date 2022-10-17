@@ -1,0 +1,148 @@
+@use "global" as *;
+@use "sass:math";
+
+.p-medical-intro-card {
+  background-color: $color-white;
+  border-radius: rem(20);
+  padding: rem(23) rem(20) rem(20);
+  position: relative;
+
+  @include mq('md') {
+    padding: rem(55) rem(60) rem(60);
+  }
+}
+
+.p-medical-intro-card__label {
+  color: $color-text02;
+  display: block;
+  font-size: rem(14);
+  font-weight: $bold;
+  height: rem(60);
+  @include letterSpacing(80);
+  padding: rem(16) 0 0;
+  position: absolute;
+  right: rem(20);
+  text-align: center;
+  top: rem(7);
+  width: rem(80);
+
+  @include mq('md') {
+    font-size: rem(16);
+    height: rem(80);
+    padding: rem(23) 0 0;
+    right: rem(60);
+    top: 0;
+    width: rem(100);
+  }
+}
+
+.p-medical-intro-card__label::after {
+  border-bottom: rem(12) solid $color-white;
+  border-left: rem(40) solid transparent;
+  border-right: rem(40) solid transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  left: 0;
+  position: absolute;
+
+  @include mq('md') {
+    border-left: rem(50) solid transparent;
+    border-right: rem(50) solid transparent;
+  }
+}
+
+.p-medical-intro-card__label--general {
+  background-color: $color-main;
+}
+
+.p-medical-intro-card__label--special {
+  background-color: $color-accent;
+}
+
+.p-medical-intro-card__head {
+  border-bottom: rem(1) solid $color-gray04;
+  padding-bottom: rem(20);
+
+  @include mq('md') {
+    align-items: center;
+    display: flex;
+    padding-bottom: rem(40);
+  }
+}
+
+.p-medical-intro-card__title {
+  font-size: rem(20);
+  font-weight: $bold;
+  @include letterSpacing(80);
+  @include lineHeight(20, 28);
+
+  @include mq('md') {
+    font-size: rem(28);
+    @include lineHeight(28, 44);
+  }
+}
+
+.p-medical-intro-card__subtitle {
+  color: $color-main;
+  display: block;
+  font-size: rem(14);
+  font-weight: $bold;
+  @include letterSpacing(80);
+  margin: rem(20) 0 0;
+
+  @include mq('md') {
+    margin: 0 0 0 rem(40);
+  }
+}
+
+.p-medical-intro-card__body {
+  margin-top: rem(20);
+
+  @include mq('md') {
+    display: flex;
+    margin-top: rem(40);
+  }
+}
+
+.p-medical-intro-card__description {
+  font-size: rem(14);
+  @include lineHeight(14, 24);
+
+  @include mq('md') {
+    width: calc(100% - rem(460));
+  }
+}
+
+.p-medical-intro-card__image {
+  border-radius: rem(20);
+  margin: rem(20) 0 0;
+  overflow: hidden;
+  position: relative;
+
+  @include mq('md') {
+    flex-shrink: 0;
+    margin: 0 0 0 rem(40);
+    width: rem(420);
+  }
+}
+
+.p-medical-intro-card__image::before {
+  content: '';
+  display: block;
+  @include paddingTopHack(295, 221);
+
+  @include mq('md') {
+    @include paddingTopHack(420, 315);
+  }
+}
+
+.p-medical-intro-card__image img {
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  object-position: center center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}

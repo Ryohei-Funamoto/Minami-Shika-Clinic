@@ -1,0 +1,171 @@
+@use "global" as *;
+@use "sass:math";
+
+.p-post-card {
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+.p-post-card__badge {
+  align-items: center;
+  background-color: $color-accent;
+  border-radius: 50%;
+  color: $color-text02;
+  display: flex;
+  font-size: rem(10);
+  font-weight: $bold;
+  height: rem(40);
+  justify-content: center;
+  left: rem(-8);
+  position: absolute;
+  text-transform: uppercase;
+  top: rem(-8);
+  width: rem(40);
+  z-index: $layer-up;
+}
+
+.p-post-card__image {
+  flex-shrink: 0;
+  overflow: hidden;
+  position: relative;
+  width: math.div(133, 335) * 100%;
+
+  @include mq('md') {
+    width: math.div(244, 670) * 100%;
+  }
+}
+
+.p-post-card--sidebar .p-post-card__image {
+  @include mq('md') {
+    width: math.div(120, 300) * 100%;
+  }
+}
+
+.p-post-card__image::before {
+  content: '';
+  display: block;
+  @include paddingTopHack(133, 101);
+  
+  @include mq('md') {
+    @include paddingTopHack(244, 153);
+  }
+}
+
+.p-post-card--sidebar .p-post-card__image::before {
+  @include mq('md') {
+    @include paddingTopHack(120, 91);
+  }
+}
+
+.p-post-card__image img {
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  object-position: center center;
+  position: absolute;
+  top: 0;
+  transform: scale(1);
+  transition: transform $trs-duration;
+  width: 100%;
+}
+
+.p-post-card:focus .p-post-card__image img,
+.p-post-card:hover .p-post-card__image img {
+  @include mq('hover-pc') {
+    transform: scale(1.1);
+  }
+}
+
+.p-post-card__body {
+  margin: 0 0 0 math.div(10, 335) * 100%;
+  width: math.div(192, 335) * 100%;
+
+  @include mq('md') {
+    margin: 0 0 0 math.div(20, 670) * 100%;
+    width: math.div(405, 670) * 100%;
+  }
+}
+
+.p-post-card--sidebar .p-post-card__body {
+  @include mq('md') {
+    margin: 0 0 0 math.div(10, 300) * 100%;
+    width: math.div(170, 300) * 100%;
+  }
+}
+
+.p-post-card__category-wrapper {
+  font-size: 0;
+}
+
+.p-post-card__category {
+  background-color: $color-main;
+  border-radius: rem(10);
+  color: $color-text02;
+  display: inline-block;
+  font-size: rem(10);
+  line-height: 1;
+  padding: rem(4) rem(8);
+  
+  @include mq('md') {
+    border-radius: rem(12);
+    font-size: rem(11);
+    padding: rem(8) rem(10);
+  }
+}
+
+.p-post-card--sidebar .p-post-card__category {
+  @include mq('md') {
+    border-radius: rem(10);
+    font-size: rem(10);
+    padding: rem(4) rem(8);
+  }
+}
+
+.p-post-card__title {
+  color: $color-text;
+  font-size: rem(14);
+  @include lineHeight(14, 20);
+  margin-top: rem(8);
+  transition: color $trs-duration;
+  
+  @include mq('md') {
+    font-size: rem(16);
+    @include lineHeight(16, 24);
+    margin-top: rem(16);
+  }
+}
+
+.p-post-card--sidebar .p-post-card__title {
+  @include mq('md') {
+    font-size: rem(14);
+    @include lineHeight(14, 20);
+    margin-top: rem(8);
+  }
+}
+
+.p-post-card:focus .p-post-card__title,
+.p-post-card:hover .p-post-card__title {
+  @include mq('hover-pc') {
+    color: $color-main;
+  }
+}
+
+.p-post-card__published {
+  color: $color-gray03;
+  display: block;
+  font-size: rem(11);
+  margin-top: rem(11);
+  
+  @include mq('md') {
+    font-size: rem(12);
+    margin-top: rem(16);
+  }
+}
+
+.p-post-card--sidebar .p-post-card__published {
+  @include mq('md') {
+    font-size: rem(11);
+    margin-top: rem(8);
+  }
+}

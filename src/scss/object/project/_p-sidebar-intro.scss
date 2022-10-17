@@ -1,0 +1,84 @@
+@use "global" as *;
+
+.p-sidebar-intro__head {
+  align-items: center;
+  border-bottom: rem(1) solid $color-gray03;
+  display: flex;
+  font-size: rem(14);
+  font-weight: $bold;
+  @include lineHeight(14, 20);
+  padding-bottom: rem(8);
+}
+
+.p-sidebar-intro__head::before {
+  background-image: url(../img/common/icon_about.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  display: block;
+  height: rem(24);
+  margin-right: rem(10);
+  width: rem(24);
+}
+
+.p-sidebar-intro__image {
+  margin-top: rem(20);
+  position: relative;
+}
+
+.p-sidebar-intro__image::before {
+  content: '';
+  display: block;
+  @include paddingTopHack(335, 210);
+}
+
+.p-sidebar-intro__image img {
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  object-position: center center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.p-sidebar-intro__title {
+  font-size: rem(16);
+  font-weight: $bold;
+  margin-top: rem(20);
+}
+
+.p-sidebar-intro__description {
+  font-size: rem(14);
+  @include lineHeight(14, 24);
+  margin-top: rem(14);
+}
+
+.p-sidebar-intro__link {
+  align-items: center;
+  color: $color-main;
+  display: inline-flex;
+  font-size: rem(14);
+  @include lineHeight(14, 24);
+  margin-top: rem(14);
+  transition: opacity $trs-duration;
+}
+
+.p-sidebar-intro__link:focus,
+.p-sidebar-intro__link:hover {
+  @include mq('hover-pc') {
+    opacity: $opacity;
+  }
+}
+
+.p-sidebar-intro__link::after {
+  border-bottom: rem(1) solid $color-main;
+  border-right: rem(1) solid $color-main;
+  content: "";
+  display: block;
+  height: rem(8);
+  margin-left: rem(4);
+  transform: rotate(-45deg);
+  width: rem(8);
+}

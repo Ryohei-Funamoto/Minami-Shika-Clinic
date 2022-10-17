@@ -1,0 +1,86 @@
+@use "global" as *;
+
+.medical-anchor__title {
+  align-items: center;
+  display: flex;
+  font-size: rem(20);
+  font-weight: $bold;
+  @include letterSpacing(80);
+  @include lineHeight(20, 28);
+
+  @include mq('md') {
+    font-size: rem(28);
+    @include lineHeight(28, 40);
+  }
+}
+
+.medical-anchor__title::after {
+  border-radius: rem(20);
+  color: $color-text02;
+  display: block;
+  font-size: rem(14);
+  line-height: 1;
+  margin-left: rem(24);
+  padding: rem(11) rem(11);
+}
+
+.medical-anchor__title--general::after {
+  background-color: $color-main;
+  content: "保険対象";
+}
+
+.medical-anchor__title--special::after {
+  background-color: $color-accent;
+  content: "実費";
+}
+
+.medical-anchor__items {
+  margin: rem(32) 0 rem(-16);
+
+  @include mq('md') {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.medical-anchor__item {
+  margin: 0 0 rem(16);
+
+  @include mq('md') {
+    margin: 0 rem(16) rem(16) 0;
+  }
+}
+
+.medical-anchor__item:last-child {
+  @include mq('md') {
+    margin-right: 0;
+  }
+}
+
+.medical-anchor__item a {
+  background-color: $color-white;
+  border: rem(1) solid $color-main;
+  border-radius: rem(12);
+  color: $color-main;
+  display: block;
+  font-size: rem(20);
+  font-weight: $bold;
+  @include letterSpacing(80);
+  padding: rem(14) rem(21);
+  text-align: center;
+  transition: background-color $trs-duration;
+
+  @include mq('md') {
+    border-width: rem(2);
+    font-size: rem(24);
+    padding: rem(16) rem(29);
+  }
+}
+
+.medical-anchor__item a:focus,
+.medical-anchor__item a:hover {
+  @include mq('hover-pc') {
+    background-color: $color-main;
+    color: $color-text02;
+  }
+}
