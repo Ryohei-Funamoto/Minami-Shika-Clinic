@@ -1,12 +1,12 @@
 @use "global" as *;
 
-.contact-body__container {
+.contact-content__container {
   @include mq('md') {
     max-width: rem(808);
   }
 }
 
-.contact-body__info:nth-child(n + 2) {
+.contact-content__info:nth-child(n + 2) {
   margin-top: rem(40);
 
   @include mq('md') {
@@ -14,7 +14,7 @@
   }
 }
 
-.contact-body__form-area {
+.contact-content__form-area {
   margin-top: rem(100);
 
   @include mq('md') {

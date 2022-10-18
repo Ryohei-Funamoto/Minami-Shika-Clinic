@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .l-header {
-  height: $header-height-sp;
+  height: rem(strip-unit($header-height-sp));
   left: 0;
   position: fixed;
   top: 0;
@@ -9,6 +9,6 @@
   z-index: $layer-header;
   
   @include mq('md') {
-    height: $header-height-pc;
+    height: rem(strip-unit($header-height-pc));
   }
 }

@@ -25,10 +25,10 @@
 
             <%- include(path + 'common/_breadcrumb' , {pageId: pageId}) %>
 
-              <div class="l-archive__body archive-body">
-                <div class="l-container archive-body__container">
-                  <div class="archive-body__inner">
-                    <main class="archive-body__main archive-main">
+              <div class="l-archive__content archive-content">
+                <div class="l-container archive-content__container">
+                  <div class="archive-content__inner">
+                    <main class="archive-content__main archive-main">
                       <ol class="archive-main__items">
                         <li class="archive-main__item">
                           <a href="<%= jsonData.pages.blog_single.slug; %>" class="p-post-card">
@@ -213,139 +213,15 @@
                         </li><!-- /.archive-main__item -->
                       </ol><!-- /.archive-main__items -->
 
-                      <div class="l-pagination p-pagination">
-                        <a href="#" class="prev page-numbers">前へ</a>
-                        <a href="#" class="page-numbers">1</a>
-                        <span class="page-numbers current">2</span>
-                        <a href="#" class="page-numbers">3</a>
-                        <a href="#" class="next page-numbers">次へ</a>
-                      </div><!-- /.l-pagination p-pagination -->
-                    </main><!-- /.archive-body__main archive-main -->
+                      <%- include(path + 'common/_pagination' , {pageId: pageId}) %>
+                    </main><!-- /.archive-content__main archive-main -->
 
-                    <div class="archive-body__side">
-                      <aside class="p-sidebar">
-                        <div class="p-sidebar__intro p-sidebar-intro">
-                          <div class="p-sidebar-intro__head">クリニックの紹介</div>
-                          <figure class="p-sidebar-intro__image">
-                            <img src="/img/blog/blog_sidebar_intro_img.jpg" alt="クリニックの紹介">
-                          </figure><!-- /.p-sidebar-intro__image -->
-                          <div class="p-sidebar-intro__title">みなみ歯科クリニック</div>
-                          <p class="p-sidebar-intro__description">お子様からご高齢の方まで、快適な空間で治療が受けられる場を作り、地域医療に貢献しきたいと考えております。
-                          </p>
-                          <a href="<%= jsonData.pages.about.slug; %>" class="p-sidebar-intro__link">
-                            <%= jsonData.pages.about.title; %>
-                          </a>
-                        </div><!-- /.p-sidebar__intro p-sidebar-intro -->
-
-                        <div class="p-sidebar__latest-posts p-sidebar-latest-posts">
-                          <div class="p-sidebar-latest-posts__head">新着記事</div>
-                          <ol class="p-sidebar-latest-posts__items">
-                            <li class="p-sidebar-latest-posts__item">
-                              <a href="<%= jsonData.pages.blog_single.slug; %>"
-                                class="p-post-card p-post-card--sidebar">
-                                <figure class="p-post-card__image">
-                                  <img src="/img/blog/blog_post_img.jpg" alt="<%= jsonData.pages.blog_single.title; %>">
-                                </figure><!-- /.p-post-card__image -->
-                                <div class="p-post-card__body">
-                                  <div class="p-post-card__category-wrapper">
-                                    <span class="p-post-card__category">お知らせ</span>
-                                  </div><!-- /.p-post-card__category-wrapper -->
-                                  <h3 class="p-post-card__title">
-                                    <%= jsonData.pages.blog_single.title; %>
-                                  </h3>
-                                  <time datetime="2020-02-14" class="p-post-card__published">2020.02.14</time>
-                                </div><!-- /.p-post-card__body -->
-                              </a><!-- /.p-post-card -->
-                            </li><!-- /.p-sidebar-latest-posts__item -->
-
-                            <li class="p-sidebar-latest-posts__item">
-                              <a href="<%= jsonData.pages.blog_single.slug; %>"
-                                class="p-post-card p-post-card--sidebar">
-                                <figure class="p-post-card__image">
-                                  <img src="/img/blog/blog_post_img.jpg" alt="<%= jsonData.pages.blog_single.title; %>">
-                                </figure><!-- /.p-post-card__image -->
-                                <div class="p-post-card__body">
-                                  <div class="p-post-card__category-wrapper">
-                                    <span class="p-post-card__category">お知らせ</span>
-                                  </div><!-- /.p-post-card__category-wrapper -->
-                                  <h3 class="p-post-card__title">
-                                    <%= jsonData.pages.blog_single.title; %>
-                                  </h3>
-                                  <time datetime="2020-02-14" class="p-post-card__published">2020.02.14</time>
-                                </div><!-- /.p-post-card__body -->
-                              </a><!-- /.p-post-card -->
-                            </li><!-- /.p-sidebar-latest-posts__item -->
-
-                            <li class="p-sidebar-latest-posts__item">
-                              <a href="<%= jsonData.pages.blog_single.slug; %>"
-                                class="p-post-card p-post-card--sidebar">
-                                <figure class="p-post-card__image">
-                                  <img src="/img/blog/blog_post_img.jpg" alt="<%= jsonData.pages.blog_single.title; %>">
-                                </figure><!-- /.p-post-card__image -->
-                                <div class="p-post-card__body">
-                                  <div class="p-post-card__category-wrapper">
-                                    <span class="p-post-card__category">お知らせ</span>
-                                  </div><!-- /.p-post-card__category-wrapper -->
-                                  <h3 class="p-post-card__title">
-                                    <%= jsonData.pages.blog_single.title; %>
-                                  </h3>
-                                  <time datetime="2020-02-14" class="p-post-card__published">2020.02.14</time>
-                                </div><!-- /.p-post-card__body -->
-                              </a><!-- /.p-post-card -->
-                            </li><!-- /.p-sidebar-latest-posts__item -->
-
-                            <li class="p-sidebar-latest-posts__item">
-                              <a href="<%= jsonData.pages.blog_single.slug; %>"
-                                class="p-post-card p-post-card--sidebar">
-                                <figure class="p-post-card__image">
-                                  <img src="/img/blog/blog_post_img.jpg" alt="<%= jsonData.pages.blog_single.title; %>">
-                                </figure><!-- /.p-post-card__image -->
-                                <div class="p-post-card__body">
-                                  <div class="p-post-card__category-wrapper">
-                                    <span class="p-post-card__category">お知らせ</span>
-                                  </div><!-- /.p-post-card__category-wrapper -->
-                                  <h3 class="p-post-card__title">
-                                    <%= jsonData.pages.blog_single.title; %>
-                                  </h3>
-                                  <time datetime="2020-02-14" class="p-post-card__published">2020.02.14</time>
-                                </div><!-- /.p-post-card__body -->
-                              </a><!-- /.p-post-card -->
-                            </li><!-- /.p-sidebar-latest-posts__item -->
-
-                            <li class="p-sidebar-latest-posts__item">
-                              <a href="<%= jsonData.pages.blog_single.slug; %>"
-                                class="p-post-card p-post-card--sidebar">
-                                <figure class="p-post-card__image">
-                                  <img src="/img/blog/blog_post_img.jpg" alt="<%= jsonData.pages.blog_single.title; %>">
-                                </figure><!-- /.p-post-card__image -->
-                                <div class="p-post-card__body">
-                                  <div class="p-post-card__category-wrapper">
-                                    <span class="p-post-card__category">お知らせ</span>
-                                  </div><!-- /.p-post-card__category-wrapper -->
-                                  <h3 class="p-post-card__title">
-                                    <%= jsonData.pages.blog_single.title; %>
-                                  </h3>
-                                  <time datetime="2020-02-14" class="p-post-card__published">2020.02.14</time>
-                                </div><!-- /.p-post-card__body -->
-                              </a><!-- /.p-post-card -->
-                            </li><!-- /.p-sidebar-latest-posts__item -->
-                          </ol><!-- /.p-sidebar-latest-posts__items -->
-                        </div><!-- /.p-sidebar__latest-posts p-sidebar-latest-posts -->
-
-                        <div class="p-sidebar__category-list p-sidebar-category-list">
-                          <div class="p-sidebar-category-list__head">カテゴリー</div>
-                          <ul class="p-sidebar-category-list__items">
-                            <li class="p-sidebar-category-list__item"><a href="#">テキストテキスト</a></li>
-                            <li class="p-sidebar-category-list__item"><a href="#">テキストテキスト</a></li>
-                            <li class="p-sidebar-category-list__item"><a href="#">テキストテキスト</a></li>
-                            <li class="p-sidebar-category-list__item"><a href="#">テキストテキスト</a></li>
-                          </ul><!-- /.p-sidebar-category-list__items -->
-                        </div><!-- /.p-sidebar__category-list p-sidebar-category-list -->
-                      </aside><!-- /.archive-body__side p-sidebar -->
-                    </div><!-- /.archive-body__side -->
-                  </div><!-- /.archive-body__inner -->
-                </div><!-- /.l-container archive-body__container -->
-              </div><!-- /.l-archive__body archive-body -->
+                    <div class="archive-content__side">
+                      <%- include(path + 'common/_sidebar' , {pageId: pageId}) %>
+                    </div><!-- /.archive-content__side -->
+                  </div><!-- /.archive-content__inner -->
+                </div><!-- /.l-container archive-content__container -->
+              </div><!-- /.l-archive__content archive-content -->
           </div><!-- /.l-archive -->
 
           <%- include(path + 'common/_footer' , {pageId: pageId}) %>

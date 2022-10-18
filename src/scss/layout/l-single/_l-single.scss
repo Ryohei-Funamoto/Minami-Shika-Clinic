@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.l-contact {
+.l-single {
   padding-bottom: rem(100);
 
   @include mq('md') {
@@ -8,7 +8,7 @@
   }
 }
 
-.l-contact__content {
+.l-single__content {
   margin-top: rem(60);
 
   @include mq('md') {

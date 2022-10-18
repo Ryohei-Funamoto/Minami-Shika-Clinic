@@ -1,0 +1,86 @@
+<% let pageId='blog_single' ; %>
+  <% let path='../../' %>
+
+    <%- include(path + 'common/_head' , {pageId: pageId}) %>
+
+      <%- include(path + 'common/_header' , {pageId: pageId}) %>
+
+        <% console.log(jsonData) %>
+
+          <div class="l-single">
+            <div class="l-single__main-visual l-main-visual l-main-visual--sub p-sub-main-visual single-main-visual">
+              <picture>
+                <source srcset="/img/blog/blog_mv_pc_img.jpg" media="(min-width: 768px)">
+                <img src="/img/blog/blog_mv_sp_img.jpg" alt="<%= jsonData.pages[pageId].title; %>">
+              </picture>
+              <div class="p-sub-main-visual__content single-main-visual__content">
+                <h1 class="p-sub-main-visual__title single-main-visual__title">
+                  <%= jsonData.pages[pageId].title; %>
+                </h1>
+                <span class="p-sub-main-visual__subtitle single-main-visual__subtitle">
+                  <%= jsonData.pages[pageId].subtitle; %>
+                </span>
+              </div><!-- /.p-sub-main-visual__content single-main-visual__content -->
+            </div><!-- /.l-main-visual l-main-visual--sub p-sub-main-visual single-main-visual -->
+
+            <%- include(path + 'common/_breadcrumb' , {pageId: pageId}) %>
+
+              <div class="l-single__content single-content">
+                <div class="l-container single-content__container">
+                  <div class="single-content__inner">
+                    <main class="single-content__main single-main">
+                      <div class="single-main__head">
+                        <h2 class="single-main__title">
+                          <%= jsonData.pages.blog_single.title; %>
+                        </h2>
+                        <div class="single-main__meta">
+                          <time datetime="2020-02-14" class="single-main__published">2020.02.14</time>
+                          <div class="single-main__category-wrapper">
+                            <span class="single-main__category"><a
+                                href="<%= jsonData.pages.blog.slug; %>">お知らせ</a></span>
+                          </div><!-- /.single-main__category-wrapper -->
+                        </div><!-- /.single-main__meta -->
+                      </div><!-- /.single-main__head -->
+
+                      <div class="single-main__body">
+                        <p>
+                          テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。<a
+                            href="#">リンクが入ります。</a>テキストが入ります。テキストが入ります。テキストが入ります。<br><br>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                        </p>
+                        <h2>見出し2見出し2見出し2見出し2</h2>
+                        <figure>
+                          <img src="/img/blog/blog_post_img.jpg" alt="見出し2見出し2見出し2見出し2">
+                        </figure>
+                        <h3>見出し3見出し3見出し3見出し3</h3>
+                        <p>
+                          テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                        </p>
+                        <h4>見出し4見出し4見出し4見出し4</h4>
+                        <p>
+                          テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                        </p>
+                        <ul>
+                          <li>リスト1</li>
+                          <li>リスト2</li>
+                          <li>リスト3</li>
+                        </ul>
+                      </div><!-- /.single-main__body -->
+
+                      <div class="l-post-nav p-post-nav">
+                        <ul class="p-post-nav__items">
+                          <li class="p-post-nav__item p-post-nav__item--prev"><a href="#">前の記事</a></li>
+                          <li class="p-post-nav__item p-post-nav__item--archive"><a href="#">記事一覧</a></li>
+                          <li class="p-post-nav__item p-post-nav__item--next"><a href="#">次の記事</a></li>
+                        </ul><!-- /.p-post-nav__items -->
+                      </div><!-- /.l-post-nav p-post-nav -->
+                    </main><!-- /.single-content__main single-main -->
+
+                    <div class="single-content__side">
+                      <%- include(path + 'common/_sidebar' , {pageId: pageId}) %>
+                    </div><!-- /.single-content__side -->
+                  </div><!-- /.single-content__inner -->
+                </div><!-- /.l-container single-content__container -->
+              </div><!-- /.l-single__content single-content -->
+          </div><!-- /.l-single -->
+
+          <%- include(path + 'common/_footer' , {pageId: pageId}) %>

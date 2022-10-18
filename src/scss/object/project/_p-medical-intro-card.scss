@@ -6,6 +6,7 @@
   border-radius: rem(20);
   padding: rem(23) rem(20) rem(20);
   position: relative;
+  z-index: $layer-up;
 
   @include mq('md') {
     padding: rem(55) rem(60) rem(60);

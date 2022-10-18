@@ -1,0 +1,128 @@
+@use "global" as *;
+
+.p-post-nav__items {
+  display: flex;
+  justify-content: center;
+  padding-bottom: rem(42);
+  position: relative;
+}
+
+.p-post-nav__item {
+  font-size: rem(14);
+  line-height: 1;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.p-post-nav__item--prev {
+  right: calc(50% + rem(59));
+  
+  @include mq('md') {
+    right: calc(50% + rem(65));
+  }
+}
+
+.p-post-nav__item--next {
+  left: calc(50% + rem(59));
+  
+  @include mq('md') {
+    left: calc(50% + rem(65));
+  }
+}
+
+.p-post-nav__item a {
+  border: rem(1) solid $color-main;
+  border-radius: rem(4);
+  display: block;
+  transition: background-color $trs-duration, color $trs-duration;
+}
+
+.p-post-nav__item--prev a,
+.p-post-nav__item--next a {
+  color: $color-text02;
+  background-color: $color-main;
+  position: relative;
+}
+
+.p-post-nav__item--prev a:focus,
+.p-post-nav__item--prev a:hover,
+.p-post-nav__item--next a:focus,
+.p-post-nav__item--next a:hover {
+  @include mq('hover-pc') {
+    background-color: $color-white;
+    color: $color-main;
+  }
+}
+
+.p-post-nav__item--prev a {
+  padding: rem(11) rem(15) rem(11) rem(35);
+
+  @include mq('md') {
+    padding: rem(10) rem(16) rem(10) rem(38);
+  }
+}
+
+.p-post-nav__item--prev a::before {
+  content: '\f0a8';
+  font-family: 'Font Awesome 6 Free';
+  font-size: rem(16);
+  font-weight: 900;
+  left: rem(14);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: left $trs-duration;
+}
+
+.p-post-nav__item--prev a:focus::before,
+.p-post-nav__item--prev a:hover::before {
+  @include mq('hover-pc') {
+    left: rem(9);
+  }
+}
+
+.p-post-nav__item--next a {
+  padding: rem(11) rem(35) rem(11) rem(15);
+
+  @include mq('md') {
+    padding: rem(10) rem(38) rem(10) rem(16);
+  }
+}
+
+.p-post-nav__item--next a::before {
+  content: '\f0a9';
+  font-family: 'Font Awesome 6 Free';
+  font-size: rem(16);
+  font-weight: 900;
+  right: rem(14);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: right $trs-duration;
+}
+
+.p-post-nav__item--next a:focus::before,
+.p-post-nav__item--next a:hover::before {
+  @include mq('hover-pc') {
+    right: rem(9);
+  }
+}
+
+.p-post-nav__item--archive a {
+  background-color: $color-white;
+  color: $color-main;
+  padding: rem(12) rem(18);
+
+  @include mq('md') {
+    padding: rem(12) rem(16);
+  }
+}
+
+.p-post-nav__item--archive a:focus,
+.p-post-nav__item--archive a:hover {
+  @include mq('hover-pc') {
+    background-color: $color-main;
+    color: $color-text02;
+  }
+}
