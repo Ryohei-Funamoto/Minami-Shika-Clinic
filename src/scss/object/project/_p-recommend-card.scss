@@ -1,0 +1,27 @@
+@use "global" as *;
+
+.p-recommend-card__title {
+  text-align: center;
+}
+
+.p-recommend-card__image {
+  margin-top: rem(12);
+  text-align: center;
+
+  @include mq('md') {
+    margin-top: rem(16);
+  }
+}
+
+.p-recommend-card__body {
+  margin-top: rem(24);
+}
+
+.p-recommend-card__description {
+  font-size: rem(14);
+  @include lineHeight(14, 24);
+}
+
+.p-recommend-card__description--precaution {
+  color: $color-accent;
+}

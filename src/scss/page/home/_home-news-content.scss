@@ -1,0 +1,58 @@
+@use "global" as *;
+
+.home-news-content__head {
+  align-items: center;
+  display: flex;
+  padding: 0 0 rem(8) rem(16);
+  
+  @include mq('md') {
+    padding: 0 0 rem(8) rem(14);
+  }
+}
+
+.home-news-content__title {
+  align-items: flex-end;
+  display: flex;
+  font-size: rem(20);
+  font-weight: $bold;
+  @include letterSpacing(100);
+}
+
+.home-news-content__title span {
+  color: $color-main;
+  display: block;
+  font-size: rem(11);
+  margin-left: rem(16);
+  text-transform: uppercase;
+
+  @include mq('md') {
+    font-size: rem(12);
+  }
+}
+
+.home-news-content__archive-link {
+  color: $color-gray03;
+  font-size: rem(11);
+  margin-left: auto;
+  text-decoration: underline;
+  transition: opacity $trs-duration;
+
+  @include mq('md') {
+    font-size: rem(12);
+  }
+}
+
+.home-news-content__archive-link:focus,
+.home-news-content__archive-link:hover {
+  @include mq('md') {
+    opacity: $opacity;
+  }
+}
+
+.home-news-content__item {
+  border-top: rem(1) solid $color-text;
+}
+
+.home-news-content__item:last-child {
+  border-bottom: rem(1) solid $color-text;
+}

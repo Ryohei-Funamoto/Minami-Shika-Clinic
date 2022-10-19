@@ -21,15 +21,15 @@
                   <%= jsonData.pages[pageId].subtitle; %>
                 </span>
               </div><!-- /.p-sub-main-visual__content about-main-visual__content -->
-            </div><!-- /.l-main-visual l-main-visual--sub p-sub-main-visual about-main-visual -->
+            </div><!-- /.l-main-visual p-sub-main-visual about-main-visual -->
 
             <%- include(path + 'common/_breadcrumb' , {pageId: pageId}) %>
 
-              <section class="l-about__policy about-policy">
+              <section id="aboutPolicy" class="l-about__policy about-policy">
                 <div class="l-container about-policy__container">
-                  <div class="about-policy__title-wrapper">
-                    <h2 class="about-policy__title c-section-title">ポリシーと特徴</h2>
-                  </div><!-- /.about-policy__title-wrapper -->
+                  <div class="about-policy__title">
+                    <h2 class="c-section-title">ポリシーと特徴</h2>
+                  </div><!-- /.about-policy__title -->
 
                   <ul class="about-policy__items">
                     <li
@@ -69,11 +69,11 @@
                 </div><!-- /.l-container about-policy__container -->
               </section><!-- /.l-about__policy about-policy -->
 
-              <section class="l-about__mood about-mood">
+              <section id="aboutMood" class="l-about__mood about-mood">
                 <div class="l-container about-mood__container">
-                  <div class="about-mood__title-wrapper">
-                    <h2 class="about-mood__title c-section-title">院内の様子</h2>
-                  </div><!-- /.about-mood__title-wrapper -->
+                  <div class="about-mood__title">
+                    <h2 class="c-section-title">院内の様子</h2>
+                  </div><!-- /.about-mood__title -->
 
                   <div class="about-mood__images">
                     <figure class="about-mood__image">

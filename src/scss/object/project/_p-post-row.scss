@@ -1,0 +1,51 @@
+@use "global" as *;
+
+.p-post-row {
+  align-items: flex-start;
+  color: $color-text;
+  display: flex;
+  padding: rem(12) rem(26) rem(13) rem(6);
+  position: relative;
+  transition: color $trs-duration;
+  
+  @include mq('md') {
+    padding: rem(9) rem(30) rem(10) rem(14);
+  }
+}
+
+.p-post-row:focus,
+.p-post-row:hover {
+  @include mq('hover-pc') {
+    color: $color-main;
+  }
+}
+
+.p-post-row::after {
+  content: '\f061';
+  font-family: 'Font Awesome 6 Free';
+  font-size: rem(14);
+  font-weight: 900;
+  position: absolute;
+  right: rem(6);
+  top: 50%;
+  transform: translateY(-50%);
+  transition: right $trs-duration;
+}
+
+.p-post-row:focus::after,
+.p-post-row:hover::after {
+  @include mq('hover-pc') {
+    right: rem(2);
+  }
+}
+
+.p-post-row__published {
+  font-size: rem(12);
+  padding-top: rem(2);
+  width: rem(92);
+}
+
+.p-post-row__title {
+  font-size: rem(14);
+  width: calc(100% - rem(92));
+}

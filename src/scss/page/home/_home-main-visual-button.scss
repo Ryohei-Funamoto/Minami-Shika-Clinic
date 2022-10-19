@@ -1,0 +1,77 @@
+@use "global" as *;
+@use "sass:color";
+
+.home-main-visual-wrapper__button.swiper-button-prev,
+.home-main-visual-wrapper__button.swiper-button-next {
+  height: rem(32);
+  width: rem(32);
+
+  @include mq('md') {
+    height: rem(48);
+    width: rem(48);
+  }
+}
+
+.home-main-visual-wrapper__button--prev.swiper-button-prev {
+  left: rem(4);
+
+  @include mq('md') {
+    left: rem(38);
+  }
+}
+
+.home-main-visual-wrapper__button--next.swiper-button-next {
+  right: rem(4);
+
+  @include mq('md') {
+    right: rem(38);
+  }
+}
+
+.home-main-visual-button.swiper-button-prev::after,
+.home-main-visual-button.swiper-button-next::after {
+  content: "";
+}
+
+.home-main-visual-button--prev::before,
+.home-main-visual-button--next::before {
+  background-color: $color-white;
+  border-radius: 50%;
+  box-shadow: 0 rem(3) rem(6) color.adjust($color-black, $alpha: -0.84);
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.home-main-visual-button--prev::after {
+  border-left: rem(2) solid $color-gray04;
+  border-top: rem(2) solid $color-gray04;
+  display: block;
+  height: rem(12);
+  left: 36%;
+  position: absolute;
+  transform: rotate(-45deg);
+  width: rem(12);
+
+  @include mq('md') {
+    height: rem(18);
+    width: rem(18);
+  }
+}
+
+.home-main-visual-button--next::after {
+  border-right: rem(2) solid $color-gray04;
+  border-top: rem(2) solid $color-gray04;
+  display: block;
+  height: rem(12);
+  position: absolute;
+  right: 36%;
+  transform: rotate(45deg);
+  width: rem(12);
+
+  @include mq('md') {
+    height: rem(18);
+    width: rem(18);
+  }
+}

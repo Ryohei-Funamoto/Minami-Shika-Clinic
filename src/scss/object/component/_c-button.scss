@@ -1,1 +1,43 @@
 @use "global" as *;
+
+.c-button {
+  background-color: $color-white;
+  border: rem(1) solid $color-main;
+  border-radius: rem(24);
+  color: $color-main;
+  display: inline-block;
+  font-size: rem(14);
+  padding: rem(8) rem(39);
+  position: relative;
+  transition: background-color $trs-duration, color $trs-duration;
+
+  @include mq('md') {
+    padding: rem(10) rem(45);
+  }
+}
+
+.c-button:focus,
+.c-button:hover {
+  @include mq('hover-pc') {
+    background-color: $color-main;
+    color: $color-text02;
+  }
+}
+
+.c-button::after {
+  content: '\f061';
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  position: absolute;
+  right: rem(12);
+  top: 50%;
+  transform: translateY(-50%);
+  transition: right $trs-duration;
+}
+
+.c-button:focus::after,
+.c-button:hover::after {
+  @include mq('hover-pc') {
+    right: rem(8);
+  }
+}

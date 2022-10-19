@@ -1,0 +1,32 @@
+@use "global" as *;
+
+.home-main-visual-pagination.swiper-pagination-bullets {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.home-main-visual-pagination.swiper-pagination-bullets .swiper-pagination-bullet {
+  background-color: $color-gray04;
+  height: rem(6);
+  margin-left: 0;
+  margin-right: 0;
+  opacity: 1;
+  width: rem(6);
+
+  @include mq('md') {
+    height: rem(8);
+    width: rem(8);
+  }
+}
+
+.home-main-visual-pagination.swiper-pagination-bullets .swiper-pagination-bullet:nth-child(n + 2) {
+  margin-top: rem(8);
+
+  @include mq('md') {
+    margin-top: rem(10);
+  }
+}
+
+.home-main-visual-pagination.swiper-pagination-bullets .swiper-pagination-bullet-active {
+  background-color: $color-main;
+}

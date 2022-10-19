@@ -21,15 +21,15 @@
                   <%= jsonData.pages[pageId].subtitle; %>
                 </span>
               </div><!-- /.p-sub-main-visual__content staff-main-visual__content -->
-            </div><!-- /.l-main-visual l-main-visual--sub p-sub-main-visual staff-main-visual -->
+            </div><!-- /.l-main-visual p-sub-main-visual staff-main-visual -->
 
             <%- include(path + 'common/_breadcrumb' , {pageId: pageId}) %>
 
-              <section class="l-staff__greeting staff-greeting">
+              <section id="staffDirector" class="l-staff__greeting staff-greeting">
                 <div class="l-container staff-greeting__container">
-                  <div class="staff-greeting__title-wrapper">
-                    <h2 class="staff-greeting__title c-section-title">院長のあいさつ</h2>
-                  </div><!-- /.staff-greeting__title-wrapper -->
+                  <div class="staff-greeting__title">
+                    <h2 class="c-section-title">院長のあいさつ</h2>
+                  </div><!-- /.staff-greeting__title -->
 
                   <div class="staff-greeting__director-info staff-director-info">
                     <div class="staff-director-info__body">
@@ -73,7 +73,7 @@
                 </div><!-- /.l-container staff-greeting__container -->
               </section><!-- /.l-staff__policy staff-greeting -->
 
-              <div class="l-staff__slider staff-slider swiper js-staff-slider">
+              <div id="staffSlider" class="l-staff__slider staff-slider swiper js-staff-slider">
                 <div class="staff-slider__slides swiper-wrapper">
                   <div class="staff-slider__slide swiper-slide">
                     <img src="/img/staff/staff_slider_img01.jpg" alt="当院のスタッフ１">
@@ -93,11 +93,11 @@
                 </div><!-- /.staff-slider__slides -->
               </div><!-- /.l-staff__slider staff-slider -->
 
-              <section class="l-staff__intro staff-intro">
+              <section id="staffIntro" class="l-staff__intro staff-intro">
                 <div class="l-container staff-intro__container">
-                  <div class="staff-intro__title-wrapper">
-                    <h2 class="staff-intro__title c-section-title">スタッフ紹介</h2>
-                  </div><!-- /.staff-intro__title-wrapper -->
+                  <div class="staff-intro__title">
+                    <h2 class="c-section-title">スタッフ紹介</h2>
+                  </div><!-- /.staff-intro__title -->
 
                   <section class="staff-intro__group staff-group">
                     <h3 class="staff-group__title">歯科衛生士</h3>

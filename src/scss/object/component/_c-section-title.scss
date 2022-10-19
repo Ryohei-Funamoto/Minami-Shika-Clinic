@@ -6,7 +6,7 @@
   font-weight: $bold;
   @include letterSpacing(80);
   @include lineHeight(20, 32);
-  padding: 0 rem(65);
+  padding: 0 rem(63);
   position: relative;
   
   @include mq('md') {

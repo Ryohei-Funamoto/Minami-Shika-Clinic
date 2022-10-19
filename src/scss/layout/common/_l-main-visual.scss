@@ -11,6 +11,14 @@
   }
 }
 
+.l-main-visual--home {
+  height: rem(447);
+
+  @include mq('md') {
+    height: rem(520);
+  }
+}
+
 .l-main-visual--sub {
   height: rem(188);
 

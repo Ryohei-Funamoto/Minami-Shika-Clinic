@@ -1,0 +1,87 @@
+@use "global" as *;
+@use "sass:color";
+
+.home-main-visual {
+  border-radius: rem(8);
+
+  @include mq('md') {
+    border-radius: rem(20);
+  }
+}
+
+.home-main-visual__slide {
+  position: relative;
+}
+
+.home-main-visual__slide::after {
+  background-color: color.adjust($color-black, $alpha: -0.9);
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.home-main-visual__slide picture {
+  height: 100%;
+  width: 100%;
+}
+
+.home-main-visual__slide img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  width: 100%;
+}
+
+.home-main-visual__content {
+  bottom: rem(40);
+  left: rem(20);
+  position: absolute;
+  z-index: $layer-up;
+
+  @include mq('md') {
+    bottom: rem(52);
+    left: rem(60);
+  }
+}
+
+.home-main-visual__lead {
+  color: $color-text02;
+  font-size: rem(20);
+  font-weight: $bold;
+  @include letterSpacing(80);
+  @include lineHeight(20, 34);
+
+  @include mq('md') {
+    font-size: rem(32);
+    @include lineHeight(32, 54);
+  }
+}
+
+.home-main-visual__lead span {
+  background-image: radial-gradient(circle at rem(1) center,
+      $color-white,
+      $color-white rem(1),
+      transparent rem(1),
+      transparent 100%);
+  background-position: center bottom;
+  background-repeat: repeat-x;
+  background-size: rem(8) rem(2);
+  display: inline-block;
+
+  @include mq('md') {
+    background-image: radial-gradient(circle at rem(2) center,
+        $color-white,
+        $color-white rem(2),
+        transparent rem(2),
+        transparent 100%);
+    background-size: rem(10) rem(4);
+  }
+}
+
+.home-main-visual__lead span:nth-child(n + 2) {
+  margin-top: rem(10);
+}

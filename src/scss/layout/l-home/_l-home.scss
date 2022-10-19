@@ -1,1 +1,45 @@
 @use "global" as *;
+
+.l-home {
+  padding-bottom: rem(100);
+
+  @include mq('md') {
+    padding-bottom: rem(160);
+  }
+}
+
+.l-home__news {
+  margin-top: rem(-23);
+
+  @include mq('md') {
+    margin-top: rem(-36);
+  }
+}
+
+.l-home__concept {
+  margin-top: rem(60);
+}
+
+.l-home__recommend {
+  margin-top: rem(100);
+
+  @include mq('md') {
+    margin-top: rem(120 );
+  }
+}
+
+.l-home__medical {
+  margin-top: rem(100);
+
+  @include mq('md') {
+    margin-top: rem(140);
+  }
+}
+
+.l-home__blog {
+  margin-top: rem(100);
+
+  @include mq('md') {
+    margin-top: rem(160);
+  }
+}

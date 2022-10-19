@@ -21,7 +21,7 @@
                   <%= jsonData.pages[pageId].subtitle; %>
                 </span>
               </div><!-- /.p-sub-main-visual__content archive-main-visual__content -->
-            </div><!-- /.l-main-visual l-main-visual--sub p-sub-main-visual archive-main-visual -->
+            </div><!-- /.l-main-visual p-sub-main-visual archive-main-visual -->
 
             <%- include(path + 'common/_breadcrumb' , {pageId: pageId}) %>
 
@@ -29,189 +29,170 @@
                 <div class="l-container archive-content__container">
                   <div class="archive-content__inner">
                     <main class="archive-content__main archive-main">
-                      <ol class="archive-main__items">
-                        <li class="archive-main__item">
-                          <a href="<%= jsonData.pages.blog_single.slug; %>" class="p-post-card">
-                            <span class="p-post-card__badge">new</span>
-                            <figure class="p-post-card__image">
-                              <img src="/img/blog/blog_post_img.jpg" alt="<%= jsonData.pages.blog_single.title; %>">
-                            </figure><!-- /.p-post-card__image -->
+                      <div class="archive-main__items">
+                        <a href="<%= jsonData.pages.blog_single.slug; %>" class="archive-main__item p-post-card">
+                          <span class="p-post-card__badge">new</span>
+                          <figure class="p-post-card__image">
+                            <img src="/img/blog/blog_post_img.jpg" alt="<%= jsonData.pages.blog_single.title; %>">
+                          </figure><!-- /.p-post-card__image -->
 
-                            <div class="p-post-card__body">
-                              <div class="p-post-card__category-wrapper">
-                                <span class="p-post-card__category">お知らせ</span>
-                              </div><!-- /.p-post-card__category-wrapper -->
-                              <h3 class="p-post-card__title">
-                                <%= jsonData.pages.blog_single.title; %>
-                              </h3>
-                              <time datetime="2020-02-14" class="p-post-card__published">2020.02.14</time>
-                            </div><!-- /.p-post-card__body -->
-                          </a><!-- /.p-post-card -->
-                        </li><!-- /.archive-main__item -->
+                          <div class="p-post-card__body">
+                            <div class="p-post-card__category-wrapper">
+                              <span class="p-post-card__category">お知らせ</span>
+                            </div><!-- /.p-post-card__category-wrapper -->
+                            <h3 class="p-post-card__title">
+                              <%= jsonData.pages.blog_single.title; %>
+                            </h3>
+                            <time datetime="2020-02-14" class="p-post-card__published">2020.02.14</time>
+                          </div><!-- /.p-post-card__body -->
+                        </a><!-- /.archive-main__item p-post-card -->
 
-                        <li class="archive-main__item">
-                          <a href="<%= jsonData.pages.blog_single.slug; %>" class="p-post-card">
-                            <span class="p-post-card__badge">new</span>
-                            <figure class="p-post-card__image">
-                              <img src="/img/blog/blog_post_img.jpg" alt="<%= jsonData.pages.blog_single.title; %>">
-                            </figure><!-- /.p-post-card__image -->
+                        <a href="<%= jsonData.pages.blog_single.slug; %>" class="archive-main__item p-post-card">
+                          <span class="p-post-card__badge">new</span>
+                          <figure class="p-post-card__image">
+                            <img src="/img/blog/blog_post_img.jpg" alt="<%= jsonData.pages.blog_single.title; %>">
+                          </figure><!-- /.p-post-card__image -->
 
-                            <div class="p-post-card__body">
-                              <div class="p-post-card__category-wrapper">
-                                <span class="p-post-card__category">お知らせ</span>
-                              </div><!-- /.p-post-card__category-wrapper -->
-                              <h3 class="p-post-card__title">
-                                <%= jsonData.pages.blog_single.title; %>
-                              </h3>
-                              <time datetime="2020-02-14" class="p-post-card__published">2020.02.14</time>
-                            </div><!-- /.p-post-card__body -->
-                          </a><!-- /.p-post-card -->
-                        </li><!-- /.archive-main__item -->
+                          <div class="p-post-card__body">
+                            <div class="p-post-card__category-wrapper">
+                              <span class="p-post-card__category">お知らせ</span>
+                            </div><!-- /.p-post-card__category-wrapper -->
+                            <h3 class="p-post-card__title">
+                              <%= jsonData.pages.blog_single.title; %>
+                            </h3>
+                            <time datetime="2020-02-14" class="p-post-card__published">2020.02.14</time>
+                          </div><!-- /.p-post-card__body -->
+                        </a><!-- /.archive-main__item p-post-card -->
 
-                        <li class="archive-main__item">
-                          <a href="<%= jsonData.pages.blog_single.slug; %>" class="p-post-card">
-                            <figure class="p-post-card__image">
-                              <img src="/img/blog/blog_post_img.jpg" alt="<%= jsonData.pages.blog_single.title; %>">
-                            </figure><!-- /.p-post-card__image -->
+                        <a href="<%= jsonData.pages.blog_single.slug; %>" class="archive-main__item p-post-card">
+                          <figure class="p-post-card__image">
+                            <img src="/img/blog/blog_post_img.jpg" alt="<%= jsonData.pages.blog_single.title; %>">
+                          </figure><!-- /.p-post-card__image -->
 
-                            <div class="p-post-card__body">
-                              <div class="p-post-card__category-wrapper">
-                                <span class="p-post-card__category">お知らせ</span>
-                              </div><!-- /.p-post-card__category-wrapper -->
-                              <h3 class="p-post-card__title">
-                                <%= jsonData.pages.blog_single.title; %>
-                              </h3>
-                              <time datetime="2020-02-14" class="p-post-card__published">2020.02.14</time>
-                            </div><!-- /.p-post-card__body -->
-                          </a><!-- /.p-post-card -->
-                        </li><!-- /.archive-main__item -->
+                          <div class="p-post-card__body">
+                            <div class="p-post-card__category-wrapper">
+                              <span class="p-post-card__category">お知らせ</span>
+                            </div><!-- /.p-post-card__category-wrapper -->
+                            <h3 class="p-post-card__title">
+                              <%= jsonData.pages.blog_single.title; %>
+                            </h3>
+                            <time datetime="2020-02-14" class="p-post-card__published">2020.02.14</time>
+                          </div><!-- /.p-post-card__body -->
+                        </a><!-- /.archive-main__item p-post-card -->
 
-                        <li class="archive-main__item">
-                          <a href="<%= jsonData.pages.blog_single.slug; %>" class="p-post-card">
-                            <figure class="p-post-card__image">
-                              <img src="/img/blog/blog_post_img.jpg" alt="<%= jsonData.pages.blog_single.title; %>">
-                            </figure><!-- /.p-post-card__image -->
+                        <a href="<%= jsonData.pages.blog_single.slug; %>" class="archive-main__item p-post-card">
+                          <figure class="p-post-card__image">
+                            <img src="/img/blog/blog_post_img.jpg" alt="<%= jsonData.pages.blog_single.title; %>">
+                          </figure><!-- /.p-post-card__image -->
 
-                            <div class="p-post-card__body">
-                              <div class="p-post-card__category-wrapper">
-                                <span class="p-post-card__category">お知らせ</span>
-                              </div><!-- /.p-post-card__category-wrapper -->
-                              <h3 class="p-post-card__title">
-                                <%= jsonData.pages.blog_single.title; %>
-                              </h3>
-                              <time datetime="2020-02-14" class="p-post-card__published">2020.02.14</time>
-                            </div><!-- /.p-post-card__body -->
-                          </a><!-- /.p-post-card -->
-                        </li><!-- /.archive-main__item -->
+                          <div class="p-post-card__body">
+                            <div class="p-post-card__category-wrapper">
+                              <span class="p-post-card__category">お知らせ</span>
+                            </div><!-- /.p-post-card__category-wrapper -->
+                            <h3 class="p-post-card__title">
+                              <%= jsonData.pages.blog_single.title; %>
+                            </h3>
+                            <time datetime="2020-02-14" class="p-post-card__published">2020.02.14</time>
+                          </div><!-- /.p-post-card__body -->
+                        </a><!-- /.archive-main__item p-post-card -->
 
-                        <li class="archive-main__item">
-                          <a href="<%= jsonData.pages.blog_single.slug; %>" class="p-post-card">
-                            <figure class="p-post-card__image">
-                              <img src="/img/blog/blog_post_img.jpg" alt="<%= jsonData.pages.blog_single.title; %>">
-                            </figure><!-- /.p-post-card__image -->
+                        <a href="<%= jsonData.pages.blog_single.slug; %>" class="archive-main__item p-post-card">
+                          <figure class="p-post-card__image">
+                            <img src="/img/blog/blog_post_img.jpg" alt="<%= jsonData.pages.blog_single.title; %>">
+                          </figure><!-- /.p-post-card__image -->
 
-                            <div class="p-post-card__body">
-                              <div class="p-post-card__category-wrapper">
-                                <span class="p-post-card__category">お知らせ</span>
-                              </div><!-- /.p-post-card__category-wrapper -->
-                              <h3 class="p-post-card__title">
-                                <%= jsonData.pages.blog_single.title; %>
-                              </h3>
-                              <time datetime="2020-02-14" class="p-post-card__published">2020.02.14</time>
-                            </div><!-- /.p-post-card__body -->
-                          </a><!-- /.p-post-card -->
-                        </li><!-- /.archive-main__item -->
+                          <div class="p-post-card__body">
+                            <div class="p-post-card__category-wrapper">
+                              <span class="p-post-card__category">お知らせ</span>
+                            </div><!-- /.p-post-card__category-wrapper -->
+                            <h3 class="p-post-card__title">
+                              <%= jsonData.pages.blog_single.title; %>
+                            </h3>
+                            <time datetime="2020-02-14" class="p-post-card__published">2020.02.14</time>
+                          </div><!-- /.p-post-card__body -->
+                        </a><!-- /.archive-main__item p-post-card -->
 
-                        <li class="archive-main__item">
-                          <a href="<%= jsonData.pages.blog_single.slug; %>" class="p-post-card">
-                            <figure class="p-post-card__image">
-                              <img src="/img/blog/blog_post_img.jpg" alt="<%= jsonData.pages.blog_single.title; %>">
-                            </figure><!-- /.p-post-card__image -->
+                        <a href="<%= jsonData.pages.blog_single.slug; %>" class="archive-main__item p-post-card">
+                          <figure class="p-post-card__image">
+                            <img src="/img/blog/blog_post_img.jpg" alt="<%= jsonData.pages.blog_single.title; %>">
+                          </figure><!-- /.p-post-card__image -->
 
-                            <div class="p-post-card__body">
-                              <div class="p-post-card__category-wrapper">
-                                <span class="p-post-card__category">お知らせ</span>
-                              </div><!-- /.p-post-card__category-wrapper -->
-                              <h3 class="p-post-card__title">
-                                <%= jsonData.pages.blog_single.title; %>
-                              </h3>
-                              <time datetime="2020-02-14" class="p-post-card__published">2020.02.14</time>
-                            </div><!-- /.p-post-card__body -->
-                          </a><!-- /.p-post-card -->
-                        </li><!-- /.archive-main__item -->
+                          <div class="p-post-card__body">
+                            <div class="p-post-card__category-wrapper">
+                              <span class="p-post-card__category">お知らせ</span>
+                            </div><!-- /.p-post-card__category-wrapper -->
+                            <h3 class="p-post-card__title">
+                              <%= jsonData.pages.blog_single.title; %>
+                            </h3>
+                            <time datetime="2020-02-14" class="p-post-card__published">2020.02.14</time>
+                          </div><!-- /.p-post-card__body -->
+                        </a><!-- /.archive-main__item p-post-card -->
 
-                        <li class="archive-main__item">
-                          <a href="<%= jsonData.pages.blog_single.slug; %>" class="p-post-card">
-                            <figure class="p-post-card__image">
-                              <img src="/img/blog/blog_post_img.jpg" alt="<%= jsonData.pages.blog_single.title; %>">
-                            </figure><!-- /.p-post-card__image -->
+                        <a href="<%= jsonData.pages.blog_single.slug; %>" class="archive-main__item p-post-card">
+                          <figure class="p-post-card__image">
+                            <img src="/img/blog/blog_post_img.jpg" alt="<%= jsonData.pages.blog_single.title; %>">
+                          </figure><!-- /.p-post-card__image -->
 
-                            <div class="p-post-card__body">
-                              <div class="p-post-card__category-wrapper">
-                                <span class="p-post-card__category">お知らせ</span>
-                              </div><!-- /.p-post-card__category-wrapper -->
-                              <h3 class="p-post-card__title">
-                                <%= jsonData.pages.blog_single.title; %>
-                              </h3>
-                              <time datetime="2020-02-14" class="p-post-card__published">2020.02.14</time>
-                            </div><!-- /.p-post-card__body -->
-                          </a><!-- /.p-post-card -->
-                        </li><!-- /.archive-main__item -->
+                          <div class="p-post-card__body">
+                            <div class="p-post-card__category-wrapper">
+                              <span class="p-post-card__category">お知らせ</span>
+                            </div><!-- /.p-post-card__category-wrapper -->
+                            <h3 class="p-post-card__title">
+                              <%= jsonData.pages.blog_single.title; %>
+                            </h3>
+                            <time datetime="2020-02-14" class="p-post-card__published">2020.02.14</time>
+                          </div><!-- /.p-post-card__body -->
+                        </a><!-- /.archive-main__item p-post-card -->
 
-                        <li class="archive-main__item">
-                          <a href="<%= jsonData.pages.blog_single.slug; %>" class="p-post-card">
-                            <figure class="p-post-card__image">
-                              <img src="/img/blog/blog_post_img.jpg" alt="<%= jsonData.pages.blog_single.title; %>">
-                            </figure><!-- /.p-post-card__image -->
 
-                            <div class="p-post-card__body">
-                              <div class="p-post-card__category-wrapper">
-                                <span class="p-post-card__category">お知らせ</span>
-                              </div><!-- /.p-post-card__category-wrapper -->
-                              <h3 class="p-post-card__title">
-                                <%= jsonData.pages.blog_single.title; %>
-                              </h3>
-                              <time datetime="2020-02-14" class="p-post-card__published">2020.02.14</time>
-                            </div><!-- /.p-post-card__body -->
-                          </a><!-- /.p-post-card -->
-                        </li><!-- /.archive-main__item -->
+                        <a href="<%= jsonData.pages.blog_single.slug; %>" class="archive-main__item p-post-card">
+                          <figure class="p-post-card__image">
+                            <img src="/img/blog/blog_post_img.jpg" alt="<%= jsonData.pages.blog_single.title; %>">
+                          </figure><!-- /.p-post-card__image -->
 
-                        <li class="archive-main__item">
-                          <a href="<%= jsonData.pages.blog_single.slug; %>" class="p-post-card">
-                            <figure class="p-post-card__image">
-                              <img src="/img/blog/blog_post_img.jpg" alt="<%= jsonData.pages.blog_single.title; %>">
-                            </figure><!-- /.p-post-card__image -->
+                          <div class="p-post-card__body">
+                            <div class="p-post-card__category-wrapper">
+                              <span class="p-post-card__category">お知らせ</span>
+                            </div><!-- /.p-post-card__category-wrapper -->
+                            <h3 class="p-post-card__title">
+                              <%= jsonData.pages.blog_single.title; %>
+                            </h3>
+                            <time datetime="2020-02-14" class="p-post-card__published">2020.02.14</time>
+                          </div><!-- /.p-post-card__body -->
+                        </a><!-- /.archive-main__item p-post-card -->
 
-                            <div class="p-post-card__body">
-                              <div class="p-post-card__category-wrapper">
-                                <span class="p-post-card__category">お知らせ</span>
-                              </div><!-- /.p-post-card__category-wrapper -->
-                              <h3 class="p-post-card__title">
-                                <%= jsonData.pages.blog_single.title; %>
-                              </h3>
-                              <time datetime="2020-02-14" class="p-post-card__published">2020.02.14</time>
-                            </div><!-- /.p-post-card__body -->
-                          </a><!-- /.p-post-card -->
-                        </li><!-- /.archive-main__item -->
+                        <a href="<%= jsonData.pages.blog_single.slug; %>" class="archive-main__item p-post-card">
+                          <figure class="p-post-card__image">
+                            <img src="/img/blog/blog_post_img.jpg" alt="<%= jsonData.pages.blog_single.title; %>">
+                          </figure><!-- /.p-post-card__image -->
 
-                        <li class="archive-main__item">
-                          <a href="<%= jsonData.pages.blog_single.slug; %>" class="p-post-card">
-                            <figure class="p-post-card__image">
-                              <img src="/img/blog/blog_post_img.jpg" alt="<%= jsonData.pages.blog_single.title; %>">
-                            </figure><!-- /.p-post-card__image -->
+                          <div class="p-post-card__body">
+                            <div class="p-post-card__category-wrapper">
+                              <span class="p-post-card__category">お知らせ</span>
+                            </div><!-- /.p-post-card__category-wrapper -->
+                            <h3 class="p-post-card__title">
+                              <%= jsonData.pages.blog_single.title; %>
+                            </h3>
+                            <time datetime="2020-02-14" class="p-post-card__published">2020.02.14</time>
+                          </div><!-- /.p-post-card__body -->
+                        </a><!-- /.archive-main__item p-post-card -->
 
-                            <div class="p-post-card__body">
-                              <div class="p-post-card__category-wrapper">
-                                <span class="p-post-card__category">お知らせ</span>
-                              </div><!-- /.p-post-card__category-wrapper -->
-                              <h3 class="p-post-card__title">
-                                <%= jsonData.pages.blog_single.title; %>
-                              </h3>
-                              <time datetime="2020-02-14" class="p-post-card__published">2020.02.14</time>
-                            </div><!-- /.p-post-card__body -->
-                          </a><!-- /.p-post-card -->
-                        </li><!-- /.archive-main__item -->
-                      </ol><!-- /.archive-main__items -->
+                        <a href="<%= jsonData.pages.blog_single.slug; %>" class="archive-main__item p-post-card">
+                          <figure class="p-post-card__image">
+                            <img src="/img/blog/blog_post_img.jpg" alt="<%= jsonData.pages.blog_single.title; %>">
+                          </figure><!-- /.p-post-card__image -->
+
+                          <div class="p-post-card__body">
+                            <div class="p-post-card__category-wrapper">
+                              <span class="p-post-card__category">お知らせ</span>
+                            </div><!-- /.p-post-card__category-wrapper -->
+                            <h3 class="p-post-card__title">
+                              <%= jsonData.pages.blog_single.title; %>
+                            </h3>
+                            <time datetime="2020-02-14" class="p-post-card__published">2020.02.14</time>
+                          </div><!-- /.p-post-card__body -->
+                        </a><!-- /.archive-main__item p-post-card -->
+                      </div><!-- /.archive-main__items -->
 
                       <%- include(path + 'common/_pagination' , {pageId: pageId}) %>
                     </main><!-- /.archive-content__main archive-main -->

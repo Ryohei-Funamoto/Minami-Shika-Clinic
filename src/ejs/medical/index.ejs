@@ -21,7 +21,7 @@
                   <%= jsonData.pages[pageId].subtitle; %>
                 </span>
               </div><!-- /.p-sub-main-visual__content medical-main-visual__content -->
-            </div><!-- /.l-main-visual l-main-visual--sub p-sub-main-visual medical-main-visual -->
+            </div><!-- /.l-main-visual p-sub-main-visual medical-main-visual -->
 
             <%- include(path + 'common/_breadcrumb' , {pageId: pageId}) %>
 
@@ -51,13 +51,13 @@
                 </div><!-- /.l-container medical-anchor__container -->
               </section><!-- /.l-medical__anchor medical-anchor -->
 
-              <section class="l-medical__intro medical-intro">
+              <section id="medicalGeneral" class="l-medical__intro medical-intro">
                 <div class="medical-intro__top-deco"></div>
                 <div class="medical-intro__content">
                   <div class="l-container medical-intro__container">
-                    <div class="medical-intro__title-wrapper">
-                      <h2 class="medical-intro__title c-section-title">一般診療</h2>
-                    </div><!-- /.medical-intro__title-wrapper -->
+                    <div class="medical-intro__title">
+                      <h2 class="c-section-title">一般診療</h2>
+                    </div><!-- /.medical-intro__title -->
 
                     <ul class="medical-intro__items">
                       <li id="general" class="medical-intro__item p-medical-intro-card">
@@ -116,13 +116,13 @@
                 <div class="medical-intro__bottom-deco"></div>
               </section><!-- /.l-medical__intro medical-intro -->
 
-              <section class="l-medical__intro medical-intro">
+              <section id="medicalSpecial" class="l-medical__intro medical-intro">
                 <div class="medical-intro__top-deco"></div>
                 <div class="medical-intro__content">
                   <div class="l-container medical-intro__container">
-                    <div class="medical-intro__title-wrapper">
-                      <h2 class="medical-intro__title c-section-title">特殊診療</h2>
-                    </div><!-- /.medical-intro__title-wrapper -->
+                    <div class="medical-intro__title">
+                      <h2 class="c-section-title">特殊診療</h2>
+                    </div><!-- /.medical-intro__title -->
 
                     <ul class="medical-intro__items">
                       <li id="denture" class="medical-intro__item p-medical-intro-card">

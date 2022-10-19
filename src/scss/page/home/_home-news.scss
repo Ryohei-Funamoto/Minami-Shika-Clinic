@@ -1,0 +1,34 @@
+@use "global" as *;
+@use "sass:color";
+
+.home-news {
+  position: relative;
+  z-index: $layer-up;
+}
+
+.home-news__inner {
+  @include mq('md') {
+    align-items: center;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+
+.home-news__medical-time-sheet {
+  border-radius: rem(12);
+  box-shadow: 0 rem(3) rem(6) color.adjust($color-black, $alpha: -0.84);
+
+  @include mq('md') {
+    flex-shrink: 0;
+    width: rem(477);
+  }
+}
+
+.home-news__content {
+  margin: rem(40) 0 0;
+
+  @include mq('md') {
+    margin: 0 rem(63) 0 0;
+    width: calc(100% - rem(477) - rem(63));
+  }
+}

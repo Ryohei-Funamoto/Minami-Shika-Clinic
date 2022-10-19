@@ -126,3 +126,12 @@
   top: 0;
   width: 100%;
 }
+
+.p-off-center-media__button {
+  margin-top: rem(40);
+  text-align: center;
+
+  @include mq('md') {
+    text-align: left;
+  }
+}

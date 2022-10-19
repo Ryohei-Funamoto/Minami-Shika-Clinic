@@ -1,0 +1,44 @@
+@use "global" as *;
+@use "sass:color";
+
+.home-main-visual-wrapper {
+  position: relative;
+}
+
+.home-main-visual-wrapper__pagination.swiper-pagination-bullets {
+  bottom: rem(19);
+  left: rem(7);
+  width: auto;
+
+  @include mq('md') {
+    bottom: rem(5);
+    left: calc(37 / 1280 * 100%);
+  }
+}
+
+.home-main-visual-wrapper__button.swiper-button-prev,
+.home-main-visual-wrapper__button.swiper-button-next {
+  height: rem(32);
+  width: rem(32);
+
+  @include mq('md') {
+    height: rem(48);
+    width: rem(48);
+  }
+}
+
+.home-main-visual-wrapper__button--prev.swiper-button-prev {
+  left: rem(4);
+
+  @include mq('md') {
+    left: calc(38 / 1280 * 100%);
+  }
+}
+
+.home-main-visual-wrapper__button--next.swiper-button-next {
+  right: rem(4);
+
+  @include mq('md') {
+    right: calc(38 / 1280 * 100%);
+  }
+}

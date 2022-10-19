@@ -1,0 +1,15 @@
+@use "global" as *;
+
+.home-concept {
+  overflow-x: hidden;
+}
+
+.home-concept__media {
+  padding: rem(110) 0 0;
+  
+  @include mq('md') {
+    margin: 0 0 0 calc(50% - 50vw);
+    padding: rem(180) 0 rem(107);
+    width: calc(50vw + 50%);
+  }
+}

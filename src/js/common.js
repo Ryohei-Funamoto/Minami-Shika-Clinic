@@ -87,6 +87,24 @@
   /**
    * Swiper
    */
+  const homeMvSlider = new Swiper('.js-home-mv-slider', {
+    autoplay: {
+      delay: 4000,
+    },
+    disableOnInteraction: false,
+    effect: 'fade',
+    loop: true,
+    slidesPerView: 1,
+    speed: 2000,
+    pagination: {
+      el: '.js-home-main-visual-pagination',
+    },
+    navigation: {
+      nextEl: '.js-home-main-visual-button-next',
+      prevEl: '.js-home-main-visual-button-prev',
+    },
+  });
+
   const staffSlider = new Swiper('.js-staff-slider', {
     allowTouchMove: false, // スワイプ無効
     autoplay: {

@@ -1,0 +1,20 @@
+@use "global" as *;
+
+.home-recommend__title {
+  text-align: center;
+}
+
+.home-recommend__items {
+  display: grid;
+  gap: rem(60);
+  grid-template-columns: 1fr;
+  margin: rem(40) auto 0;
+  max-width: calc(100% - rem(50));
+  width: 100%;
+  
+  @include mq('md') {
+    margin: rem(60) auto 0;
+    max-width: calc(100% - rem(32));
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

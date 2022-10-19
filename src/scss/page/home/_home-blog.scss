@@ -1,0 +1,29 @@
+@use "global" as *;
+
+.home-blog__title {
+  text-align: center;
+}
+
+.home-blog__items {
+  column-gap: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: rem(48);
+  row-gap: rem(20);
+  
+  @include mq('md') {
+    column-gap: rem(50);
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: rem(80);
+    row-gap: rem(50);
+  }
+}
+
+.home-blog__button {
+  margin-top: rem(40);
+  text-align: center;
+
+  @include mq('md') {
+    margin-top: rem(60);
+  }
+}

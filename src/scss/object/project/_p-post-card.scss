@@ -1,10 +1,19 @@
 @use "global" as *;
 @use "sass:math";
+@use "sass:color";
 
 .p-post-card {
   align-items: center;
   display: flex;
   position: relative;
+}
+
+.p-post-card--column {
+  @include mq('md') {
+    border-radius: rem(20);
+    box-shadow: 0 rem(3) rem(6) color.adjust($color-black, $alpha: -0.84);
+    flex-direction: column;
+  }
 }
 
 .p-post-card__badge {
@@ -25,14 +34,31 @@
   z-index: $layer-up;
 }
 
+.p-post-card--column .p-post-card__badge {
+  @include mq('md') {
+    font-size: rem(16);
+    height: rem(60);
+    left: rem(-10);
+    top: rem(-20);
+    width: rem(60);
+  }
+}
+
 .p-post-card__image {
   flex-shrink: 0;
   overflow: hidden;
   position: relative;
   width: math.div(133, 335) * 100%;
-
+  
   @include mq('md') {
     width: math.div(244, 670) * 100%;
+  }
+}
+
+.p-post-card--column .p-post-card__image {
+  @include mq('md') {
+    border-radius: rem(20) rem(20) 0 0;
+    width: 100%;
   }
 }
 
@@ -49,6 +75,12 @@
   
   @include mq('md') {
     @include paddingTopHack(244, 153);
+  }
+}
+
+.p-post-card--column .p-post-card__image::before {
+  @include mq('md') {
+    @include paddingTopHack(300, 188);
   }
 }
 
@@ -87,6 +119,18 @@
   }
 }
 
+.p-post-card--column .p-post-card__body {
+  @include mq('md') {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin: 0;
+    padding: rem(24) rem(24) rem(13);
+    position: relative;
+    width: 100%;
+  }
+}
+
 .p-post-card--sidebar .p-post-card__body {
   @include mq('md') {
     margin: 0 0 0 math.div(10, 300) * 100%;
@@ -96,6 +140,13 @@
 
 .p-post-card__category-wrapper {
   font-size: 0;
+}
+
+.p-post-card--column .p-post-card__category-wrapper {
+  @include mq('md') {
+    position: absolute;
+    top: rem(-14);
+  }
 }
 
 .p-post-card__category {
@@ -136,6 +187,12 @@
   }
 }
 
+.p-post-card--column .p-post-card__title {
+  @include mq('md') {
+    margin-top: 0;
+  }
+}
+
 .p-post-card--sidebar .p-post-card__title {
   @include mq('md') {
     font-size: rem(14);
@@ -160,6 +217,12 @@
   @include mq('md') {
     font-size: rem(12);
     margin-top: rem(16);
+  }
+}
+
+.p-post-card--column .p-post-card__published {
+  @include mq('md') {
+    margin-top: auto;
   }
 }
 
