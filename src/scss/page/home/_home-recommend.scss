@@ -5,11 +5,12 @@
 }
 
 .home-recommend__items {
+  column-gap: rem(60);
   display: grid;
-  gap: rem(60);
   grid-template-columns: 1fr;
-  margin: rem(40) auto 0;
+  margin: rem(38) auto 0;
   max-width: calc(100% - rem(50));
+  row-gap: rem(56);
   width: 100%;
   
   @include mq('md') {

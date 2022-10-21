@@ -3,11 +3,13 @@
 
 .p-sp-fixed-footer {
   background-color: color.adjust($color-white, $alpha: -0.15);
+  border-top: rem(1) solid $color-main;
 }
 
 .p-sp-fixed-footer__container {
   height: inherit;
   max-width: rem(440);
+  padding: 0 rem(20) 0 rem(16);
 }
 
 .p-sp-fixed-footer__inner {
@@ -17,6 +19,7 @@
 }
 
 .p-sp-fixed-footer__business-hours {
+  color: $color-text;
   font-size: rem(10);
   @include lineHeight(10, 12);
   margin-top: rem(4);

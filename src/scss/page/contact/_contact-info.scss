@@ -15,7 +15,7 @@
 .contact-info__description {
   font-size: rem(14);
   @include lineHeight(14, 24);
-  margin-top: rem(28);
+  margin-top: rem(25);
 }
 
 .contact-info__description--precaution {
@@ -25,5 +25,13 @@
 .contact-info__tel-wrapper {
   display: inline-flex;
   flex-direction: column;
-  margin-top: rem(28);
+  margin-top: rem(29);
+
+  @include mq('md') {
+    margin-top: rem(33);
+  }
+}
+
+.contact-info__business-hours {
+  margin-top: rem(2);
 }

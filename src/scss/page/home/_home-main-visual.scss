@@ -57,7 +57,7 @@
 
   @include mq('md') {
     font-size: rem(32);
-    @include lineHeight(32, 54);
+    @include lineHeight(32, 64);
   }
 }
 
@@ -83,5 +83,5 @@
 }
 
 .home-main-visual__lead span:nth-child(n + 2) {
-  margin-top: rem(10);
+  margin-top: rem(2);
 }

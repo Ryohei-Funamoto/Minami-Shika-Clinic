@@ -15,10 +15,10 @@
 .single-main__meta {
   align-items: center;
   display: flex;
-  margin-top: rem(17);
+  margin-top: rem(15);
 
   @include mq('md') {
-    margin-top: rem(18);
+    margin-top: rem(16);
   }
 }
 
@@ -65,7 +65,7 @@
 }
 
 .single-main__body {
-  margin-top: rem(60);
+  margin-top: rem(56);
 }
 
 .single-main__body h2 {
@@ -76,7 +76,7 @@
   font-weight: $bold;
   @include letterSpacing(80);
   @include lineHeight(18, 32);
-  margin-top: rem(60);
+  margin-top: rem(56);
 
   @include mq('md') {
     font-size: rem(24);
@@ -106,12 +106,12 @@
   font-weight: $bold;
   @include letterSpacing(80);
   margin-top: rem(40);
-  padding-bottom: rem(5);
+  padding-bottom: rem(3);
 
   @include mq('md') {
     font-size: rem(20);
     @include lineHeight(20, 28);
-    padding-bottom: rem(6);
+    padding-bottom: rem(5);
   }
 }
 
@@ -120,10 +120,12 @@
   font-size: rem(14);
   font-weight: $bold;
   @include letterSpacing(80);
-  margin-top: rem(60);
+  @include lineHeight(14, 19);
+  margin-top: rem(56);
 
   @include mq('md') {
     font-size: rem(16);
+    @include lineHeight(16, 20);
   }
 }
 
@@ -147,8 +149,8 @@
 }
 
 .single-main__body ul {
-  margin-top: rem(20);
-  padding-left: rem(17);
+  margin-top: rem(12);
+  padding-left: rem(20);
 
   @include mq('md') {
     padding-left: rem(14);
@@ -174,6 +176,10 @@
   height: rem(3);
   margin-right: rem(6);
   width: rem(3);
+
+  @include mq('md') {
+    margin-right: rem(11);
+  }
 }
 
 .single-main__body figure {

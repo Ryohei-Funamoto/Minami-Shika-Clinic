@@ -4,9 +4,10 @@
 .p-footer-info {
   background-color: $color-white;
   border-radius: rem(8);
-
+  
   @include mq('md') {
     align-items: center;
+    border-radius: rem(20);
     display: flex;
   }
 }
@@ -26,23 +27,31 @@
 
 .p-footer-info__address {
   font-size: rem(14);
-  @include lineHeight(14, 36);
+  margin-top: rem(8);
   text-align: center;
+
+  @include mq('md') {
+    margin-top: rem(6);
+  }
 }
 
 .p-footer-info__tel {
-  margin-top: rem(20);
+  margin-top: rem(22);
 }
 
 .p-footer-info__tel a {
   justify-content: center;
 }
 
+.p-footer-info__business-hours {
+  margin-top: rem(4);
+}
+
 .p-footer-info__buttons {
   display: flex;
   font-size: 0;
   justify-content: center;
-  margin-top: rem(20);
+  margin-top: rem(18);
 }
 
 .p-footer-info__button:nth-child(n + 2) {

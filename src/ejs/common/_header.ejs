@@ -61,7 +61,7 @@
                     スタッフ紹介
                   </a>
                 </li>
-                <li <%- pageId === 'blog' ? 'class="is-current"' : '' %>>
+                <li <%- pageId === 'blog' || pageId === 'blog_single' ? 'class="is-current"' : '' %>>
                   <a href="<%= jsonData.pages.blog.slug; %>">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                       <path data-name="パス 43761"

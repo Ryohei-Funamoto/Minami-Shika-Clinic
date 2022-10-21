@@ -5,7 +5,7 @@
   font-size: rem(16);
   font-weight: bold;
   @include letterSpacing(80);
-  padding-bottom: rem(8);
+  padding-bottom: rem(7);
 }
 
 .staff-group__items {
@@ -13,11 +13,12 @@
   display: grid;
   grid-template-columns: 1fr;
   margin-top: rem(37);
-  row-gap: rem(60);
+  row-gap: rem(54);
   
   @include mq('md') {
     column-gap: rem(80);
     grid-template-columns: repeat(3, 1fr);
     margin-top: rem(40);
+    row-gap: rem(60);
   }
 }

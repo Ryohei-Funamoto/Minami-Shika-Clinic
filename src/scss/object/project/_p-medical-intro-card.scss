@@ -9,7 +9,7 @@
   z-index: $layer-up;
 
   @include mq('md') {
-    padding: rem(55) rem(60) rem(60);
+    padding: rem(52) rem(60) rem(62);
   }
 }
 
@@ -46,8 +46,9 @@
   display: block;
   left: 0;
   position: absolute;
-
+  
   @include mq('md') {
+    border-bottom: rem(16) solid $color-white;
     border-left: rem(50) solid transparent;
     border-right: rem(50) solid transparent;
   }
@@ -63,12 +64,12 @@
 
 .p-medical-intro-card__head {
   border-bottom: rem(1) solid $color-gray04;
-  padding-bottom: rem(20);
+  padding-bottom: rem(18);
 
   @include mq('md') {
     align-items: center;
     display: flex;
-    padding-bottom: rem(40);
+    padding-bottom: rem(37);
   }
 }
 
@@ -98,11 +99,11 @@
 }
 
 .p-medical-intro-card__body {
-  margin-top: rem(20);
+  margin-top: rem(18);
 
   @include mq('md') {
     display: flex;
-    margin-top: rem(40);
+    margin-top: rem(39);
   }
 }
 
@@ -117,7 +118,7 @@
 
 .p-medical-intro-card__image {
   border-radius: rem(20);
-  margin: rem(20) 0 0;
+  margin: rem(18) 0 0;
   overflow: hidden;
   position: relative;
 

@@ -4,9 +4,9 @@
   align-items: center;
   border-bottom: rem(1) solid $color-gray03;
   display: flex;
-  font-size: rem(14);
+  font-size: rem(16);
   font-weight: $bold;
-  @include lineHeight(14, 20);
+  @include lineHeight(16, 20);
   padding-bottom: rem(8);
 }
 
@@ -52,7 +52,7 @@
 .p-sidebar-intro__description {
   font-size: rem(14);
   @include lineHeight(14, 24);
-  margin-top: rem(14);
+  margin-top: rem(10);
 }
 
 .p-sidebar-intro__link {
@@ -61,7 +61,8 @@
   display: inline-flex;
   font-size: rem(14);
   @include lineHeight(14, 24);
-  margin-top: rem(14);
+  margin-top: rem(10);
+  padding-left: rem(3);
   transition: opacity $trs-duration;
 }
 

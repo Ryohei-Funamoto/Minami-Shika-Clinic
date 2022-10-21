@@ -77,27 +77,21 @@
                             <dd class="p-input-group__field">
                               <div class="p-textbox">
                                 <span>
-                                  <input type="text" name="your-kana" id="kana" placeholder="ヤマダ タロウ"
+                                  <input type="text" name="your-kana" id="kana" placeholder="ヤマダ　タロウ"
                                     aria-required="true">
                                 </span>
                               </div>
                             </dd>
                           </div>
                           <div class="p-form__item p-input-group">
-                            <dt id="telNumberLabel" class="p-input-group__label p-input-group__label--required">電話番号
+                            <dt class="p-input-group__label p-input-group__label--required"><label
+                                for="tel">電話番号</label>
                             </dt>
                             <dd class="p-input-group__field">
-                              <div class="p-textbox p-textbox--tel" aria-labelledby="telNumberLabel">
+                              <div class="p-textbox">
                                 <span>
-                                  <input type="tel" name="your-tel01" placeholder="080" aria-required="true">
-                                </span>
-                                -
-                                <span>
-                                  <input type="tel" name="your-tel02" placeholder="1234" aria-required="true">
-                                </span>
-                                -
-                                <span>
-                                  <input type="tel" name="your-tel03" placeholder="5678" aria-required="true">
+                                  <input type="tel" name="your-tel" id="tel" placeholder="000-0000-0000"
+                                    aria-required="true">
                                 </span>
                               </div>
                             </dd>
@@ -114,7 +108,7 @@
                               </div>
                             </dd>
                           </div>
-                          <div class="p-form__item p-input-group">
+                          <div class="p-form__item p-form__item--radio p-input-group">
                             <dt id="visitTimesLabel" class="p-input-group__label p-input-group__label--required">初診/再診
                             </dt>
                             <dd class="p-input-group__field p-input-group__field--radio">
@@ -134,7 +128,7 @@
                               </div>
                             </dd>
                           </div>
-                          <div class="p-form__item p-input-group">
+                          <div class="p-form__item p-form__item--checkbox p-input-group">
                             <dt id="purposeLabel" class="p-input-group__label p-input-group__label--required">
                               <div class="p-input-group__label--multi-row">診療内容<span>※(複数選択可)</span></div>
                             </dt>
@@ -214,7 +208,7 @@
                             </dd>
                           </div>
                           <div class="p-form__item p-input-group">
-                            <dt id="preferredDateLabel" class="p-input-group__label">ご連絡方法</dt>
+                            <dt id="preferredDateLabel" class="p-input-group__label">希望日</dt>
                             <dd class="p-input-group__field">
                               <div class="p-textbox p-textbox--date" aria-labelledby="preferredDateLabel">
                                 <span>

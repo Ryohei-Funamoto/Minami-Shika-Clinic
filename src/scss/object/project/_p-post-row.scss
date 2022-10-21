@@ -4,12 +4,12 @@
   align-items: flex-start;
   color: $color-text;
   display: flex;
-  padding: rem(12) rem(26) rem(13) rem(6);
+  padding: rem(12) rem(26) rem(11) rem(6);
   position: relative;
   transition: color $trs-duration;
   
   @include mq('md') {
-    padding: rem(9) rem(30) rem(10) rem(14);
+    padding: rem(9) rem(30) rem(7) rem(14);
   }
 }
 
@@ -30,6 +30,10 @@
   top: 50%;
   transform: translateY(-50%);
   transition: right $trs-duration;
+
+  @include mq('md') {
+    font-size: rem(18);
+  }
 }
 
 .p-post-row:focus::after,
@@ -42,10 +46,18 @@
 .p-post-row__published {
   font-size: rem(12);
   padding-top: rem(2);
-  width: rem(92);
+  width: rem(95);
+
+  @include mq('md') {
+    width: rem(92);
+  }
 }
 
 .p-post-row__title {
   font-size: rem(14);
-  width: calc(100% - rem(92));
+  width: calc(100% - rem(95));
+  
+  @include mq('md') {
+    width: calc(100% - rem(92));
+  }
 }

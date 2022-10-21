@@ -2,11 +2,27 @@
 
 .p-form__item {
   border-top: rem(1) solid $color-gray05;
-  padding: rem(28) 0;
+  padding: rem(26) 0 rem(24);
+  
+  @include mq('md') {
+    padding: rem(28) 0;
+  }
 }
 
 .p-form__item:last-child {
   border-bottom: rem(1) solid $color-gray05;
+}
+
+.p-form__item--radio {
+  @include mq('md') {
+    padding: rem(39) 0 rem(40);
+  }
+}
+
+.p-form__item--checkbox {
+  @include mq('md') {
+    padding: rem(22) 0;
+  }
 }
 
 .p-form__button {

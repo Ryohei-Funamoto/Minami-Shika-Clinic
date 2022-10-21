@@ -9,7 +9,7 @@
 }
 
 .l-about__policy {
-  margin-top: rem(60);
+  margin-top: rem(58);
 
   @include mq('md') {
     margin-top: rem(80);
@@ -17,9 +17,9 @@
 }
 
 .l-about__mood {
-  margin-top: rem(100);
+  margin-top: rem(97);
 
   @include mq('md') {
-    margin-top: rem(160);
+    margin-top: rem(158);
   }
 }

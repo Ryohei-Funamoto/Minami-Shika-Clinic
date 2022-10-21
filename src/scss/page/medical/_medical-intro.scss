@@ -17,10 +17,10 @@
 
 .medical-intro__content {
   background-color: $color-sub02;
-  padding: rem(32) 0 rem(97);
+  padding: rem(30) 0 rem(97);
 
   @include mq('md') {
-    padding: 0 0 rem(82);
+    padding: rem(4) 0 rem(82);
   }
 }
 
@@ -32,7 +32,7 @@
   margin-top: rem(40);
 
   @include mq('md') {
-    margin-top: rem(60);
+    margin-top: rem(59);
   }
 }
 

@@ -13,6 +13,16 @@
   padding: rem(11) rem(16) rem(12);
 }
 
+.p-textbox input[type="email"],
+.p-textbox input[type="tel"],
+.p-textbox textarea {
+  padding: rem(11) rem(16) rem(12);
+}
+
+.p-textbox input[type="date"] {
+  padding: rem(10) rem(16) rem(11);
+}
+
 .p-textbox textarea {
   height: rem(160);
 
@@ -33,17 +43,8 @@
   display: block;
 }
 
-.p-textbox:not(.p-textbox--tel)>span:nth-child(n + 2) {
+.p-textbox>span:nth-child(n + 2) {
   margin-top: rem(20);
-}
-
-.p-textbox--tel {
-  align-items: center;
-  display: flex;
-}
-
-.p-textbox--tel>span {
-  max-width: rem(80);
 }
 
 .p-textbox--date>span {
@@ -57,7 +58,7 @@
   font-weight: 900;
   pointer-events: none;
   position: absolute;
-  right: rem(10);
+  right: rem(12);
   top: 50%;
   transform: translateY(-50%);
 }

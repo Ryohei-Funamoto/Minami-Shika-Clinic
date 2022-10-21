@@ -65,22 +65,22 @@
   font-weight: $bold;
   @include letterSpacing(80);
   @include lineHeight(20, 32);
-  margin-top: rem(16);
+  margin-top: rem(14);
 
   @include mq('md') {
     font-size: rem(28);
     @include lineHeight(28, 44);
-    margin-top: rem(28);
+    margin-top: rem(24);
   }
 }
 
 .p-off-center-media__description {
   font-size: rem(14);
   @include lineHeight(14, 24);
-  margin-top: rem(32);
+  margin-top: rem(26);
 
   @include mq('md') {
-    margin-top: rem(40);
+    margin-top: rem(35);
   }
 }
 
@@ -128,10 +128,11 @@
 }
 
 .p-off-center-media__button {
-  margin-top: rem(40);
+  margin-top: rem(37);
   text-align: center;
-
+  
   @include mq('md') {
+    margin-top: rem(38);
     text-align: left;
   }
 }

@@ -6,6 +6,12 @@
   z-index: $layer-up;
 }
 
+.home-news__container {
+  @include mq('md') {
+    max-width: rem(1160);
+  }
+}
+
 .home-news__inner {
   @include mq('md') {
     align-items: center;
@@ -25,10 +31,10 @@
 }
 
 .home-news__content {
-  margin: rem(40) 0 0;
+  margin: rem(39) 0 0;
 
   @include mq('md') {
-    margin: 0 rem(63) 0 0;
+    margin: rem(22) rem(63) 0 0;
     width: calc(100% - rem(477) - rem(63));
   }
 }

@@ -3,10 +3,10 @@
 .home-news-content__head {
   align-items: center;
   display: flex;
-  padding: 0 0 rem(8) rem(16);
+  padding: 0 0 rem(6) rem(16);
   
   @include mq('md') {
-    padding: 0 0 rem(8) rem(14);
+    padding: 0 0 rem(9) rem(14);
   }
 }
 
@@ -16,13 +16,14 @@
   font-size: rem(20);
   font-weight: $bold;
   @include letterSpacing(100);
+  @include lineHeight(20, 28);
 }
 
 .home-news-content__title span {
   color: $color-main;
   display: block;
   font-size: rem(11);
-  margin-left: rem(16);
+  margin-left: rem(12);
   text-transform: uppercase;
 
   @include mq('md') {

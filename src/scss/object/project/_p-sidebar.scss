@@ -1,9 +1,13 @@
 @use "global" as *;
 
 .p-sidebar__latest-posts {
-  margin-top: rem(60);
+  margin-top: rem(56);
 }
 
 .p-sidebar__category-list {
   margin-top: rem(60);
+
+  @include mq('md') {
+    margin-top: rem(61);
+  }
 }

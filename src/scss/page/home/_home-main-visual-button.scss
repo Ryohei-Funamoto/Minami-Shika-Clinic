@@ -4,6 +4,8 @@
 .home-main-visual-wrapper__button.swiper-button-prev,
 .home-main-visual-wrapper__button.swiper-button-next {
   height: rem(32);
+  margin: 0;
+  transform: translateY(-50%);
   width: rem(32);
 
   @include mq('md') {

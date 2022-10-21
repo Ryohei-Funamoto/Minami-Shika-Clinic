@@ -28,33 +28,33 @@
 }
 
 .staff-director-info__profile-lists {
-  margin-top: rem(40);
+  margin-top: rem(38);
   order: 3;
 
   @include mq('md') {
-    margin-top: rem(60);
+    margin-top: rem(56);
     order: 0;
   }
 }
 
 .staff-director-info__profile-list:nth-child(n + 2) {
-  margin-top: rem(40);
+  margin-top: rem(36);
 
   @include mq('md') {
-    margin-top: rem(32);
+    margin-top: rem(28);
   }
 }
 
 .staff-director-info__image {
   border-radius: rem(20);
-  margin: rem(40) 0 0;
+  margin: rem(38) 0 0;
   order: 2;
   overflow: hidden;
   position: relative;
 
   @include mq('md') {
     flex-shrink: 0;
-    margin: rem(7) 0 0 math.div(80, 1000) * 100%;
+    margin: rem(9) 0 0 math.div(80, 1000) * 100%;
     width: math.div(460, 1000) * 100%;
   }
 }

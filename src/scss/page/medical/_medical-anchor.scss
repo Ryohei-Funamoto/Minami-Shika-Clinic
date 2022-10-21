@@ -21,7 +21,12 @@
   font-size: rem(14);
   line-height: 1;
   margin-left: rem(24);
-  padding: rem(11) rem(11);
+  padding: rem(10) rem(11) rem(11);
+  
+  @include mq('md') {
+    padding: rem(10) rem(10) rem(11);
+    margin-left: rem(20);
+  }
 }
 
 .medical-anchor__title--general::after {
@@ -35,11 +40,12 @@
 }
 
 .medical-anchor__items {
-  margin: rem(32) 0 rem(-16);
-
+  margin: rem(32) 0 0;
+  
   @include mq('md') {
     display: flex;
     flex-wrap: wrap;
+    margin: rem(30) 0 rem(-16);
   }
 }
 
@@ -52,8 +58,10 @@
 }
 
 .medical-anchor__item:last-child {
+  margin: 0 0 0 0;
+
   @include mq('md') {
-    margin-right: 0;
+    margin: 0 0 rem(16) 0;
   }
 }
 

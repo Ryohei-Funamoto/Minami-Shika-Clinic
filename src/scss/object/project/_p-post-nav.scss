@@ -56,7 +56,7 @@
 }
 
 .p-post-nav__item--prev a {
-  padding: rem(11) rem(15) rem(11) rem(35);
+  padding: rem(11) rem(15) rem(12) rem(35);
 
   @include mq('md') {
     padding: rem(10) rem(16) rem(10) rem(38);
@@ -83,7 +83,7 @@
 }
 
 .p-post-nav__item--next a {
-  padding: rem(11) rem(35) rem(11) rem(15);
+  padding: rem(11) rem(35) rem(12) rem(15);
 
   @include mq('md') {
     padding: rem(10) rem(38) rem(10) rem(16);
@@ -112,10 +112,10 @@
 .p-post-nav__item--archive a {
   background-color: $color-white;
   color: $color-main;
-  padding: rem(12) rem(18);
+  padding: rem(12) rem(18) rem(13);
 
   @include mq('md') {
-    padding: rem(12) rem(16);
+    padding: rem(12) rem(16) rem(13);
   }
 }
 

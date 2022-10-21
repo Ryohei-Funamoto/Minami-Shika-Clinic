@@ -97,15 +97,20 @@
   position: absolute;
   z-index: $layer-up;
   text-align: center;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  top: calc(62 / 210 * 100%);
+  transform: translateX(-50%);
   width: 100%;
+  
+  @include mq('md') {
+    top: calc(93 / 288 * 100%);
+  }
 }
 
 .p-medical-link__title {
   font-size: rem(20);
   font-weight: $bold;
-  padding-bottom: rem(20);
+  @include lineHeight(20, 28);
+  padding-bottom: rem(22);
   position: relative;
 
   @include mq('md') {
@@ -133,9 +138,12 @@
 
 .p-medical-link__description {
   font-size: rem(12);
+  @include lineHeight(12, 19);
   margin-top: rem(20);
-
+  
   @include mq('md') {
     font-size: rem(16);
+    @include lineHeight(16, 28);
+    margin-top: rem(17);
   }
 }

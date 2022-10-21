@@ -4,12 +4,14 @@
   /**
    * DOM
    */
+  const header = document.querySelector('.js-header');
+  const headerHeight = header.clientHeight;
   const hamburger = document.querySelector('.js-hamburger');
   const drawer = document.querySelector('.js-drawer');
   const toTopBtn = document.querySelector('.js-button-to-top');
   const anchorLinks = document.querySelectorAll('a[href^="#"]');
   const anchorLinksArr = Array.prototype.slice.call(anchorLinks);
-
+  
   /**
    * 関数
    */
@@ -38,12 +40,24 @@
       behavior: 'smooth'
     });
   }
-  // ページ内リンクをクリックした時にターゲットへスムーススクロールする動き
-  const scrollToTarget = function (targetOffsetTop) {
+  // ターゲットへスムーススクロールする動き
+  const scrollToTarget = function (targetId) {
+    let target = document.querySelector(targetId);
+    let position = window.pageYOffset + target.getBoundingClientRect().top - headerHeight;
     window.scrollTo({
-      top: targetOffsetTop,
-      behavior: 'smooth'
+      top: position,
+      behavior: 'smooth',
     });
+  }
+  // 別ページの特定箇所へのスムーススクロール
+  const trsToAnotherPageTarget = function () {
+    let targetId = location.hash;
+    if (targetId) {
+      window.scrollTo({
+        top: 0,
+      });
+      setTimeout(scrollToTarget(targetId), 400);
+    }
   }
 
   /**
@@ -65,37 +79,32 @@
   });
   // トップへ戻るボタンの表示・非表示
   window.addEventListener('scroll', toTopBtnToggle);
-  // トップへ戻るボタンを押した時のページトップへ戻る動き
+  // トップへ戻るボタンを押した時にページトップへ戻る
   toTopBtn.addEventListener('click', scrollToTop);
-  // ページ内リンクをクリックした時にターゲットへスムーススクロールする動き
+  // ページ内リンクをクリックした時にターゲットへスムーススクロールする
   anchorLinksArr.forEach(elm => {
     elm.addEventListener('click', function (e) {
       e.preventDefault();
-      const targetId = elm.getAttribute('href');
-      let targetOffsetTop;
-      if (targetId == '#') {
-        targetOffsetTop = 0;
-      } else {
-        const targetElement = document.querySelector(targetId);
-        const headerHeight = document.querySelector('.js-header').clientHeight;
-        targetOffsetTop = window.pageYOffset + targetElement.getBoundingClientRect().top - headerHeight;
-      }
-      scrollToTarget(targetOffsetTop);
+      let targetId = elm.getAttribute('href');
+      scrollToTarget(targetId);
     });
   });
-
+  // 別ページの特定箇所へスムーススクロールする
+  window.addEventListener('load', trsToAnotherPageTarget);
+  
   /**
    * Swiper
    */
+  // トップページのメインビジュアルのスライダー
   const homeMvSlider = new Swiper('.js-home-mv-slider', {
     autoplay: {
-      delay: 4000,
+      delay: 4000, // 4000ミリ秒後に切り替わり
     },
-    disableOnInteraction: false,
-    effect: 'fade',
-    loop: true,
-    slidesPerView: 1,
-    speed: 2000,
+    disableOnInteraction: false, // スワイプ操作によるスライダー停止を無効化
+    effect: 'fade', // フェードで切り替わり
+    loop: true, // ループ有効化
+    slidesPerView: 1, // 1度に表示させるスライド枚数
+    speed: 2000, // スライドの速さ
     pagination: {
       el: '.js-home-main-visual-pagination',
     },
@@ -104,7 +113,7 @@
       prevEl: '.js-home-main-visual-button-prev',
     },
   });
-
+  // スタッフ紹介ページの無限ループスライダー
   const staffSlider = new Swiper('.js-staff-slider', {
     allowTouchMove: false, // スワイプ無効
     autoplay: {

@@ -4,7 +4,11 @@
   border-bottom: rem(1) solid $color-gray;
   font-size: rem(16);
   font-weight: $medium;
-  padding-bottom: rem(8);
+  padding-bottom: rem(7);
+}
+
+.staff-director-profile__items {
+  margin-top: rem(14);
 }
 
 dl.staff-director-profile__items {
@@ -17,7 +21,12 @@ dl.staff-director-profile__items {
 .staff-director-profile__items li {
   font-size: rem(14);
   @include lineHeight(14, 24);
-  margin-top: rem(16);
+}
+
+.staff-director-profile__items dt:nth-of-type(n + 2),
+.staff-director-profile__items dd:nth-of-type(n + 2),
+.staff-director-profile__items li:nth-of-type(n + 2) {
+  margin-top: rem(11);
 }
 
 .staff-director-profile__items dt {

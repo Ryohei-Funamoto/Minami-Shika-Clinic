@@ -68,8 +68,13 @@
             <a href="<%= jsonData.pages.about.slug; %>">当院について</a>
             <div class="p-footer-nav__sub p-footer-sub-nav">
               <ul class="p-footer-sub-nav__items">
-                <li><a href="">ポリシーと特徴</a></li>
-                <li><a href="">当院の様子</a></li>
+                <% if (pageId==='about' ) { %>
+                  <li><a href="#aboutPolicy">ポリシーと特徴</a></li>
+                  <li><a href="#aboutMood">当院の様子</a></li>
+                  <% } else { %>
+                    <li><a href="<%= jsonData.pages.about.slug; %>#aboutPolicy">ポリシーと特徴</a></li>
+                    <li><a href="<%= jsonData.pages.about.slug; %>#aboutMood">当院の様子</a></li>
+                    <% } %>
               </ul><!-- /.p-footer-sub-nav__items -->
             </div><!-- /.p-footer-nav__sub p-footer-sub-nav -->
           </li>
@@ -77,9 +82,15 @@
             <a href="<%= jsonData.pages.staff.slug; %>">スタッフ紹介</a>
             <div class="p-footer-nav__sub p-footer-sub-nav">
               <ul class="p-footer-sub-nav__items">
-                <li><a href="">院長のあいさつ</a></li>
-                <li><a href="">スタッフ</a></li>
-                <li><a href="">スタッフブログ</a></li>
+                <% if (pageId==='staff' ) { %>
+                  <li><a href="#staffGreeting">院長のあいさつ</a></li>
+                  <li><a href="#staffIntro">スタッフ</a></li>
+                  <li><a href="<%= jsonData.pages.blog.slug; %>">スタッフブログ</a></li>
+                  <% } else { %>
+                    <li><a href="<%= jsonData.pages.staff.slug; %>#staffGreeting">院長のあいさつ</a></li>
+                    <li><a href="<%= jsonData.pages.staff.slug; %>#staffIntro">スタッフ</a></li>
+                    <li><a href="<%= jsonData.pages.blog.slug; %>">スタッフブログ</a></li>
+                    <% } %>
               </ul><!-- /.p-footer-sub-nav__items -->
             </div><!-- /.p-footer-nav__sub p-footer-sub-nav -->
           </li>
@@ -87,16 +98,30 @@
             <a href="<%= jsonData.pages.medical.slug; %>">診療案内</a>
             <div class="p-footer-nav__sub p-footer-sub-nav">
               <ul class="p-footer-sub-nav__items">
-                <li><a href="">一般歯科</a></li>
-                <li><a href="">小児歯科</a></li>
-                <li><a href="">予防歯科</a></li>
-                <li><a href="">入れ歯</a></li>
+                <% if (pageId==='medical' ) { %>
+                  <li><a href="#general">一般歯科</a></li>
+                  <li><a href="#child">小児歯科</a></li>
+                  <li><a href="#prevention">予防歯科</a></li>
+                  <li><a href="#denture">入れ歯</a></li>
+                  <% } else { %>
+                    <li><a href="<%= jsonData.pages.medical.slug; %>#general">一般歯科</a></li>
+                    <li><a href="<%= jsonData.pages.medical.slug; %>#child">小児歯科</a></li>
+                    <li><a href="<%= jsonData.pages.medical.slug; %>#prevention">予防歯科</a></li>
+                    <li><a href="<%= jsonData.pages.medical.slug; %>#denture">入れ歯</a></li>
+                    <% } %>
               </ul><!-- /.p-footer-sub-nav__items -->
               <ul class="p-footer-sub-nav__items">
-                <li><a href="">矯正歯科</a></li>
-                <li><a href="">ホワイトニング</a></li>
-                <li><a href="">口腔外科</a></li>
-                <li><a href="">レーザー治療</a></li>
+                <% if (pageId==='medical' ) { %>
+                  <li><a href="#orthodontia">矯正歯科</a></li>
+                  <li><a href="#whitening">ホワイトニング</a></li>
+                  <li><a href="#oral">口腔外科</a></li>
+                  <li><a href="#laser">レーザー治療</a></li>
+                  <% } else { %>
+                    <li><a href="<%= jsonData.pages.medical.slug; %>#orthodontia">矯正歯科</a></li>
+                    <li><a href="<%= jsonData.pages.medical.slug; %>#whitening">ホワイトニング</a></li>
+                    <li><a href="<%= jsonData.pages.medical.slug; %>#oral">口腔外科</a></li>
+                    <li><a href="<%= jsonData.pages.medical.slug; %>#laser">レーザー治療</a></li>
+                    <% } %>
               </ul><!-- /.p-footer-sub-nav__items -->
             </div><!-- /.p-footer-nav__sub p-footer-sub-nav -->
           </li>
@@ -104,8 +129,16 @@
             <a href="<%= jsonData.pages.contact.slug; %>">お問い合わせ</a>
             <div class="p-footer-nav__sub p-footer-sub-nav">
               <ul class="p-footer-sub-nav__items">
-                <li><a href="">お問い合わせフォーム</a></li>
-                <li><a href="">WEB予約</a></li>
+                <% if (pageId==='contact' ) { %>
+                  <li><a href="#contactForm">お問い合わせフォーム</a></li>
+                  <% } else { %>
+                    <li><a href="<%= jsonData.pages.contact.slug; %>#contactForm">お問い合わせフォーム</a></li>
+                    <% } %>
+                      <% if (pageId==='reserve' ) { %>
+                        <li><a href="#reserveForm">WEB予約</a></li>
+                        <% } else { %>
+                          <li><a href="<%= jsonData.pages.reserve.slug; %>#reserveForm">WEB予約</a></li>
+                          <% } %>
               </ul><!-- /.p-footer-sub-nav__items -->
             </div><!-- /.p-footer-nav__sub p-footer-sub-nav -->
           </li>

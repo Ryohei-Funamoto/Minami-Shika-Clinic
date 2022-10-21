@@ -24,22 +24,22 @@
   margin-top: rem(100);
 
   @include mq('md') {
-    margin-top: rem(120 );
+    margin-top: rem(120);
   }
 }
 
 .l-home__medical {
-  margin-top: rem(100);
+  margin-top: rem(96);
 
   @include mq('md') {
-    margin-top: rem(140);
+    margin-top: rem(136);
   }
 }
 
 .l-home__blog {
-  margin-top: rem(100);
+  margin-top: rem(98);
 
   @include mq('md') {
-    margin-top: rem(160);
+    margin-top: rem(159);
   }
 }

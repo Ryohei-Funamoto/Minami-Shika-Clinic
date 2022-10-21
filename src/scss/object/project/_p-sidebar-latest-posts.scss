@@ -4,9 +4,9 @@
   align-items: center;
   border-bottom: rem(1) solid $color-gray03;
   display: flex;
-  font-size: rem(14);
+  font-size: rem(16);
   font-weight: $bold;
-  @include lineHeight(14, 20);
+  @include lineHeight(16, 20);
   padding-bottom: rem(8);
 }
 

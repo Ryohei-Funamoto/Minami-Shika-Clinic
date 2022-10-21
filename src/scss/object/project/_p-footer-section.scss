@@ -2,7 +2,7 @@
 
 .p-footer-section__top-deco {
   background-image: url(../img/common/footer_deco_wave.svg);
-  background-position: center top;
+  background-position: left 7% top;
   background-size: cover;
   height: rem(32);
   width: 100%;
@@ -17,18 +17,30 @@
   }
 }
 
+.p-footer-section__container {
+  max-width: rem(strip-unit($l-container-sp) + 20);
+  padding: 0 rem(10);
+
+  @include mq('md') {
+    padding: 0 rem(40);
+    max-width: rem(strip-unit($l-container-pc) + strip-unit($padding-pc) * 2);
+  }
+}
+
 .p-footer-section__info {
   padding: rem(32) rem(10) rem(20);
 
   @include mq('md') {
-    padding: rem(49) rem(40);
+    padding: rem(40) rem(49);
   }
 }
 
 .p-footer-section__nav {
-  margin-top: rem(60);
+  margin-top: rem(58);
+  padding-left: rem(10);
 
   @include mq('md') {
     margin-top: rem(40);
+    padding-left: 0;
   }
 }

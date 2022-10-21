@@ -4,12 +4,12 @@
   display: inline-block;
   font-size: rem(14);
   @include lineHeight(14, 24);
-  margin: 0 rem(24) rem(16) 0;
+  margin: 0 rem(16) rem(15) 0;
   padding-left: rem(32);
   position: relative;
   
   @include mq('md') {
-    margin: 0 rem(32) rem(16) 0;
+    margin: 0 rem(23) rem(15) 0;
   }
 }
 

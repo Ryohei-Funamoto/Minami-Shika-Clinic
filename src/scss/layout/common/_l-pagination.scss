@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .l-pagination {
-  margin-top: rem(60);
+  margin-top: rem(59);
 
   @include mq('md') {
     margin-top: rem(100);

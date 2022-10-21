@@ -3,7 +3,7 @@
 @use "sass:color";
 
 .p-post-card {
-  align-items: center;
+  align-items: flex-start;
   display: flex;
   position: relative;
 }
@@ -111,21 +111,25 @@
 
 .p-post-card__body {
   margin: 0 0 0 math.div(10, 335) * 100%;
+  padding: rem(9) 0 0;
   width: math.div(192, 335) * 100%;
-
+  
   @include mq('md') {
     margin: 0 0 0 math.div(20, 670) * 100%;
+    padding: rem(19) 0 0;
     width: math.div(405, 670) * 100%;
   }
 }
 
 .p-post-card--column .p-post-card__body {
   @include mq('md') {
+    background-color: $color-white;
+    border-radius: 0 0 rem(20) rem(20);
     display: flex;
     flex-direction: column;
     flex-grow: 1;
     margin: 0;
-    padding: rem(24) rem(24) rem(13);
+    padding: rem(22) rem(24) rem(13);
     position: relative;
     width: 100%;
   }
@@ -134,6 +138,7 @@
 .p-post-card--sidebar .p-post-card__body {
   @include mq('md') {
     margin: 0 0 0 math.div(10, 300) * 100%;
+    padding: rem(2) 0 0;
     width: math.div(170, 300) * 100%;
   }
 }
@@ -161,7 +166,7 @@
   @include mq('md') {
     border-radius: rem(12);
     font-size: rem(11);
-    padding: rem(8) rem(10);
+    padding: rem(8) rem(10) rem(9);
   }
 }
 
@@ -177,13 +182,13 @@
   color: $color-text;
   font-size: rem(14);
   @include lineHeight(14, 20);
-  margin-top: rem(8);
+  margin-top: rem(5);
   transition: color $trs-duration;
   
   @include mq('md') {
     font-size: rem(16);
     @include lineHeight(16, 24);
-    margin-top: rem(16);
+    margin-top: rem(12);
   }
 }
 
@@ -197,7 +202,7 @@
   @include mq('md') {
     font-size: rem(14);
     @include lineHeight(14, 20);
-    margin-top: rem(8);
+    margin-top: rem(5);
   }
 }
 
@@ -212,17 +217,19 @@
   color: $color-gray03;
   display: block;
   font-size: rem(11);
-  margin-top: rem(11);
+  margin-top: rem(7);
   
   @include mq('md') {
     font-size: rem(12);
-    margin-top: rem(16);
+    margin-top: rem(15);
   }
 }
 
 .p-post-card--column .p-post-card__published {
   @include mq('md') {
+    font-size: rem(11);
     margin-top: auto;
+    padding-top: rem(4);
   }
 }
 
