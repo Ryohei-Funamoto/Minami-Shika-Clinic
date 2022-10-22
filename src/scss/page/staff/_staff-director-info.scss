@@ -20,6 +20,7 @@
 }
 
 .staff-director-info__greeting {
+  opacity: 0;
   order: 1;
 
   @include mq('md') {
@@ -27,14 +28,29 @@
   }
 }
 
+.staff-director-info__greeting.is-appear {
+  animation-duration: $anime-duration;
+  animation-fill-mode: $anime-fill-mode;
+  animation-name: fadeUp;
+  animation-timing-function: $anime-timing-function;
+}
+
 .staff-director-info__profile-lists {
   margin-top: rem(38);
+  opacity: 0;
   order: 3;
 
   @include mq('md') {
     margin-top: rem(56);
     order: 0;
   }
+}
+
+.staff-director-info__profile-lists.is-appear {
+  animation-duration: $anime-duration;
+  animation-fill-mode: $anime-fill-mode;
+  animation-name: fadeUp;
+  animation-timing-function: $anime-timing-function;
 }
 
 .staff-director-info__profile-list:nth-child(n + 2) {
@@ -69,12 +85,40 @@
   }
 }
 
+.staff-director-info__image::after {
+  background-color: $color-main;
+  content: '';
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: scaleX(0);
+  width: 100%;
+}
+
+.staff-director-info__image.is-appear::after {
+  animation-duration: $anime-duration;
+  animation-fill-mode: $anime-fill-mode;
+  animation-name: maskAppearLeft;
+  animation-timing-function: $anime-timing-function;
+}
+
 .staff-director-info__image img {
   height: 100%;
   left: 0;
   object-fit: cover;
   object-position: center center;
+  opacity: 0;
   position: absolute;
   top: 0;
   width: 100%;
+}
+
+.staff-director-info__image.is-appear img {
+  animation-delay: 0.7s;
+  animation-duration: $anime-duration;
+  animation-fill-mode: $anime-fill-mode;
+  animation-name: fadeIn;
+  animation-timing-function: $anime-timing-function;
 }

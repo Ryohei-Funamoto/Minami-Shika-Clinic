@@ -1,0 +1,85 @@
+@use "global" as *;
+
+.p-staff-card__image {
+  border-radius: rem(20);
+  overflow: hidden;
+  position: relative;
+}
+
+.p-staff-card__image::before {
+  content: '';
+  display: block;
+  padding-top: 100%;
+}
+
+.p-staff-card__image::after {
+  background-color: $color-main;
+  content: '';
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: scaleX(0);
+  width: 100%;
+}
+
+.p-staff-card__image.is-appear::after {
+  animation-duration: $anime-duration;
+  animation-fill-mode: $anime-fill-mode;
+  animation-name: maskAppearLeft;
+  animation-timing-function: $anime-timing-function;
+}
+
+.p-staff-card__image img {
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  object-position: center center;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.p-staff-card__image.is-appear img {
+  animation-delay: 0.7s;
+  animation-duration: $anime-duration;
+  animation-fill-mode: $anime-fill-mode;
+  animation-name: fadeIn;
+  animation-timing-function: $anime-timing-function;
+}
+
+.p-staff-card__body {
+  margin-top: rem(16);
+  opacity: 0;
+}
+
+.p-staff-card__body.is-appear {
+  animation-duration: $anime-duration;
+  animation-fill-mode: $anime-fill-mode;
+  animation-name: fadeUp;
+  animation-timing-function: $anime-timing-function;
+}
+
+.p-staff-card__name {
+  align-items: center;
+  display: flex;
+  font-size: rem(18);
+  font-weight: $bold;
+  justify-content: center;
+  @include letterSpacing(80);
+  @include lineHeight(18, 28);
+}
+
+.p-staff-card__name--small {
+  display: block;
+  font-size: rem(12);
+  font-weight: $medium;
+  @include lineHeight(12, 18);
+  margin-right: rem(12);
+}
+
+.p-staff-card__profile {
+  margin-top: rem(15);
+}

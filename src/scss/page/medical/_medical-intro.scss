@@ -1,6 +1,10 @@
 @use "global" as *;
 @use "sass:math";
 
+.medical-intro {
+  overflow: hidden;
+}
+
 .medical-intro__top-deco {
   background-image: url(../img/home/home_medical_deco_sp_top.svg);
   background-position: center bottom;

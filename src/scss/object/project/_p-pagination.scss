@@ -2,7 +2,15 @@
 
 .p-pagination {
   font-size: 0;
+  opacity: 0;
   text-align: center;
+}
+
+.p-pagination.is-appear {
+  animation-duration: $anime-duration;
+  animation-fill-mode: $anime-fill-mode;
+  animation-name: fadeUp;
+  animation-timing-function: $anime-timing-function;
 }
 
 .p-pagination .page-numbers:not(:last-child) {

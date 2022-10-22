@@ -23,17 +23,13 @@
 .p-post-row::after {
   content: '\f061';
   font-family: 'Font Awesome 6 Free';
-  font-size: rem(14);
+  font-size: rem(18);
   font-weight: 900;
   position: absolute;
-  right: rem(6);
+  right: rem(5);
   top: 50%;
   transform: translateY(-50%);
   transition: right $trs-duration;
-
-  @include mq('md') {
-    font-size: rem(18);
-  }
 }
 
 .p-post-row:focus::after,

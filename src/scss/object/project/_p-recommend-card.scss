@@ -1,5 +1,28 @@
 @use "global" as *;
 
+.p-recommend-card {
+  opacity: 0;
+}
+
+.p-recommend-card.is-appear {
+  animation-duration: $anime-duration;
+  animation-fill-mode: $anime-fill-mode;
+  animation-name: fadeUp;
+  animation-timing-function: $anime-timing-function;
+}
+
+.p-recommend-card.is-appear:nth-child(3n - 1) {
+  @include mq('md') {
+    animation-delay: 0.5s;
+  }
+}
+
+.p-recommend-card.is-appear:nth-child(3n) {
+  @include mq('md') {
+    animation-delay: 1.0s;
+  }
+}
+
 .p-recommend-card__title {
   text-align: center;
 }

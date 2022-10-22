@@ -79,7 +79,7 @@
     "blog": {
       "name": "blog",
       "title": "スタッフブログ",
-      "subtitle": "blog",
+      "subtitle": "staff blog",
       "description": "スタッフブログページの説明",
       "ogpImage": "",
       "type": "article",
@@ -100,7 +100,7 @@
     "blog_single": {
       "name": "blog_single",
       "title": "記事のタイトル記事のタイトル",
-      "subtitle": "blog",
+      "subtitle": "staff blog",
       "description": "スタッフブログ記事の説明",
       "ogpImage": "",
       "type": "article",

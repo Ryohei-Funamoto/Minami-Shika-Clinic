@@ -8,11 +8,34 @@
   position: relative;
 }
 
+.p-post-card:not(.p-post-card--sidebar) {
+  opacity: 0;
+}
+
+.p-post-card:not(.p-post-card--sidebar).is-appear {
+  animation-duration: $anime-duration;
+  animation-name: fadeUp;
+  animation-fill-mode: $anime-fill-mode;
+  animation-timing-function: $anime-timing-function;
+}
+
 .p-post-card--column {
   @include mq('md') {
     border-radius: rem(20);
     box-shadow: 0 rem(3) rem(6) color.adjust($color-black, $alpha: -0.84);
     flex-direction: column;
+  }
+}
+
+.p-post-card--column.is-appear:nth-child(3n - 1) {
+  @include mq('md') {
+    animation-delay: 0.5s;
+  }
+}
+
+.p-post-card--column.is-appear:nth-child(3n) {
+  @include mq('md') {
+    animation-delay: 1.0s;
   }
 }
 

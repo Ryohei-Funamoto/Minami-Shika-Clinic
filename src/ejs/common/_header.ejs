@@ -1,3 +1,11 @@
+<div class="l-loading p-loading js-loading">
+  <div class="p-loading__content">
+    <div class="p-loading__title">
+      <img src="/img/common/logo.svg" alt="みなみ歯科クリニック">
+    </div><!-- /.p-loading__title -->
+  </div><!-- /.p-loading__content -->
+</div><!-- /.l-loading p-loading -->
+
 <header class="l-header p-header js-header">
   <div class="l-container p-header__container">
     <div class="p-header__inner">
@@ -15,7 +23,7 @@
 
             <nav class="p-header__nav p-gnav">
               <ul class="p-gnav__items">
-                <li <%- pageId === 'home' ? 'class="is-current"' : '' %>>
+                <li <%- pageId==='home' ? 'class="is-current"' : '' %>>
                   <a href="<%= jsonData.pages.home.slug; %>">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                       <path data-name="パス 43759"
@@ -25,7 +33,7 @@
                     ホーム
                   </a>
                 </li>
-                <li <%- pageId === 'about' ? 'class="is-current"' : '' %>>
+                <li <%- pageId==='about' ? 'class="is-current"' : '' %>>
                   <a href="<%= jsonData.pages.about.slug; %>">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                       <path
@@ -35,7 +43,7 @@
                     当院について
                   </a>
                 </li>
-                <li <%- pageId === 'medical' ? 'class="is-current"' : '' %>>
+                <li <%- pageId==='medical' ? 'class="is-current"' : '' %>>
                   <a href="<%= jsonData.pages.medical.slug; %>">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                       <g fill="#393939">
@@ -48,7 +56,7 @@
                     診療案内
                   </a>
                 </li>
-                <li <%- pageId === 'staff' ? 'class="is-current"' : '' %>>
+                <li <%- pageId==='staff' ? 'class="is-current"' : '' %>>
                   <a href="<%= jsonData.pages.staff.slug; %>">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                       <g fill="#393939">
@@ -61,7 +69,7 @@
                     スタッフ紹介
                   </a>
                 </li>
-                <li <%- pageId === 'blog' || pageId === 'blog_single' ? 'class="is-current"' : '' %>>
+                <li <%- pageId==='blog' || pageId==='blog_single' ? 'class="is-current"' : '' %>>
                   <a href="<%= jsonData.pages.blog.slug; %>">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                       <path data-name="パス 43761"
@@ -71,7 +79,7 @@
                     スタッフブログ
                   </a>
                 </li>
-                <li <%- pageId === 'contact' ? 'class="is-current"' : '' %>>
+                <li <%- pageId==='contact' || pageId==='contact_thanks' ? 'class="is-current"' : '' %>>
                   <a href="<%= jsonData.pages.contact.slug; %>">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                       <path data-name="パス 43760"
@@ -86,8 +94,7 @@
 
             <div class="p-header__info p-header-info">
               <p class="p-header-info__address">〒166-0001 東京都杉並区阿佐谷北7-3-1</p>
-              <p class="p-header-info__tel p-tel"><a href="tel:03-1234-5678"><img
-                    src="/img/common/icon_tel.svg"
+              <p class="p-header-info__tel p-tel"><a href="tel:03-1234-5678"><img src="/img/common/icon_tel.svg"
                     alt="tel">03-1234-5678</a></p>
             </div><!-- /.p-header__info p-header-info -->
 
@@ -109,23 +116,17 @@
               <div class="p-drawer__scroll">
                 <nav class="p-drawer__nav p-drawer-nav">
                   <ul class="p-drawer-nav__items">
-                    <li><a href="<%= jsonData.pages.home.slug; %>"><img
-                          src="/img/common/icon_home_white.svg"
+                    <li><a href="<%= jsonData.pages.home.slug; %>"><img src="/img/common/icon_home_white.svg"
                           alt="ホーム">ホーム</a></li>
-                    <li><a href="<%= jsonData.pages.about.slug; %>"><img
-                          src="/img/common/icon_about_white.svg"
+                    <li><a href="<%= jsonData.pages.about.slug; %>"><img src="/img/common/icon_about_white.svg"
                           alt="当院について">当院について</a></li>
-                    <li><a href="<%= jsonData.pages.medical.slug; %>"><img
-                          src="/img/common/icon_medical_white.svg"
+                    <li><a href="<%= jsonData.pages.medical.slug; %>"><img src="/img/common/icon_medical_white.svg"
                           alt="診療案内">診療案内</a></li>
-                    <li><a href="<%= jsonData.pages.staff.slug; %>"><img
-                          src="/img/common/icon_staff_white.svg"
+                    <li><a href="<%= jsonData.pages.staff.slug; %>"><img src="/img/common/icon_staff_white.svg"
                           alt="スタッフ紹介">スタッフ紹介</a></li>
-                    <li><a href="<%= jsonData.pages.blog.slug; %>"><img
-                          src="/img/common/icon_blog_white.svg"
+                    <li><a href="<%= jsonData.pages.blog.slug; %>"><img src="/img/common/icon_blog_white.svg"
                           alt="スタッフブログ">スタッフブログ</a></li>
-                    <li><a href="<%= jsonData.pages.contact.slug; %>"><img
-                          src="/img/common/icon_contact_white.svg"
+                    <li><a href="<%= jsonData.pages.contact.slug; %>"><img src="/img/common/icon_contact_white.svg"
                           alt="お問い合わせ">お問い合わせ</a></li>
                   </ul><!-- /.p-drawer-nav__items -->
                 </nav><!-- /.p-drawer__nav p-drawer-nav -->

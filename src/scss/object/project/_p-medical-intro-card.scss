@@ -4,6 +4,7 @@
 .p-medical-intro-card {
   background-color: $color-white;
   border-radius: rem(20);
+  opacity: 0;
   padding: rem(23) rem(20) rem(20);
   position: relative;
   z-index: $layer-up;
@@ -11,6 +12,20 @@
   @include mq('md') {
     padding: rem(52) rem(60) rem(62);
   }
+}
+
+.p-medical-intro-card.is-appear:nth-child(2n - 1) {
+  animation-duration: $anime-duration;
+  animation-fill-mode: $anime-fill-mode;
+  animation-name: fadeRight;
+  animation-timing-function: $anime-timing-function;
+}
+
+.p-medical-intro-card.is-appear:nth-child(2n) {
+  animation-duration: $anime-duration;
+  animation-fill-mode: $anime-fill-mode;
+  animation-name: fadeLeft;
+  animation-timing-function: $anime-timing-function;
 }
 
 .p-medical-intro-card__label {

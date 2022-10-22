@@ -145,6 +145,7 @@ $color-sns-line: #04BB00 !default;
 // ----------
 // z-index
 // ----------
+$layer-loading: 200;
 $layer-modal: 100;
 $layer-modal-overlay: 99;
 $layer-sp-fixed-footer: 42;
@@ -168,3 +169,10 @@ $header-height-sp: 60px;
 // transition
 // ----------
 $trs-duration: 0.3s;
+
+// ----------
+// animation
+// ----------
+$anime-duration: 1.5s;
+$anime-fill-mode: forwards;
+$anime-timing-function: ease-in-out;

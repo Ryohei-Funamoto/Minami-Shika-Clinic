@@ -1,5 +1,16 @@
 @use "global" as *;
 
+.p-form {
+  opacity: 0;
+}
+
+.p-form.is-appear {
+  animation-duration: $anime-duration;
+  animation-fill-mode: $anime-fill-mode;
+  animation-name: fadeUp;
+  animation-timing-function: $anime-timing-function;
+}
+
 .p-form__item {
   border-top: rem(1) solid $color-gray05;
   padding: rem(26) 0 rem(24);

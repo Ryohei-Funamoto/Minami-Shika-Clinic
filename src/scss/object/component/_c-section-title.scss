@@ -6,6 +6,7 @@
   font-weight: $bold;
   @include letterSpacing(80);
   @include lineHeight(20, 28);
+  opacity: 0;
   padding: 0 rem(63);
   position: relative;
   
@@ -14,6 +15,13 @@
     @include lineHeight(28, 40);
     padding: 0 rem(96);
   }
+}
+
+.c-section-title.is-appear {
+  animation-duration: $anime-duration;
+  animation-fill-mode: $anime-fill-mode;
+  animation-name: fadeUp;
+  animation-timing-function: $anime-timing-function;
 }
 
 .c-section-title::before,

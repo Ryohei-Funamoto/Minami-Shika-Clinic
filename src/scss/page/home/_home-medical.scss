@@ -43,6 +43,17 @@
   }
 }
 
+.home-medical__column {
+  opacity: 0;
+}
+
+.home-medical__column.is-appear {
+  animation-duration: $anime-duration;
+  animation-fill-mode: $anime-fill-mode;
+  animation-name: fadeUp;
+  animation-timing-function: $anime-timing-function;
+}
+
 .home-medical__column--full {
   @include mq('md') {
     grid-column: 1 / 3;

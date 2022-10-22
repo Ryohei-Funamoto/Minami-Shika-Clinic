@@ -1,46 +1,24 @@
 @use "global" as *;
 
-.p-staff-profile__image {
-  border-radius: rem(20);
-  overflow: hidden;
-  position: relative;
-}
-
-.p-staff-profile__image::before {
-  content: '';
-  display: block;
-  padding-top: 100%;
-}
-
-.p-staff-profile__image img {
-  height: 100%;
-  left: 0;
-  object-fit: cover;
-  object-position: center center;
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-
-.p-staff-profile__name {
-  align-items: center;
+.p-staff-profile__item {
   display: flex;
-  font-size: rem(18);
-  font-weight: $bold;
-  justify-content: center;
-  @include letterSpacing(80);
-  @include lineHeight(18, 28);
-  margin-top: rem(16);
 }
 
-.p-staff-profile__name--small {
-  display: block;
-  font-size: rem(12);
-  font-weight: $medium;
-  @include lineHeight(12, 18);
-  margin-right: rem(12);
+.p-staff-profile__item:nth-child(n + 2) {
+  border-top: rem(1) solid $color-white;
 }
 
-.p-staff-profile__data {
-  margin-top: rem(15);
+.p-staff-profile__term,
+.p-staff-profile__description {
+  font-size: rem(14);
+  padding: rem(16) rem(12) rem(17) rem(20);
+}
+
+.p-staff-profile__term {
+  background-color: $color-sub02;
+  width: rem(140);
+}
+
+.p-staff-profile__description {
+  width: calc(100% - rem(140));
 }

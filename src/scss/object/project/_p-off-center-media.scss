@@ -41,10 +41,19 @@
 }
 
 .p-off-center-media__body {
+  opacity: 0;
+
   @include mq('md') {
     padding: rem(36) 0 0;
     width: math.div(407, 1140) * 100%;
   }
+}
+
+.p-off-center-media__body.is-appear {
+  animation-duration: $anime-duration;
+  animation-fill-mode: $anime-fill-mode;
+  animation-name: fadeUp;
+  animation-timing-function: $anime-timing-function;
 }
 
 .p-off-center-media__subtitle {
@@ -117,14 +126,42 @@
   @include paddingTopHack(334, 229);
 }
 
+.p-off-center-media__image::after {
+  background-color: $color-main;
+  content: '';
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: scaleX(0);
+  width: 100%;
+}
+
+.p-off-center-media__image.is-appear::after {
+  animation-duration: $anime-duration;
+  animation-fill-mode: $anime-fill-mode;
+  animation-name: maskAppearLeft;
+  animation-timing-function: $anime-timing-function;
+}
+
 .p-off-center-media__image img {
   height: 100%;
   left: 0;
   object-fit: cover;
   object-position: center center;
+  opacity: 0;
   position: absolute;
   top: 0;
   width: 100%;
+}
+
+.p-off-center-media__image.is-appear img {
+  animation-delay: 0.7s;
+  animation-duration: $anime-duration;
+  animation-fill-mode: $anime-fill-mode;
+  animation-name: fadeIn;
+  animation-timing-function: $anime-timing-function;
 }
 
 .p-off-center-media__button {

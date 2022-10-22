@@ -1,5 +1,16 @@
 @use "global" as *;
 
+.medical-anchor {
+  opacity: 0;
+}
+
+.medical-anchor.is-appear {
+  animation-duration: $anime-duration;
+  animation-fill-mode: $anime-fill-mode;
+  animation-name: fadeUp;
+  animation-timing-function: $anime-timing-function;
+}
+
 .medical-anchor__title {
   align-items: center;
   display: flex;

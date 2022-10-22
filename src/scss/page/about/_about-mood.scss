@@ -22,8 +22,16 @@
 
 .about-mood__image {
   border-radius: rem(20);
+  opacity: 0;
   overflow: hidden;
   position: relative;
+}
+
+.about-mood__image.is-appear {
+  animation-duration: $anime-duration;
+  animation-fill-mode: $anime-fill-mode;
+  animation-name: flipRight;
+  animation-timing-function: $anime-timing-function;
 }
 
 .about-mood__image::before {

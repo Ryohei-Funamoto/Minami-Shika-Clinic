@@ -21,9 +21,17 @@
 
 .home-blog__button {
   margin-top: rem(40);
+  opacity: 0;
   text-align: center;
 
   @include mq('md') {
     margin-top: rem(66);
   }
+}
+
+.home-blog__button.is-appear {
+  animation-duration: $anime-duration;
+  animation-fill-mode: $anime-fill-mode;
+  animation-name: fadeUp;
+  animation-timing-function: $anime-timing-function;
 }

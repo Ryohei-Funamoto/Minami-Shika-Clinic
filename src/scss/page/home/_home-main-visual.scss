@@ -83,5 +83,9 @@
 }
 
 .home-main-visual__lead span:nth-child(n + 2) {
-  margin-top: rem(2);
+  margin-top: rem(10);
+
+  @include mq('md') {
+    margin-top: rem(2);
+  }
 }

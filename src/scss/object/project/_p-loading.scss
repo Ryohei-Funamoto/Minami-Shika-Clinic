@@ -1,0 +1,38 @@
+@use "global" as *;
+
+.p-loading {
+  align-items: center;
+  background-color: $color-white;
+  display: flex;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 0.5s, visibility 0.5s;
+  visibility: visible;
+}
+
+.p-loading.is-loaded {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.p-loading__content {
+  width: 100%;
+}
+
+.p-loading__title {
+  animation-duration: $anime-duration;
+  animation-fill-mode: $anime-fill-mode;
+  animation-name: bounce;
+  animation-timing-function: $anime-timing-function;
+  margin: 0 auto;
+  max-width: rem(500);
+  width: 80%;
+}
+
+.p-loading.p-loading.is-loaded .p-loading__title {
+  display: none;
+}
+
+.p-loading__title img {
+  width: 100%;
+}
