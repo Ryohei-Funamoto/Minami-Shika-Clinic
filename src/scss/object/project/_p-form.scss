@@ -44,3 +44,16 @@
     margin-top: rem(72);
   }
 }
+
+.p-form__error-message {
+  color: $color-accent;
+  display: none;
+  font-size: rem(16);
+  margin-top: rem(16);
+  text-align: center;
+}
+
+// Contact Form 7 バリデーション
+.wpcf7 form.invalid .p-form__error-message {
+  display: block;
+}

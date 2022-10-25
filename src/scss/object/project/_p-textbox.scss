@@ -62,3 +62,11 @@
   top: 50%;
   transform: translateY(-50%);
 }
+
+// Contact Form 7 バリデーション
+.p-textbox input[type="text"][aria-invalid="true"],
+.p-textbox input[type="email"][aria-invalid="true"],
+.p-textbox input[type="tel"][aria-invalid="true"],
+.p-textbox textarea[aria-invalid="true"] {
+  background-color: $color-danger;
+}

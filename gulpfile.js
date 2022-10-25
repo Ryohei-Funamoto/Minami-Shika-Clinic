@@ -4,7 +4,7 @@ const { src, dest, watch, series, parallel } = require('gulp');
 const srcBase = './src';
 const publicBase = './src/public';
 const distBase = './dist';
-const serverBase = './app/public/wp-content/themes/dummy'; // Local by Flywheelのパス
+const serverBase = './app/public/wp-content/themes/minami-shika-clinic'; // Local by Flywheelのパス
 
 // 既存のファイルの読み込みパス
 const publicPath = {
@@ -73,22 +73,22 @@ else if (env === 'development') {
 const del = require('del');
 
 const delPath = {
-  'css': [distBase + '/css/**', '!' + distBase + '/css/'],
-  'js': [distBase + '/js/**', '!' + distBase + '/js/'],
-  'img': [distBase + '/img/**', '!' + distBase + '/img/'],
-  'html': [distBase + '/**/*.html', '!' + distBase],
-  // 'wpCss': [serverBase + '/css/**', '!' + serverBase + '/css/'],
-  // 'wpJs': [serverBase + '/js/**', '!' + serverBase + '/js/'],
-  // 'wpImg': [serverBase + '/img/**', '!' + serverBase + '/img/']
+  // 'css': [distBase + '/css/**', '!' + distBase + '/css/'],
+  // 'js': [distBase + '/js/**', '!' + distBase + '/js/'],
+  // 'img': [distBase + '/img/**', '!' + distBase + '/img/'],
+  // 'html': [distBase + '/**/*.html', '!' + distBase],
+  'wpCss': [serverBase + '/css/**', '!' + serverBase + '/css/'],
+  'wpJs': [serverBase + '/js/**', '!' + serverBase + '/js/'],
+  'wpImg': [serverBase + '/img/**', '!' + serverBase + '/img/']
 };
 const clean = (done) => {
-  del(delPath.css, { force: true });
-  del(delPath.js, { force: true });
-  del(delPath.img, { force: true });
-  del(delPath.html, { force: true });
-  // del(delPath.wpCss, { force: true });
-  // del(delPath.wpJs, { force: true });
-  // del(delPath.wpImg, { force: true });
+  // del(delPath.css, { force: true });
+  // del(delPath.js, { force: true });
+  // del(delPath.img, { force: true });
+  // del(delPath.html, { force: true });
+  del(delPath.wpCss, { force: true });
+  del(delPath.wpJs, { force: true });
+  del(delPath.wpImg, { force: true });
   done();
 };
 
@@ -98,8 +98,8 @@ const clean = (done) => {
 const browserSync = require('browser-sync');
 
 const browserSyncOption = {
-  server: distBase // HTMLサイトの場合
-  // proxy: 'http://dummy.local' // WordPressサイトの場合(Local by Flywheel)
+  // server: distBase // HTMLサイトの場合
+  proxy: 'http://minami-shika-clinic.local' // WordPressサイトの場合(Local by Flywheel)
 };
 const browserSyncFunc = () => {
   browserSync.init(browserSyncOption);
@@ -139,8 +139,8 @@ const cssSass = () => {
       cssdeclsort({ order: 'alphabetical' })
     ]))
     .pipe(gulpif(thisCssGroupMediaQueries, gcmq())) // メディアクエリをまとめる
-    .pipe(dest(distPath.css, { sourcemaps: './' })) // コンパイル先(HTML)
-    // .pipe(dest(distPath.wpCss, { sourcemaps: './' })) // コンパイル先(WordPress)
+    // .pipe(dest(distPath.css, { sourcemaps: './' })) // コンパイル先(HTML)
+    .pipe(dest(distPath.wpCss, { sourcemaps: './' })) // コンパイル先(WordPress)
     .pipe(browserSync.stream())
     .pipe(notify({
       message: 'Sassをコンパイルしました！',
@@ -153,8 +153,8 @@ const cssSass = () => {
  */
 const js = () => {
   return src(srcPath.js)
-    .pipe(dest(distPath.js)) // HTMLサイトの吐き出し先
-  // .pipe(dest(distPath.wpJs)) // WordPressサイトの吐き出し先
+    // .pipe(dest(distPath.js)) // HTMLサイトの吐き出し先
+    .pipe(dest(distPath.wpJs)) // WordPressサイトの吐き出し先
 };
 
 /**
@@ -181,8 +181,8 @@ const imgImagemin = () => {
         verbose: true
       }
       ))
-    .pipe(dest(distPath.img)) // HTMLサイトの吐き出し先
-  // .pipe(dest(distPath.wpImg)) // WordPressサイトの吐き出し先
+    // .pipe(dest(distPath.img)) // HTMLサイトの吐き出し先
+    .pipe(dest(distPath.wpImg)) // WordPressサイトの吐き出し先
 };
 
 /**
@@ -198,8 +198,8 @@ const html = () => {
  */
 const public_file = () => {
   return src(publicPath.public)
-    .pipe(dest(distBase)) // HTMLサイトの吐き出し先
-  // .pipe(dest(serverBase)) // WordPressサイトの吐き出し先
+    // .pipe(dest(distBase)) // HTMLサイトの吐き出し先
+    .pipe(dest(serverBase)) // WordPressサイトの吐き出し先
 };
 
 /**
@@ -293,7 +293,7 @@ const watchFiles = () => {
   watch(srcPath.img, series(imgImagemin, browserSyncReload))
   // watch(srcPath.html, series(html, browserSyncReload))
   watch(publicPath.public, series(public_file, browserSyncReload))
-  watch(watchPath.ejs, series(ejsHTML, browserSyncReload))
+  // watch(watchPath.ejs, series(ejsHTML, browserSyncReload))
   // watch(watchPath.pug, series(pugHTML, browserSyncReload))
 };
 
@@ -303,6 +303,6 @@ const watchFiles = () => {
  * parallel -> 並列で実行
  */
 module.exports = {
-  default: series(series(clean, cssSass, js, imgImagemin, ejsHTML, public_file), parallel(watchFiles, browserSyncFunc)),
-  build: series(series(clean, cssSass, js, imgImagemin, ejsHTML, public_file, cacheBusting))
+  default: series(series(clean, cssSass, js, imgImagemin, public_file), parallel(watchFiles, browserSyncFunc)),
+  build: series(series(clean, cssSass, js, imgImagemin, public_file))
 };

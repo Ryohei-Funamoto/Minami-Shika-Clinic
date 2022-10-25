@@ -10,10 +10,18 @@ app/public/*
 !app/public/wp-content/
 app/public/wp-content/languages/
 app/public/wp-content/plugins/
+app/public/wp-content/upgrade/
 app/public/wp-content/uploads/
 app/public/wp-content/index.php
 app/public/wp-content/ewww/
 
-app/public/wp-content/themes/dummy/css
-app/public/wp-content/themes/dummy/js
-app/public/wp-content/themes/dummy/img
+app/public/wp-content/themes/minami-shika-clinic/css
+app/public/wp-content/themes/minami-shika-clinic/js
+app/public/wp-content/themes/minami-shika-clinic/img
+app/public/wp-content/themes/twentytwentytwo
+app/public/wp-content/themes/index.php
+
+app/sql/
+
+conf/
+logs/

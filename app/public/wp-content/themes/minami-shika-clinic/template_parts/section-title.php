@@ -1,0 +1,1 @@
+<h2 class="c-section-title js-anime-target"><?php echo $args['title_text']; ?></h2>

@@ -23,7 +23,7 @@
 }
 
 .p-sidebar-category-list__items {
-  margin-top: rem(20);
+  margin-top: rem(16);
   padding-left: rem(20);
 }
 
@@ -33,10 +33,10 @@
 }
 
 .p-sidebar-category-list__item:nth-child(n + 2) {
-  margin-top: rem(20);
+  margin-top: rem(12);
 
   @include mq('md') {
-    margin-top: rem(21);
+    margin-top: rem(13);
   }
 }
 
@@ -44,7 +44,7 @@
   align-items: center;
   color: $color-text;
   display: block;
-  padding-left: rem(12);
+  padding: rem(4) 0 rem(4) rem(12);
   position: relative;
   transition: color $trs-duration;
 }

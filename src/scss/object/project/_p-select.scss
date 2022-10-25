@@ -26,3 +26,8 @@
   font-size: rem(16);
   padding: rem(12) rem(32) rem(12) rem(16);
 }
+
+// Contact Form 7 バリデーション
+.p-select select[aria-invalid="true"] {
+  background-color: $color-danger;
+}

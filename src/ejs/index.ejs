@@ -16,29 +16,23 @@
                       <source srcset="/img/home/home_mv_pc_img01.jpg" media="(min-width: 768px)">
                       <img src="/img/home/home_mv_sp_img01.jpg" alt="みなみ歯科クリニック">
                     </picture>
-                    <div class="home-main-visual__content">
-                      <p class="home-main-visual__lead"><span>街の皆さまの笑顔を守る</span><br><span>アットホームな歯医者さん</span></p>
-                    </div><!-- /.home-main-visual__content -->
                   </div>
                   <div class="swiper-slide home-main-visual__slide">
                     <picture>
                       <source srcset="/img/home/home_mv_pc_img02.jpg" media="(min-width: 768px)">
                       <img src="/img/home/home_mv_sp_img02.jpg" alt="みなみ歯科クリニック">
                     </picture>
-                    <div class="home-main-visual__content">
-                      <p class="home-main-visual__lead"><span>街の皆さまの笑顔を守る</span><br><span>アットホームな歯医者さん</span></p>
-                    </div><!-- /.home-main-visual__content -->
                   </div>
                   <div class="swiper-slide home-main-visual__slide">
                     <picture>
                       <source srcset="/img/home/home_mv_pc_img03.jpg" media="(min-width: 768px)">
                       <img src="/img/home/home_mv_sp_img03.jpg" alt="みなみ歯科クリニック">
                     </picture>
-                    <div class="home-main-visual__content">
-                      <p class="home-main-visual__lead"><span>街の皆さまの笑顔を守る</span><br><span>アットホームな歯医者さん</span></p>
-                    </div><!-- /.home-main-visual__content -->
                   </div>
                 </div>
+                <div class="home-main-visual__content">
+                  <p class="home-main-visual__lead"><span>街の皆さまの笑顔を守る</span><br><span>アットホームな歯医者さん</span></p>
+                </div><!-- /.home-main-visual__content -->
               </div><!-- /. l-main-visual l-main-visual--home home-main-visual js-home-mv-slider -->
               <!-- If we need pagination -->
               <div
@@ -315,7 +309,9 @@
                 </div><!-- /.home-blog__items -->
 
                 <div class="home-blog__button js-anime-target">
-                  <a href="<%= jsonData.pages.blog.slug; %>" class="c-button"><%= jsonData.pages.blog.title %>一覧はこちら</a>
+                  <a href="<%= jsonData.pages.blog.slug; %>" class="c-button">
+                    <%= jsonData.pages.blog.title %>一覧はこちら
+                  </a>
                 </div><!-- /.home-blog__button -->
               </div><!-- /.l-container home-blog__container -->
             </section><!-- /.l-home__blog home-blog -->

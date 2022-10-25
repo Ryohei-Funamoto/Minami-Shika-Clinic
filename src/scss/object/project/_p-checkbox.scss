@@ -50,3 +50,8 @@
   opacity: 1;
   visibility: visible;
 }
+
+// Contact Form 7 バリデーション
+.wpcf7 form.invalid .p-checkbox input[type="checkbox"]+span::before {
+  background-color: $color-danger;
+}
