@@ -109,14 +109,15 @@
   const homeMvSlider = new Swiper('.js-home-mv-slider', {
     autoplay: {
       delay: 4000, // 4000ミリ秒後に切り替わり
+      disableOnInteraction: false, // スワイプ操作によるスライダー停止を無効化
     },
-    disableOnInteraction: false, // スワイプ操作によるスライダー停止を無効化
     effect: 'fade', // フェードで切り替わり
     loop: true, // ループ有効化
     slidesPerView: 1, // 1度に表示させるスライド枚数
     speed: 2000, // スライドの速さ
     pagination: {
       el: '.js-home-main-visual-pagination',
+      clickable: true,
     },
     navigation: {
       nextEl: '.js-home-main-visual-button-next',

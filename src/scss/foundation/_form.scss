@@ -95,7 +95,7 @@ select:focus {
 
 // 最初の項目の文字色を変更（selectタグにrequired属性を指定）
 select:invalid {
-  color:  04;
+  color: $color-gray04;
 }
 
 // ----------

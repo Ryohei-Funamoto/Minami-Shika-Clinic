@@ -36,6 +36,15 @@
   width: 100%;
 }
 
+.home-main-visual__slide.swiper-slide-active img,
+.home-main-visual__slide.swiper-slide-duplicate-active img,
+.home-main-visual__slide.swiper-slide-prev img {
+  animation-duration: 10s;
+  animation-fill-mode: both;
+  animation-name: zoomUp;
+  animation-timing-function: linear;
+}
+
 .home-main-visual__content {
   bottom: rem(40);
   left: rem(20);

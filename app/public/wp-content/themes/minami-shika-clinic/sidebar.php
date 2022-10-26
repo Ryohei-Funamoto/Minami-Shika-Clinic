@@ -1,10 +1,10 @@
 <aside class="p-sidebar">
   <div class="p-sidebar__intro p-sidebar-intro">
-    <div class="p-sidebar-intro__head">クリニックの紹介</div>
+    <h2 class="p-sidebar-intro__head">クリニックの紹介</h2>
     <figure class="p-sidebar-intro__image">
       <img src="<?php echo get_template_directory_uri(); ?>/img/blog/blog_sidebar_intro_img.jpg" alt="クリニックの紹介">
     </figure><!-- /.p-sidebar-intro__image -->
-    <div class="p-sidebar-intro__title">みなみ歯科クリニック</div>
+    <h3 class="p-sidebar-intro__title">みなみ歯科クリニック</h3>
     <p class="p-sidebar-intro__description">お子様からご高齢の方まで、快適な空間で治療が受けられる場を作り、地域医療に貢献しきたいと考えております。
     </p>
     <a href="/about/" class="p-sidebar-intro__link">
@@ -12,7 +12,7 @@
     </a>
   </div><!-- /.p-sidebar__intro p-sidebar-intro -->
   <div class="p-sidebar__latest-posts p-sidebar-latest-posts">
-    <div class="p-sidebar-latest-posts__head">新着記事</div>
+    <h2 class="p-sidebar-latest-posts__head">新着記事</h2>
     <?php
     if (is_home() || is_category() || is_singular('post')) {
       $latest_posts = my_get_latest_posts('post', 5);
@@ -44,7 +44,7 @@
   </div><!-- /.p-sidebar__latest-posts p-sidebar-latest-posts -->
 
   <div class="p-sidebar__category-list p-sidebar-category-list">
-    <div class="p-sidebar-category-list__head">カテゴリー</div>
+    <h2 class="p-sidebar-category-list__head">カテゴリー</h2>
     <ul class="p-sidebar-category-list__items">
       <?php
       $args = array(

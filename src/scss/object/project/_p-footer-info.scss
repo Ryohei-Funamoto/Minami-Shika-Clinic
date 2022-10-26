@@ -17,11 +17,10 @@
 }
 
 .p-footer-info__logo img {
-  max-width: rem(311);
-  width: 100%;
+  width: rem(311);
 
   @include mq('md') {
-    max-width: rem(403);
+    width: rem(403);
   }
 }
 

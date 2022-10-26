@@ -133,7 +133,7 @@ global $u_reservation; // WEB予約
         </button><!-- /.p-header__hamburger p-hamburger -->
         <div class="p-header__drawer p-drawer js-drawer">
           <div class="p-drawer__head">
-            <p class="p-drawer__logo">
+            <p class="p-drawer__logo c-logo">
               <img src="<?php echo get_template_directory_uri(); ?>/img/common/logo_drawer.svg" alt="みなみ歯科クリニック">
             </p><!-- /.p-drawer__logo -->
           </div><!-- /.p-drawer__head -->

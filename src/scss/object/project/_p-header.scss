@@ -22,8 +22,8 @@
   height: inherit;
 }
 
-.p-header__logo img {
-  max-width: 100%;
+.p-header__logo {
+  width: rem(270);
 }
 
 .p-header__nav {

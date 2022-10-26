@@ -64,7 +64,7 @@
       <div class="home-main-visual__content">
         <p class="home-main-visual__lead"><span>街の皆さまの笑顔を守る</span><br><span>アットホームな歯医者さん</span></p>
       </div><!-- /.home-main-visual__content -->
-    </div><!-- /. l-main-visual l-main-visual--home home-main-visual js-home-mv-slider -->
+    </div><!-- /. l-main-visual home-main-visual js-home-mv-slider -->
     <!-- If we need pagination -->
     <div class="swiper-pagination home-main-visual-wrapper__pagination home-main-visual-pagination js-home-main-visual-pagination">
     </div>
@@ -212,7 +212,7 @@
           </div><!-- /.home-medical__column -->
           <div class="home-medical__column home-medical__column--full js-anime-target">
             <p class="home-medical__description">当院では、患者さんの歯の健康状態や治療方針を丁寧にカウンセリングし、十分ご理解していただいた上で治療いたします。<br>痛みに配慮することと、可能な限り削らない・抜かない治療に努めております。<br><span class="home-medical__description--precaution">※特殊性の高い矯正治療などは保険の適応外となります。これらの治療を行う際は事前に詳細と費用のご説明いたします。</span></p>
-          </div><!-- /.home-medical__column home-medical__column--full -->
+          </div><!-- /.home-medical__column -->
         </div><!-- /.home-medical__column -->
       </div><!-- /.l-container home-medical__container -->
     </div><!-- /.home-medical__content -->

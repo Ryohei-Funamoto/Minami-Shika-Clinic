@@ -14,7 +14,7 @@
           <img src="<?php
                     $sp_img = get_sub_field('sp_img');
                     echo $sp_img;
-                    ?>" alt="<?php my_sub_main_visual_img_alt_attribute(); ?>">
+                    ?>" alt="<?php echo my_sub_main_visual_img_alt_attribute(); ?>">
         </picture>
     <?php
       endwhile;

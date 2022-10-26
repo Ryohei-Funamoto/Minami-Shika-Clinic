@@ -45,6 +45,7 @@
 
 .home-medical__column {
   opacity: 0;
+  z-index: $layer-up;
 }
 
 .home-medical__column.is-appear {
@@ -66,7 +67,6 @@
   @include lineHeight(14, 24);
   padding: rem(17) rem(20);
   position: relative;
-  z-index: $layer-up;
 
   @include mq('md') {
     @include lineHeight(14, 28);

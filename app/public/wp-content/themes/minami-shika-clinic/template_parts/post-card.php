@@ -16,7 +16,7 @@
     <div class="p-post-card__category-wrapper">
       <span class="p-post-card__category"><?php my_the_post_term(null, $args['taxonomy'], false); ?></span>
     </div><!-- /.p-post-card__category-wrapper -->
-    <h3 class="p-post-card__title"><?php the_title(); ?></h3>
+    <p class="p-post-card__title"><?php the_title(); ?></p>
     <time datetime="<?php the_time('c'); ?>" class="p-post-card__published"><?php the_time('Y.m.d'); ?></time>
   </div><!-- /.p-post-card__body -->
 </a><!-- /.archive-main__item p-post-card -->

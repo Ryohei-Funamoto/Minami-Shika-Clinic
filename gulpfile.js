@@ -98,7 +98,7 @@ const clean = (done) => {
 const browserSync = require('browser-sync');
 
 const browserSyncOption = {
-  // server: distBase // HTMLサイトの場合
+  // server: distBase, // HTMLサイトの場合
   proxy: 'http://minami-shika-clinic.local' // WordPressサイトの場合(Local by Flywheel)
 };
 const browserSyncFunc = () => {
@@ -303,6 +303,8 @@ const watchFiles = () => {
  * parallel -> 並列で実行
  */
 module.exports = {
+  // default: series(series(clean, cssSass, js, imgImagemin, ejsHTML, public_file), parallel(watchFiles, browserSyncFunc)),
   default: series(series(clean, cssSass, js, imgImagemin, public_file), parallel(watchFiles, browserSyncFunc)),
-  build: series(series(clean, cssSass, js, imgImagemin, public_file))
+  // build: series(series(clean, cssSass, js, imgImagemin, ejsHTML, public_file, cacheBusting)),
+  build: series(series(clean, cssSass, js, imgImagemin, public_file)),
 };

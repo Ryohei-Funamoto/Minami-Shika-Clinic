@@ -16,7 +16,7 @@ global $u_reservation; // WEB予約
     <div class="l-container p-footer-section__container">
       <div class="p-footer-section__info p-footer-info">
         <div class="p-footer-info__content">
-          <p class="p-footer-info__logo"><img src="<?php echo get_template_directory_uri(); ?>/img/common/logo.svg" alt="みなみ歯科クリニック"></p>
+          <p class="p-footer-info__logo c-logo"><img src="<?php echo get_template_directory_uri(); ?>/img/common/logo.svg" alt="みなみ歯科クリニック"></p>
           <p class="p-footer-info__address">〒166-0001&ensp;東京都杉並区阿佐谷北7-3-1</p>
           <p class="p-footer-info__tel p-tel"><a href="tel:03-1234-5678"><img src="<?php echo get_template_directory_uri(); ?>/img/common/icon_tel.svg" alt="tel">03-1234-5678</a></p>
           <p class="p-footer-info__business-hours c-business-hours">(年中無休 AM9:00〜PM22:00)</p>
@@ -167,14 +167,7 @@ global $u_reservation; // WEB予約
 </div><!-- /.l-footer-section p-footer-section -->
 <footer class="l-footer p-footer">
   <div class="l-container p-footer__container">
-    <p class="p-footer__copyright">
-      &copy;2020-
-      <script type="text/javascript" language="JavaScript">
-        current = new Date();
-        document.write(current.getFullYear())
-      </script>
-      みなみ歯科クリニック
-    </p>
+    <p class="p-footer__copyright">&copy;2020-<?php echo date('Y'); ?>みなみ歯科クリニック</p>
   </div><!-- /.l-container p-footer__container -->
 </footer><!-- /.l-footer p-footer -->
 <button class="l-button-to-top c-button-to-top js-button-to-top"></button>
