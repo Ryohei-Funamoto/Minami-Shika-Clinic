@@ -2,6 +2,8 @@
 // CSSとJavaScriptの読み込み
 function my_script_init()
 {
+  // Google Fonts
+  wp_enqueue_style('m-plus-rounded-1c', '//fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;700&display=swap', array(), '1.0.0');
   // Font Awesome
   wp_enqueue_style('font-awesome', '//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css', array(), '6.2.0');
   // Swiper CSS
