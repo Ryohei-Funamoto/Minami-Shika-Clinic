@@ -1,5 +1,8 @@
 'use strict';
 
+/**
+ * JavaScript
+ */
 (function () {
   /**
    * DOM
@@ -53,20 +56,6 @@
       behavior: 'smooth',
     });
   }
-  // 別ページの特定箇所へのスムーススクロール
-  const trsToAnotherPageTarget = function () {
-    // スクロール先のIDを取得
-    let targetId = location.hash;
-    // スクロール先のIDを取得できた場合
-    if (targetId) {
-      // スクロール先があるページのトップへ移動
-      window.scrollTo({
-        top: 0,
-      });
-      // 400ミリ秒後にスクロール先へ移動する関数を実行
-      setTimeout(scrollToTarget(targetId), 400);
-    }
-  }
 
   /**
    * イベント
@@ -99,8 +88,6 @@
       scrollToTarget(targetId);
     });
   });
-  // 別ページの特定箇所へスムーススクロールする
-  window.addEventListener('load', trsToAnotherPageTarget);
 
   /**
    * Swiper
@@ -186,7 +173,7 @@
 
   if (!sessionStorage.getItem('access')) {
     sessionStorage.setItem('access', 'true');
-    window.addEventListener('load', function() {
+    window.addEventListener('load', function () {
       setTimeout(loadedPage, 2000);
     });
     setTimeout(loadedPage, 4000);
@@ -194,3 +181,24 @@
     loadedPage();
   }
 }());
+
+/**
+ * jQuery
+ */
+jQuery(function ($) {
+  const header = $('.js-header');
+  const headerHeight = header.outerHeight();
+  let urlHash = location.hash;
+
+  // 別ページのアンカーリンクをスムーススクロールさせる
+  if (urlHash) {
+    $('body, html').stop().scrollTop(0);
+    setTimeout(function () {
+      let target = $(urlHash);
+      var position = target.offset().top - headerHeight;
+      $('body, html').stop().animate({
+        scrollTop: position
+      }, 500);
+    }, 100);
+  }
+});
